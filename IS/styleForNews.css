@@ -1,0 +1,88 @@
+.middleUser{
+    width:auto;
+    position:relative;
+    background-color: #DCE6F7;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 1100px;
+    border:1px solid grey;
+}
+.middleCourse{
+    width:auto;
+    position:relative;
+    background-color: #DCE6F7;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 700px;
+    border:1px solid grey; 
+}
+.middleRoom{
+    width:auto;
+    position:relative;
+    background-color: #DCE6F7;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 520px;
+    border:1px solid grey; 
+}
+.topic{
+    width:auto;
+    position:relative;
+    background-color: #DCE6F7;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 50px;
+    border:1px solid grey; 
+}
+.topic p{
+    text-align: left;
+    padding-top: 15px;
+    padding-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.forTextFields{
+    width:450px;
+    position:relative;
+    background-color: #DCE6F7;
+    float: left;
+    margin-top: -20px;
+    margin-left: -170px;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 1000px;
+}
+
+
+
+.saveButton{
+    width:auto;
+    position:relative;
+    margin-left: 200px;
+    float: right;
+}
+.forTextFields label{
+    display: block;
+}
+
+.itemsCourse{
+    width:450px;
+    position:relative;
+/*    background-color: #DCE6F7;*/
+    float: left;
+    margin-top: -20px;
+    margin-left: -170px;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 600px;
+}
+.itemsRoom{
+    width:450px;
+    position:relative;
+/*    background-color: #DCE6F7;*/
+    float: left;
+    margin-top: -20px;
+    margin-left: -170px;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 410px;
+}
+.itemsCourse label{
+    display: block;
+}
+.itemsRoom label{
+    display: block;
+}
