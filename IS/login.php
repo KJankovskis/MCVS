@@ -3,7 +3,7 @@ session_start(); // Sāk sesiju
 $error=''; // Mainīgais erroram
 if (isset($_POST['submit'])) {
     if (empty($_POST['username']) || empty($_POST['password'])) {
-    $error = "Username or Password is invalid";
+    $error = "Nav ievadīts lietotājvārds un / vai parole!";
     }
     else{
     // definē mainīgos
@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
         $password=$_POST['password'];
 
         // Izveido savienojumu ar serveri
-        $connection = mysql_connect("84.237.231.90:6603", "root", "janisk");
+        $connection = mysql_connect("127.0.0.1:3306", "root", "janisk");
         // Sis rindas ir lai aizsargatu informaciju datubaze
         $username = stripslashes($username);
         $password = stripslashes($password);
@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
             header("location: profile.php"); // Pārslēdzas uz citu lapu
         } 
         else {
-            $error = "Username or Password is invalid";
+            $error = "Nepareizi ievadīts lietotājvārds un / vai parole!";
         }
      mysql_close($connection); 
     }
