@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
         $password=$_POST['password'];
 
         // Izveido savienojumu ar serveri
-        $connection = mysql_connect("84.237.231.90:3306", "root", "janisk");
+        $connection = mysql_connect("84.237.231.90", "root", "janisk");
         // Sis rindas ir lai aizsargatu informaciju datubaze
         $username = stripslashes($username);
         $password = stripslashes($password);
