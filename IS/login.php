@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
         // izvelas datubazi
         $db = mysql_select_db("mcvs_db", $connection);
         // SQL query to fetch information of registerd users and finds user match.
-        $query = mysql_query("SELECT * FROM persona WHERE parole='$password' AND lietotajvards='$username'", $connection);
+        $query = mysql_query("SELECT * FROM Persona WHERE parole='$password' AND lietotajvards='$username'", $connection);
         $rows = mysql_num_rows($query);
         if ($rows == 1) {
             $_SESSION['login_user']=$username; 
