@@ -9,7 +9,7 @@
             </div>
             <div class="content-right">
                 <div class="groups">
-                    <p>MACIBU<br><br> GRUPU<br><br> PLANOSANA</p>
+                    <p>MĀCĪBU<br><br> GRUPU<br><br> PLĀNOŠANA</p>
                 </div>
             </div>
         </div> 

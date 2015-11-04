@@ -8,19 +8,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema mcvs_db
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema mcvs_db
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `mcvs_db` DEFAULT CHARACTER SET utf8 COLLATE utf8_latvian_ci ;
+USE `mcvs_db` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`Persona`
+-- Table `mcvs_db`.`Persona`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Persona` (
+CREATE TABLE IF NOT EXISTS `mcvs_db`.`Persona` (
   `idPersona` INT NOT NULL AUTO_INCREMENT,
   `vards` VARCHAR(25) NOT NULL,
   `uzvards` VARCHAR(25) NOT NULL,
@@ -40,9 +40,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`PersonaApgutais`
+-- Table `mcvs_db`.`PersonaApgutais`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`PersonaApgutais` (
+CREATE TABLE IF NOT EXISTS `mcvs_db`.`PersonaApgutais` (
   `idPersonaApgutais` INT NOT NULL AUTO_INCREMENT,
   `Persona_idPersona` INT NOT NULL,
   `SertifikatsDiplomsKurss` VARCHAR(50) NOT NULL,
@@ -57,9 +57,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Kurss`
+-- Table `mcvs_db`.`Kurss`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Kurss` (
+CREATE TABLE IF NOT EXISTS `mcvs_db`.`Kurss` (
   `idKurss` INT NOT NULL AUTO_INCREMENT,
   `kursaKods` VARCHAR(10) NOT NULL,
   `kKursaNosaukums` VARCHAR(50) NOT NULL,
@@ -75,9 +75,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Auditorija`
+-- Table `mcvs_db`.`Auditorija`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Auditorija` (
+CREATE TABLE IF NOT EXISTS `mcvs_db`.`Auditorija` (
   `idAuditorija` INT NOT NULL AUTO_INCREMENT,
   `aNumurs` INT NULL,
   `aNosaukums` VARCHAR(50) NULL,
@@ -92,9 +92,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`PersonaNoslogojums`
+-- Table `mcvs_db`.`PersonaNoslogojums`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`PersonaNoslogojums` (
+CREATE TABLE IF NOT EXISTS `mcvs_db`.`PersonaNoslogojums` (
   `idPersonaNoslogojums` INT NOT NULL AUTO_INCREMENT,
   `Persona_idPersona` INT NOT NULL,
   `pDatums` DATE NOT NULL,
@@ -111,9 +111,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`AuditorijaNoslogojums`
+-- Table `mcvs_db`.`AuditorijaNoslogojums`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`AuditorijaNoslogojums` (
+CREATE TABLE IF NOT EXISTS `mcvs_db`.`AuditorijaNoslogojums` (
   `idAuditorijaNoslogojums` INT NOT NULL AUTO_INCREMENT,
   `Auditorija_idAuditorija` INT NOT NULL,
   `aDatums` DATE NOT NULL,
@@ -130,9 +130,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`MacibuGrupa`
+-- Table `mcvs_db`.`MacibuGrupa`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`MacibuGrupa` (
+CREATE TABLE IF NOT EXISTS `mcvs_db`.`MacibuGrupa` (
   `idMacibuGrupa` INT NOT NULL AUTO_INCREMENT,
   `Kurss_idKurss` INT NOT NULL,
   `Auditorija_idAuditorija` INT NOT NULL,
@@ -155,9 +155,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Persona_has_MacibuGrupa`
+-- Table `mcvs_db`.`Persona_has_MacibuGrupa`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Persona_has_MacibuGrupa` (
+CREATE TABLE IF NOT EXISTS `mcvs_db`.`Persona_has_MacibuGrupa` (
   `Persona_idPersona` INT NOT NULL,
   `MacibuGrupa_idMacibuGrupa` INT NOT NULL,
   PRIMARY KEY (`Persona_idPersona`, `MacibuGrupa_idMacibuGrupa`),
@@ -177,9 +177,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Persona_has_Kurss`
+-- Table `mcvs_db`.`Persona_has_Kurss`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Persona_has_Kurss` (
+CREATE TABLE IF NOT EXISTS `mcvs_db`.`Persona_has_Kurss` (
   `Persona_idPersona` INT NOT NULL,
   `Kurss_idKurss` INT NOT NULL,
   PRIMARY KEY (`Persona_idPersona`, `Kurss_idKurss`),
