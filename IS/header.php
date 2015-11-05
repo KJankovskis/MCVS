@@ -32,7 +32,25 @@ $(document).ready(function(){
     });
 });
 </script>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     
+<script type="text/javascript">
+    function ShowHideDiv() {
+        var student = document.getElementById("student");
+        var showPerson = document.getElementById("showPerson");
+        showPerson.style.display = student.checked ? "block" : "none";
+        var teacher = document.getElementById("teacher");
+        var showTeacher = document.getElementById("showTeacher");
+        showTeacher.style.display = teacher.checked ? "block" : "none";
+        var course = document.getElementById("course");
+        var showCourse = document.getElementById("showCourse");
+        showCourse.style.display = course.checked ? "block" : "none";
+        var room = document.getElementById("room");
+        var showRoom = document.getElementById("showRoom");
+        showRoom.style.display = room.checked ? "block" : "none";
+    }
+</script>
+
 </head>
 <body>
     <div class="wrap">
