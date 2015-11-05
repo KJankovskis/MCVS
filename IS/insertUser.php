@@ -4,7 +4,7 @@
 $myServer = 'localhost';
 $myDB = 'mcvs_db'; # Norādiet savu datu bāzi
 $myUser = 'root';  # Norādiet savu datu bāzes lietotājvārdu
-$myPass = '';  # Norādiet savu lietotājvārdu
+$myPass = 'janisk';  # Norādiet savu lietotājvārdu
 # ja nevaram pievienoties - rakstam kļūdu paziņojumus
 $d = mysqli_connect($myServer,$myUser,$myPass,$myDB) or die('Nevaru pievienoties datubāzei');
  mysqli_set_charset($d, 'utf8');
@@ -26,7 +26,7 @@ $parole = $_REQUEST["parole"];
 $loma = $_REQUEST["lietotajaLoma"];
 
 
-    $sql_query=" INSERT INTO persona(vards, uzvards, epasts, talrunis, personasKods, dzivesAdrese, 
+    $sql_query=" INSERT INTO Persona(vards, uzvards, epasts, talrunis, personasKods, dzivesAdrese, 
                                     dzivesPilseta, darbaAdrese, darbaPilseta, foto, lietotajaLoma, lietotajvards, parole) 
                 VALUES('$vards','$uzvards','$epasts', '$talrunis', '$persKods', '$dzivesAdrese', '$dzivesPilseta'
                         , '$darbaAdrese', '$darbaPilseta','$foto' ,'$loma', '$lietotajvards', '$parole');";

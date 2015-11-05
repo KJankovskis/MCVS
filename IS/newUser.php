@@ -7,20 +7,9 @@
     $myServer = 'localhost';
     $myDB = 'mcvs_db'; # Norādiet savu datu bāzi
     $myUser = 'root';  # Norādiet savu datu bāzes lietotājvārdu
-    $myPass = '';  # Norādiet savu lietotājvārdu
+    $myPass = 'janisk';  # Norādiet savu lietotājvārdu
     # ja nevaram pievienoties - rakstam kļūdu paziņojumus
     $d = mysqli_connect($myServer,$myUser,$myPass,$myDB) or die('Nevaru pievienoties datubāzei');
-//    $sql_query="SELECT MAX(idDalibnieks) FROM dalibnieks";
-//    $result=mysqli_query($d,$sql_query);
-//    $sql_query="SELECT idSporta_veids,Veids_Nosaukums FROM sporta_veids";
-//    $sporta_veids=mysqli_query($d,$sql_query);
-//    if (mysqli_num_rows($result)<1) {
-//    print "</br>datu nav</br>";
-//    }
-//
- //   print "<table>" ;
-//    $rinda = mysqli_fetch_row($result);
-//    $rinda[0]=$rinda[0]+1;
     ?>
 
     <div class="middleUser">

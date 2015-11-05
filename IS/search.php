@@ -4,7 +4,7 @@
 $myServer = 'localhost';
 $myDB = 'mcvs_db'; # Norādiet savu datu bāzi
 $myUser = 'root';  # Norādiet savu datu bāzes lietotājvārdu
-$myPass = '';  # Norādiet savu lietotājvārdu
+$myPass = 'janisk';  # Norādiet savu lietotājvārdu
 # ja nevaram pievienoties - rakstam kļūdu paziņojumus
 $d = mysqli_connect($myServer,$myUser,$myPass,$myDB) or die('Nevaru pievienoties datubāzei');
  mysqli_set_charset($d, 'utf8');
