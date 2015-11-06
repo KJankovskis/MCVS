@@ -1,5 +1,68 @@
 /*  *** reset *** */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100.01%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}textarea{overflow:auto}input{border:0px solid white;margin:0;padding:0}a:focus{outline:none}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,
+dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,
+sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,
+label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100.01%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+focus {
+    outline: 0;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+blockquote,q {
+	quotes: none;
+}
+
+blockquote: before, blockquote: after, q:before, q:after {
+	content: "";
+	content: none;
+}
+
+textarea {
+	overflow: auto;
+}
+
+input {
+	border: 0px solid white;
+	margin: 0;
+	padding: 0;
+}
+
+a:focus {
+	outline:none;
+}
 
 
 #main {
@@ -7,13 +70,19 @@ width:960px;
 margin:50px auto;
 font-family:Verdana, Geneva, sans-serif;
 }
+
+
 span {
 color:red;
 }
+
+
 h1{
 text-align: center;
 font-size: 18px;
 }
+
+
 h2 {
 background-color:#FEFFED;
 text-align:center;
@@ -21,12 +90,16 @@ border-radius:10px 10px 0 0;
 margin:-10px -40px;
 padding:15px;
 }
+
+
 hr {
 border:0;
 border-bottom:1px solid #ccc;
 margin:10px -40px;
 margin-bottom:30px;
 }
+
+
 #login {
 width:300px;
 border-radius:10px;
@@ -36,6 +109,8 @@ padding:10px 40px 25px;
 margin: auto;
 margin-top:  20px;
 }
+
+
 input[type=text],input[type=password] {
 width:200px;
 padding:10px;
@@ -45,6 +120,8 @@ padding-left:5px;
 font-size:16px;
 font-family:Verdana, Geneva, sans-serif;
 }
+
+
 input[type=submit] {
 width:300px;
 background-color:#FFBC00;
@@ -57,7 +134,7 @@ border-radius:5px;
     margin-top: 10px;
 margin-bottom:8px;
 }
-/*********PROFILA LAPAAAAAAAA*********/
+/*********PROFILA LAPA*********/
 .wrap {
     position:relative;
 	width:990px;
@@ -117,3 +194,343 @@ color:#6495ed;
 }
 
 
+
+/************************************************************
+******************** StyleForMain.css ***********************
+************************************************************/
+
+
+
+/*********CONETNT*********/
+.content {
+    width:auto;
+    position:relative;
+    background-color: #DCE6F7;
+    font-family:"Times New Roman", Times, serif;;
+    height: 200px;
+    border:1px solid grey;
+}
+.content-left{
+    position: relative;
+    margin-top: 10px;
+	margin-left: 10px;
+    height: 180px;
+    float: left;
+    width: 550px;
+}
+.newUser{
+    width:400px;
+    height: 45px;
+    background-color:#FFBC00;
+    color:#fff;
+    border:2px solid #FFCB00;
+    padding:10px;
+    font-size:20px;
+    cursor:pointer;
+    border-radius:15px;
+    margin-top: 10px;
+    margin-left: 75px;   
+    text-align: center;
+}
+.newCourse{
+    width:400px;
+    height: 45px;
+    background-color:#FFBC00;
+    color:#fff;
+    border:2px solid #FFCB00;
+    padding:10px;
+    font-size:20px;
+    cursor:pointer;
+    border-radius:15px;
+    margin-top: 10px;
+    margin-left: 75px; 
+    text-align: center;
+}
+.newRoom{
+    width:400px;
+    height: 45px;
+    background-color:#FFBC00;
+    color:#fff;
+    border:2px solid #FFCB00;
+    padding:10px;
+    font-size:20px;
+    cursor:pointer;
+    border-radius:15px;
+    margin-top: 10px;
+    margin-left: 75px; 
+    text-align: center;
+}
+.content-right{
+    position: relative;
+    margin-top: 10px;
+	margin-right: 10px;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 180px;
+    float: right;
+    width: 410px;
+}
+.groups{
+    width:170px;
+    height: 100px;
+    background-color:#FF5326;
+    color:#fff;
+    border:2px solid #FF5326;
+    padding: 10px;
+    font-size:20px;
+    cursor:pointer;
+    border-radius:15px;
+    margin-top: 30px;
+    margin-left: 115px;  
+    text-align: center;
+}
+.newGroup{
+    width:400px;
+    height: 45px;
+    background-color:#FFBC00;
+    color:#fff;
+    border:2px solid #FFCB00;
+    padding:10px;
+    font-size:20px;
+    cursor:pointer;
+    border-radius:15px;
+    margin-top: 10px;
+    margin-left: 75px;   
+    text-align: center;
+}
+.searchArray{
+    width:auto;
+    position:relative;
+    background-color: #DCE6F7;
+    height: 150px;
+    border:1px solid grey; 
+}
+.search-left{
+    position: relative;
+    margin-top: 10px;
+	margin-left: 10px;
+    height: 130px;
+    background-color: aqua;
+    float: left;
+    width: 550px;
+}
+.search-right{
+    position: relative;
+    margin-top: 10px;
+	margin-right: 10px;
+    height: 130px;
+    /*background-color: aqua;*/
+    float: right;
+    width: 410px;
+}
+form {
+    width:500px;
+    margin:50px auto;
+}
+.search {
+    padding:8px 15px;
+    background:rgba(50, 50, 50, 0.2);
+    border:0px solid #dbdbdb;
+}
+.button {
+    position:relative;
+    padding:6px 15px;
+    left:-8px;
+    border:2px solid #207cca;
+    background-color:#207cca;
+    color:#fafafa;
+}
+.button:hover  {
+    background-color:#fafafa;
+    color:#207cca;
+}
+.founded{
+    width:auto;
+    position:relative;
+    background-color: #DCE6F7;
+    height: 250px;
+    border:1px solid grey; 
+}
+
+
+
+/*******************CONTENT_TOP******************/
+
+.content-top{
+    display: none;
+    opacity: 0;
+    position:absolute;
+    top: -700px;
+    left:70px;
+    width: 700px;
+    height: 500px;
+    background-color: black;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    z-index: 99;
+}
+
+
+
+/************************************************************
+******************** StyleForNews.css ***********************
+************************************************************/
+
+
+
+
+.middleUser{
+    width:auto;
+    position:relative;
+    background-color: #DCE6F7;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 1100px;
+    border:1px solid grey;
+}
+.middleCourse{
+    width:auto;
+    position:relative;
+    background-color: #DCE6F7;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 700px;
+    border:1px solid grey; 
+}
+.middleRoom{
+    width:auto;
+    position:relative;
+    background-color: #DCE6F7;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 520px;
+    border:1px solid grey; 
+}
+.topic{
+    width:auto;
+    position:relative;
+    background-color: #DCE6F7;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 50px;
+    border:1px solid grey; 
+}
+.topic p{
+    text-align: left;
+    padding-top: 15px;
+    padding-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.forTextFields{
+    width:450px;
+    position:relative;
+    background-color: #DCE6F7;
+    float: left;
+    margin-top: -20px;
+    margin-left: -170px;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 1000px;
+}
+
+.saveButton{
+    width:auto;
+    position:relative;
+    margin-left: 200px;
+    float: right;
+}
+.forTextFields label{
+    display: block;
+}
+
+.itemsCourse{
+    width:450px;
+    position:relative;
+/*    background-color: #DCE6F7;*/
+    float: left;
+    margin-top: -20px;
+    margin-left: -170px;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 600px;
+}
+.itemsRoom{
+    width:450px;
+    position:relative;
+/*    background-color: #DCE6F7;*/
+    float: left;
+    margin-top: -20px;
+    margin-left: -170px;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 410px;
+}
+.itemsCourse label{
+    display: block;
+}
+.itemsRoom label{
+    display: block;
+}
+
+
+
+/************************************************************
+******************* StyleForProfile.css *********************
+************************************************************/
+
+
+
+
+.name-surname{
+    width:auto;
+    position:relative;
+    background-color: #DCE6F7;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 50px;
+    border:1px solid grey;
+}
+.name-surname p{
+    text-align: left;
+    padding-top: 15px;
+    padding-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.person {
+    width:auto;
+    background-color: #DCE6F7;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 250px;
+    border:1px solid grey;
+    
+}
+.person p{
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 15px;
+    font-size: 17px;
+}
+.profilePicture{
+    width:200px;
+    height: 230px;
+    position:relative;
+    float:right;
+    margin-top: 10px;
+    margin-right: 70px; 
+}
+.noslogojums{
+    width:auto;
+    position:relative;
+    background-color: #DCE6F7;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 30px;
+    border:1px solid grey;
+}
+.noslogojums p{
+    text-align: left;
+    padding-top: 7px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: bold;     
+}
+.about{
+    width:auto;
+    position:relative;
+    background-color: #DCE6F7;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 200px;
+    border:1px solid grey;
+}

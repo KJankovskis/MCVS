@@ -9,7 +9,7 @@
             </div>
             <div class="content-right">
                 <div class="groups">
-                    <p>MĀCĪBU<br><br> GRUPU<br><br> PLĀNOŠANA</p>
+                    <input class="newGroup" name="newGroup" type="button" value="MĀCĪBU GRUPAS PLĀNOŠANA" onclick="window.open('groupPlanning.php', '_self')"/>
                 </div>
             </div>
         </div> 
