@@ -4,34 +4,36 @@
 <title>Your Home Page</title>
 <meta charset="utf-8">
 <link href="style.css" rel="stylesheet" type="text/css">
-<link href="styleForMain.css" rel="stylesheet" type="text/css">
-<link href="styleForProfile.css" rel="stylesheet" type="text/css">
-<link href="styleForNews.css" rel="stylesheet" type="text/css">
+<link href="styleForGroupPlanning.css" rel="stylesheet" type="text/css">
+
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
 <script> 
-$(function(){
-  $("#header").load("header.php"); 
-  $("#footer").load("footer.php"); 
-});
+    $(function(){
+        $("#header").load("header.php"); 
+        $("#footer").load("footer.php"); 
+    });
 </script>
     
 <script>
-$(document).ready(function(){   
-    $(".close-down").click(function(){
-        $(".content-top").delay(100).show().animate({opacity: 0, top:"-130px"},1000);
+    $(document).ready(function(){   
+        $(".close-down").click(function(){
+            $(".content-top").delay(100).show().animate({opacity: 0, top:"-130px"},1000);
+        });
         
+        $(".close-up").click(function(){
+            $(".content-top").delay(100).show().animate({opacity: 0, top:"-130px"},1000);
+        });
+        
+        $( ".show" ).click(function() {
+            function slide(){
+                $(".content-top").delay(100).show().animate({opacity: 1, top:"60px"},1000);
+            }
+            slide();
+        });
     });
-    $(".close-up").click(function(){
-        $(".content-top").delay(100).show().animate({opacity: 0, top:"-130px"},1000);
-    });
-    $( ".show" ).click(function() {
-        function slide(){
-            $(".content-top").delay(100).show().animate({opacity: 1, top:"60px"},1000);
-        }
-        slide();
-    });
-});
 </script>
+    
 <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     
 <script type="text/javascript">

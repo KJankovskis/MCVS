@@ -1,5 +1,27 @@
 <?php
     include('header.php');
+
+    $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
+    $resultSet  =$mysqli->query("SELECT * FROM Kurss");
+        if($resultSet -> num_rows != 0) {
+            $i = 0;
+            while($rows = $resultSet -> fetch_assoc()) {
+                
+                $name = $rows['kKursaNosaukums'];
+
+                $kursiArray = array (
+                    $kursiArray[i] = $name;
+                )
+                    
+                $i++;
+            }
+        }
+?>
+
+<?php 
+    foreach($kursiArray as $value) {
+        $kursi = $kursi + $value;
+    }
 ?>
 
 <div class="topic">
@@ -12,6 +34,7 @@
                 <label id="gpCourseLabel">Izvēlieties mācību kursu:</label>
             </td>
             <td width="40%">
+                <label><?php echo $kursi ?></label>
                 <select id="gpCourseList" style="width: 300px; height: 30px">
                     <option value="000"></option>
                     <option value="001">Projektu vadība</option>
@@ -30,8 +53,8 @@
             <td width="40%">
                 <select id="gpTeacherList" style="width: 300px; height: 30px">
                     <option value="000"></option>
-                    <option value="001">Jānis Zariņš></option>
-                    <option value="002">Indulis Celms></option>
+                    <option value="001">Jānis Zariņš</option>
+                    <option value="002">Indulis Celms</option>
                 </select>
             </td>
             <td width="20%">
@@ -41,7 +64,7 @@
         
         <tr>
             <td width="40%">
-                <label id="gpRoomInfo" style="height: 30px">Izvēlieties auditoriju:</label>
+                <label id="gpRoomInfo" style="height: 30px; width: 300px">Izvēlieties auditoriju:</label>
             </td>
             <td width="40%">
                 <select id="gpRoomList" style="height: 30px">
@@ -60,7 +83,7 @@
                 <label id="gpRoomLabel">Ievadiet sākuma un beigu datumus:</label>
             </td>
             <td width="40%">
-                <input type="date" id="gpDateFrom" style="height: 30px; width: 125px; border: 1px solid black"> - <input type="date" id="gpDateTo" style="height: 30px; width: 125px; border: 1px solid black">
+                <input type="date" id="gpDateFrom" style="height: 30px; width: 140px; border: 1px solid grey"> - <input type="date" id="gpDateTo" style="height: 30px; width: 140x; border: 1px solid grey">
             </td>
             <td width="20%">
                 
@@ -72,7 +95,7 @@
                 <label id="gpStudentLabel">Pievienojiet studentus:</label>
             </td>
             <td width="40%">
-                <input type="text" id="gpStudentName" placeholder="Studenta vārds" style="height: 20px; width: 300px">
+                <input type="text" id="gpStudentName" placeholder="Studenta vārds" style="height: 20px; width: 280px">
             </td>
             <td rowspan="3" width="20%" style="vertical-align: middle">
                 <input type="submit" id="gpStudentSearchButton" value="Meklēt">
@@ -81,25 +104,25 @@
         
         <tr>
             <td width="40%">
-                <input type="text" id="gpStudentSurname" placeholder="Studenta uzvārds" style="height: 20px; width: 300px">
+                <input type="text" id="gpStudentSurname" placeholder="Studenta uzvārds" style="height: 20px; width: 280px">
             </td>
         </tr>
         
         <tr>
             <td width="40%">
-                <input type="text" id="gpStudentID" placeholder="Studenta personas kods" style="height: 20px; width: 300px">
+                <input type="text" id="gpStudentID" placeholder="Studenta personas kods" style="height: 20px; width: 280px">
             </td>
         </tr>
     </table>
-    <br>
-    <div class="gpContenResults">
+    <br><br><br>
+    <div class="gpContentResults">
         <label id="gpCourseResultLabel" style="height: 30px; width: 300px">Izvēlētais kurss:</label>
         <label id="gpCourseResultInfo" style="height: 30px; width: 300px">Projektu vadība</label>
         <br>
         <label id="gpTeacherResultLabel" style="height: 30px; width: 300px">Izvēlētais pasniedzējs:</label>
         <label id="gpTeacherResultInfo" style="height: 30px; width: 300px">Arnis Strautiņš</label>
     </div>
-    <br>
+    <br><br><br>
     <center><input type="submit" id="gpCreateButton" value="IZVEIDOT MĀCĪBU GRUPU"></center>
     <br>
 </div> 
