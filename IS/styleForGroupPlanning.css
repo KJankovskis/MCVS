@@ -16,7 +16,12 @@
 
 .gpContentRight {
     position: relative;
-    float: left;
+    float: right;
     width: 500px;
     height: auto;
+}
+
+#gpCourseButton, #gpTeacherButton, #gpRoomButton, #gpStudentSearchButton {
+    height: 30px;
+    width: 125px;
 }
