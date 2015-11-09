@@ -3,12 +3,10 @@
 
     $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
     $resultSet  =$mysqli->query("SELECT * FROM Kurss");
+    $kursi = "";
         if($resultSet -> num_rows != 0) {
-            //$i = 0;
             while($rows = $resultSet -> fetch_assoc()) {
-                
-                $kurss = $rows['kKursaNosaukums'];
-                //$kursi = $kursi + $kurss + " ";
+                $kursi = $kursi + "" + $rows['kKursaNosaukums'] + ",";
             }
         }
 ?>
@@ -23,7 +21,7 @@
     <table>
         <tr>
             <td width="40%">
-                <label id="gpCourseLabel"> Izvēlieties mācību kursu:</label>
+                <label id="gpCourseLabel">Izvēlieties mācību kursu:</label>
             </td>
             <td width="40%">
                 <select id="gpCourseList">
@@ -39,7 +37,7 @@
         
         <tr>
             <td width="40%">
-                <label id="gpTeacherLabel"> Izvēlieties pasniedzēju:</label>
+                <label id="gpTeacherLabel">Izvēlieties pasniedzēju:</label>
             </td>
             <td width="40%">
                 <select id="gpTeacherList">
@@ -55,7 +53,7 @@
         
         <tr>
             <td width="40%">
-                <label id="gpRoomInfo"> Izvēlieties auditoriju:</label>
+                <label id="gpRoomLabel">Izvēlieties auditoriju:</label>
             </td>
             <td width="40%">
                 <select id="gpRoomList">
@@ -71,7 +69,7 @@
         
         <tr>
             <td width="40%">
-                <label id="gpRoomLabel"> Ievadiet sākuma un beigu datumus:</label>
+                <label id="gpDateLabel">Ievadiet sākuma un beigu datumus:</label>
             </td>
             <td width="40%">
                 <input type="date" id="gpDateFrom"> - <input type="date" id="gpDateTo">
@@ -83,7 +81,7 @@
         
         <tr>
             <td rowspan="3" width="40%" style="vertical-align: middle">
-                <label id="gpStudentLabel"> Pievienojiet studentus:</label>
+                <label id="gpStudentLabel">Pievienojiet studentus:</label>
             </td>
             <td width="40%">
                 <input type="text" id="gpStudentName" placeholder="Studenta vārds">
