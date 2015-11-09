@@ -9,14 +9,9 @@
             while($rows = $resultSet -> fetch_assoc()) {
                 $kurss = $rows['kKursaNosaukums'];
                 
-                try {
-                    $kursiArray = array (
-                        $kursiArray[i] = $kurss;
-                    );
-                } catch (Exception $e) {
-                    echo 'Pirmais izņēmums: ',  $e -> getMessage(), "\n";
-                }
-            }
+                $kursiArray = array (
+                    $kursiArray[i] = $kurss;
+                );
             /*
             try {
                 foreach ($kursiArray as $value) {
@@ -33,7 +28,7 @@
 </div>
 <div class="gpContent">
     <br>
-    <label>Izvade no DB: <?php echo $kursiArray[1]; ?></label>
+    <label>Izvade no DB: </label>
     <br>
     <table>
         <tr>
