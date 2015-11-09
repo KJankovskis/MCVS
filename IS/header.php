@@ -38,12 +38,9 @@
     
 <script type="text/javascript">
     function ShowHideDiv() {
-        var student = document.getElementById("student");
+        var peroson = document.getElementById("peroson");
         var showPerson = document.getElementById("showPerson");
-        showPerson.style.display = student.checked ? "block" : "none";
-        var teacher = document.getElementById("teacher");
-        var showTeacher = document.getElementById("showTeacher");
-        showTeacher.style.display = teacher.checked ? "block" : "none";
+        showPerson.style.display = peroson.checked ? "block" : "none";
         var course = document.getElementById("course");
         var showCourse = document.getElementById("showCourse");
         showCourse.style.display = course.checked ? "block" : "none";

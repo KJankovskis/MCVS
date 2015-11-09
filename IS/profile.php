@@ -20,23 +20,17 @@
             <form action="" method="post">
             <div class="search-left">
                 
-                <label for="student">
-                    <input type="radio" id="student" name="chkPassPort" value="1" onclick="ShowHideDiv()" />
-                    <b>Studnets</b>
+                <label for="peroson">
+                    <input type="radio" id="peroson" name="chkPassPort" value="1" onclick="ShowHideDiv()" />
+                    <b>persona</b>
                 </label>
-                
-                <label for="teacher">
-                    <input type="radio" id="teacher" name="chkPassPort" value="2" onclick="ShowHideDiv()" />
-                    <b>Pasniedzejs</b>
-                </label>
-                
                 <label for="course">
-                    <input type="radio" id="course" name="chkPassPort" value="3" onclick="ShowHideDiv()" />
+                    <input type="radio" id="course" name="chkPassPort" value="2" onclick="ShowHideDiv()" />
                     <b>Kurss</b>
                 </label>
                 
                 <label for="room">
-                    <input type="radio" id="room" name="chkPassPort" value="4" onclick="ShowHideDiv()" />
+                    <input type="radio" id="room" name="chkPassPort" value="3" onclick="ShowHideDiv()" />
                     <b>Auditorija</b>
                 </label>
 <!--____________________________________________________________________-->
@@ -44,12 +38,6 @@
                     Vards: <input type="text" id="name" name="name"/><br>
                     Uzvards:<input type="text" id="surname" name="surname"/><br>
                     Personas kods: <input type="text" id="peronID" name="peronID"/>
-                </div>
-<!--____________________________________________________________________-->                
-                <div id="showTeacher" style="display: none">
-                    Vards: <input type="text"  name="tName"/><br>
-                    Uzvards:<input type="text"  name="tSurname"/><br>
-                    Personas kods: <input type="text" name="tPeronID"/>
                 </div>
  <!--____________________________________________________________________-->               
                 <div id="showCourse" style="display: none">
