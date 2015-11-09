@@ -1,36 +1,11 @@
 <?php
     include('header.php');
-
-    $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
-    $resultSet  =$mysqli->query("SELECT * FROM Kurss");
-        if($resultSet -> num_rows != 0) {
-            $i = 0;
-            
-            while($rows = $resultSet -> fetch_assoc()) {
-                $kurss = $rows['kKursaNosaukums'];
-                
-                $kursiArray = array (
-                    $kursiArray[0] = 1;
-                    $kursiArray[1] = 2;
-                    $kursiArray[2] = 3;
-                );
-            /*
-            try {
-                foreach ($kursiArray as $value) {
-                    $kursi = $kursi + $value + ",";
-                }
-            } catch (Exception $e) {
-                echo 'Otrais izņēmums: ',  $e -> getMessage(), "\n";
-            }*/
-        }
 ?>
 
 <div class="topic">
     <p>Jaunas mācību grupas plānošana</p>
 </div>
 <div class="gpContent">
-    <br>
-    <label>Izvade no DB: </label>
     <br>
     <table>
         <tr>
@@ -39,9 +14,21 @@
             </td>
             <td width="35%">
                 <select id="gpCourseList">
-                    <option value="000"></option>
-                    <option value="001">Projektu vadība</option>
-                    <option value="002">Ievads darbam ar sistēmu</option>
+                    <?php
+                        $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
+                        $resultSet  =$mysqli->query("SELECT * FROM Kurss");
+                        
+                        if($resultSet -> num_rows != 0) {
+                            $i = 0;
+                            $kursiArray = array ();
+            
+                            while($rows = $resultSet -> fetch_assoc()) {
+                                ?>
+                                <option value="<?php $i; ?>"><?php echo $rows['kKursaNosaukums']; ?></option>
+                                <?php
+                            }
+                        }
+                        ?>
                 </select>
             </td>
             <td width="20%">
