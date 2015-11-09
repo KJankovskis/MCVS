@@ -7,6 +7,33 @@
     border:1px solid grey;
 }
 
+
+#gpCourseList, #gpTeacherList, #gpRoomList {
+    width: 300px;
+    height: 30px;
+}
+
+
+#gpCourseButton, #gpTeacherButton, #gpRoomButton, #gpStudentSearchButton {
+    height: 35px;
+    width: 125px;
+    margin: 5px 5px 5px 5px;
+}
+
+
+#gpDateFrom, #gpDateTo {
+    width: 135px;
+    height: 30px;
+    border: 1px solid #A9A9A9;
+}
+
+
+#gpStudentName, #gpStudentSurname, #gpStudentID {
+    width: 280px;
+    height: 20px;
+}
+
+
 .gpContentResults {
     position: relative;
     float: left;
@@ -14,14 +41,18 @@
     width: 600px;
     height: auto;
     background-color: red;
+    margin: 10px 10px 10px 10px;
 }
 
-#gpCourseButton, #gpTeacherButton, #gpRoomButton, #gpStudentSearchButton {
-    height: 30px;
-    width: 125px;
+
+#gpCourseResultInfo, #gpTeacherResultInfo {
+    left: 300px;
+    line-height: 150%;
 }
+
 
 #gpCreateButton {
     background-color:#FF5326;
     border:2px solid #FF5326;
+    margin: 5px 5px 5px 5px;
 }
