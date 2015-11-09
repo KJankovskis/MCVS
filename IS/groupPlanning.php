@@ -113,7 +113,7 @@
         <label id="gpTeacherResultInfo">Arnis Strautiņš</label>
     </div>
     <br><br><br>
-    <center><input type="submit" id="gpCreateButton" value="IZVEIDOT MĀCĪBU GRUPU"></center>
+    <input type="submit" id="gpCreateButton" value="IZVEIDOT MĀCĪBU GRUPU">
     <br>
 </div> 
 
