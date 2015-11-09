@@ -17,14 +17,14 @@
                     echo 'Pirmais izņēmums: ',  $e -> getMessage(), "\n";
                 }
             }
-            
+            /*
             try {
                 foreach ($kursiArray as $value) {
                     $kursi = $kursi + $value + ",";
                 }
             } catch (Exception $e) {
                 echo 'Otrais izņēmums: ',  $e -> getMessage(), "\n";
-            }
+            }*/
         }
 ?>
 
@@ -33,7 +33,7 @@
 </div>
 <div class="gpContent">
     <br>
-    <label>Izvade no DB: <?php echo $kursi ?></label>
+    <label>Izvade no DB: <?php echo $kursiArray[1]; ?></label>
     <br>
     <table>
         <tr>
