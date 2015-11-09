@@ -7,21 +7,22 @@
     border:1px solid grey;
 }
 
-.gpContentLeft {
+.gpContentResults {
     position: relative;
     float: left;
-    width: 300px;
+    left: 200px;
+    width: 600px;
     height: auto;
-}
-
-.gpContentRight {
-    position: relative;
-    float: right;
-    width: 500px;
-    height: auto;
+    background-color: red;
 }
 
 #gpCourseButton, #gpTeacherButton, #gpRoomButton, #gpStudentSearchButton {
     height: 30px;
     width: 125px;
 }
+
+#gpCreateButton {
+    background-color:#FF5326;
+    border:2px solid #FF5326;
+}
+    

@@ -60,7 +60,7 @@
                 <label id="gpRoomLabel">Ievadiet sākuma un beigu datumus:</label>
             </td>
             <td width="40%">
-                <input type="date" id="gpDateFrom" style="height: 30px; width: 125px"> - <input type="date" id="gpDateTo" style="height: 30px; width: 125px">
+                <input type="date" id="gpDateFrom" style="height: 30px; width: 125px; border: 1px solid black"> - <input type="date" id="gpDateTo" style="height: 30px; width: 125px; border: 1px solid black">
             </td>
             <td width="20%">
                 
@@ -68,41 +68,40 @@
         </tr>
         
         <tr>
-            <td rowspan="3" width="40%">
+            <td rowspan="3" width="40%" style="vertical-align: middle">
                 <label id="gpStudentLabel">Pievienojiet studentus:</label>
             </td>
             <td width="40%">
-                <input type="text" id="gpStudentName" placeholder="Studenta vārds" style="height: 30px; width: 300px">
+                <input type="text" id="gpStudentName" placeholder="Studenta vārds" style="height: 20px; width: 300px">
             </td>
-            <td rowspan="3" width="20%">
+            <td rowspan="3" width="20%" style="vertical-align: middle">
                 <input type="submit" id="gpStudentSearchButton" value="Meklēt">
             </td>
         </tr>
         
         <tr>
             <td width="40%">
-                <input type="text" id="gpStudentSurname" placeholder="Studenta uzvārds" style="height: 30px; width: 300px">
+                <input type="text" id="gpStudentSurname" placeholder="Studenta uzvārds" style="height: 20px; width: 300px">
             </td>
         </tr>
         
         <tr>
             <td width="40%">
-                <input type="text" id="gpStudentID" placeholder="Studenta personas kods" style="height: 30px; width: 300px">
+                <input type="text" id="gpStudentID" placeholder="Studenta personas kods" style="height: 20px; width: 300px">
             </td>
         </tr>
     </table>
     <br>
-    <div class="gpContentLeft">
-        <label id="gpCourseResultLabel" style="height: 30px">Izvēlētais kurss:</label>
-        <label id="gpTeacherResultLabel" style="height: 30px">Izvēlētais pasniedzējs:</label>
-    </div>
-    <div class="gpContentRight">
-        <label id="gpCourseResultInfo" style="height: 30px">Projektu vadība</label>
-        <label id="gpTeacherResultInfo" style="height: 30px">Arnis Strautiņš</label>
+    <div class="gpContenResults">
+        <label id="gpCourseResultLabel" style="height: 30px; width: 300px">Izvēlētais kurss:</label>
+        <label id="gpCourseResultInfo" style="height: 30px; width: 300px">Projektu vadība</label>
+        <br>
+        <label id="gpTeacherResultLabel" style="height: 30px; width: 300px">Izvēlētais pasniedzējs:</label>
+        <label id="gpTeacherResultInfo" style="height: 30px; width: 300px">Arnis Strautiņš</label>
     </div>
     <br>
     <center><input type="submit" id="gpCreateButton" value="IZVEIDOT MĀCĪBU GRUPU"></center>
     <br>
 </div> 
 
-<?php include('footer.php'); ?>    
+<?php include('footer.php'); ?> 
