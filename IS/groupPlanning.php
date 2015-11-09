@@ -7,21 +7,10 @@
             $i = 0;
             while($rows = $resultSet -> fetch_assoc()) {
                 
-                $name = $rows['kKursaNosaukums'];
-
-                $kursiArray = array (
-                    $kursiArray[i] = $name;
-                )
-                    
-                $i++;
+                $kurss = $rows['kKursaNosaukums'];
+                $kursi = $kursi + $kurss + " ";
             }
         }
-?>
-
-<?php 
-    foreach($kursiArray as $value) {
-        $kursi = $kursi + $value;
-    }
 ?>
 
 <div class="topic">
