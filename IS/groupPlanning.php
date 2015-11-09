@@ -3,10 +3,27 @@
 
     $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
     $resultSet  =$mysqli->query("SELECT * FROM Kurss");
-    $kursi = "";
         if($resultSet -> num_rows != 0) {
+            $i = 0;
+            
             while($rows = $resultSet -> fetch_assoc()) {
-                $kursi = $kursi + "" + $rows['kKursaNosaukums'] + ",";
+                $kurss = $rows['kKursaNosaukums'];
+                
+                try {
+                    $kursiArray = array (
+                        $kursiArray[i] = $kurss;
+                    );
+                } catch (Exception $e) {
+                    echo 'Pirmais izņēmums: ',  $e -> getMessage(), "\n";
+                }
+            }
+            
+            try {
+                foreach ($kursiArray as $value) {
+                    $kursi = $kursi + $value + ",";
+                }
+            } catch (Exception $e) {
+                echo 'Otrais izņēmums: ',  $e -> getMessage(), "\n";
             }
         }
 ?>
@@ -16,14 +33,14 @@
 </div>
 <div class="gpContent">
     <br>
-    <label>Izvade no DB: <?php echo $kurss ?></label>
+    <label>Izvade no DB: <?php echo $kursi ?></label>
     <br>
     <table>
         <tr>
-            <td width="40%">
+            <td width="45%">
                 <label id="gpCourseLabel">Izvēlieties mācību kursu:</label>
             </td>
-            <td width="40%">
+            <td width="35%">
                 <select id="gpCourseList">
                     <option value="000"></option>
                     <option value="001">Projektu vadība</option>
@@ -36,10 +53,10 @@
         </tr>
         
         <tr>
-            <td width="40%">
+            <td width="45%">
                 <label id="gpTeacherLabel">Izvēlieties pasniedzēju:</label>
             </td>
-            <td width="40%">
+            <td width="35%">
                 <select id="gpTeacherList">
                     <option value="000"></option>
                     <option value="001">Jānis Zariņš</option>
@@ -52,10 +69,10 @@
         </tr>
         
         <tr>
-            <td width="40%">
+            <td width="45%">
                 <label id="gpRoomLabel">Izvēlieties auditoriju:</label>
             </td>
-            <td width="40%">
+            <td width="35%">
                 <select id="gpRoomList">
                     <option value="000"></option>
                     <option value="001">Liepāja, Dzintaru iela 1, 34. auditorija</option>
@@ -68,10 +85,10 @@
         </tr>
         
         <tr>
-            <td width="40%">
+            <td width="45%">
                 <label id="gpDateLabel">Ievadiet sākuma un beigu datumus:</label>
             </td>
-            <td width="40%">
+            <td width="35%">
                 <input type="date" id="gpDateFrom"> - <input type="date" id="gpDateTo">
             </td>
             <td width="20%">
@@ -80,7 +97,7 @@
         </tr>
         
         <tr>
-            <td rowspan="3" width="40%" style="vertical-align: middle">
+            <td rowspan="3" width="45%" style="vertical-align: middle">
                 <label id="gpStudentLabel">Pievienojiet studentus:</label>
             </td>
             <td width="40%">
@@ -92,13 +109,13 @@
         </tr>
         
         <tr>
-            <td width="40%">
+            <td width="35%">
                 <input type="text" id="gpStudentSurname" placeholder="Studenta uzvārds">
             </td>
         </tr>
         
         <tr>
-            <td width="40%">
+            <td width="35%">
                 <input type="text" id="gpStudentID" placeholder="Studenta personas kods">
             </td>
         </tr>

@@ -7,9 +7,17 @@
     border:1px solid grey;
 }
 
+
 #gpCourseLabel, #gpTeacherLabel, #gpRoomLabel, #gpDateLabel, #gpStudentLabel {
     margin-left: 5px;
 }
+
+
+#gpRoomLabel {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 
 #gpCourseList, #gpTeacherList, #gpRoomList {
     width: 300px;
@@ -21,13 +29,16 @@
     height: 35px;
     width: 125px;
     padding: 5px 5px 5px 5px;
+    margin-left: 50px;
 }
 
 
 #gpDateFrom, #gpDateTo {
-    width: 137px;
+    width: 138px;
     height: 30px;
     border: 1px solid #A9A9A9;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
@@ -49,7 +60,9 @@
 
 
 #gpCourseResultInfo, #gpTeacherResultInfo {
-    margin-left: 300px;
+    position: relative;
+    float: left;
+    left: 300px;
     line-height: 150%;
 }
 
@@ -57,5 +70,5 @@
 #gpCreateButton {
     background-color:#FF5326;
     border:2px solid #FF5326;
-    padding: px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
 }
