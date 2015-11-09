@@ -301,26 +301,27 @@ color:#6495ed;
     width:auto;
     position:relative;
     background-color: #DCE6F7;
-    height: 150px;
+    height: 200px;
     border:1px solid grey; 
 }
 .search-left{
-    position: relative;
-    margin-top: 10px;
-	margin-left: 10px;
-    height: 130px;
-    background-color: aqua;
+    position: absolute;
+    margin-top: -40px;
+	margin-left: -220px;
+    height: 170px;
+/*    background-color: aqua;*/
     float: left;
     width: 550px;
 }
 .search-right{
     position: relative;
-    margin-top: 10px;
-	margin-right: 10px;
-    height: 130px;
-    /*background-color: aqua;*/
     float: right;
-    width: 410px;
+    margin-top: 75px;
+	margin-right: -170px;
+    height: 70px;
+/*    background-color: black;*/
+    
+    width: 300px;
 }
 form {
     width:500px;
@@ -349,6 +350,7 @@ form {
     background-color: #DCE6F7;
     height: 250px;
     border:1px solid grey; 
+    overflow-y: scroll;
 }
 
 
