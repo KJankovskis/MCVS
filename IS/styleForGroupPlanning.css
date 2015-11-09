@@ -53,9 +53,17 @@
     left: 200px;
     width: 600px;
     height: auto;
-    background-color: green;
+    background-color: blanchedalmond;
     padding: 10px 10px 10px 10px;
     line-height: 150%;
+}
+
+
+.gbCreateButtonClass {
+    position: relative;
+    float: left;
+    width: auto;
+    height: 75px;
 }
 
 
@@ -63,5 +71,4 @@
     background-color:#FF5326;
     border:2px solid #FF5326;
     padding: 5px 5px 5px 5px;
-    align-items: center;
 }

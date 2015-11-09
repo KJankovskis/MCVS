@@ -7,6 +7,7 @@
 </div>
 <div class="gpContent">
     <br>
+    <form action="http://84.237.231.90/MCVS/IS/groupPlanning.php" method="post">
     <table>
         <tr>
             <td width="45%">
@@ -14,6 +15,7 @@
             </td>
             <td width="35%">
                 <select id="gpCourseList">
+                    <option value="null"></option>
                     <?php
                         $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
                         $resultSet  =$mysqli->query("SELECT * FROM Kurss");
@@ -21,7 +23,7 @@
                         if($resultSet -> num_rows != 0) {
                             $i = 0;
                             $kursiArray = array ();
-            
+                
                             while($rows = $resultSet -> fetch_assoc()) {
                                 ?>
                                 <option value="<?php $i; ?>"><?php echo $rows['kKursaNosaukums']; ?></option>
@@ -32,7 +34,7 @@
                 </select>
             </td>
             <td width="20%">
-                <input type="submit" id="gpCourseButton" value="Pievienot">
+                <input type="submit" id="gpCourseButton" value="Apstiprināt">
             </td>
         </tr>
         
@@ -48,7 +50,7 @@
                 </select>
             </td>
             <td width="20%">
-                <input type="submit" id="gpTeacherButton" value="Pievienot">
+                <input type="submit" id="gpTeacherButton" value="Apstiprināt">
             </td>
         </tr>
         
@@ -64,7 +66,7 @@
                 </select>
             </td>
             <td width="20%">
-                <input type="submit" id="gpRoomButton" value="Pievienot">
+                <input type="submit" id="gpRoomButton" value="Apstiprināt">
             </td>
         </tr>
         
@@ -112,8 +114,10 @@
         <label id="gpTeacherResultLabel" >Izvēlētais pasniedzējs:</label>
         <label id="gpTeacherResultInfo">Arnis Strautiņš</label>
     </div>
-    <br><br><br>
-    <input type="submit" id="gpCreateButton" value="IZVEIDOT MĀCĪBU GRUPU">
+    <br>
+    <div class="gbCreateButtonClass">
+        <center><input type="submit" id="gpCreateButton" value="IZVEIDOT MĀCĪBU GRUPU"></center>
+    </div>
     <br>
 </div> 
 
