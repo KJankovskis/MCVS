@@ -10,7 +10,9 @@
                 $kurss = $rows['kKursaNosaukums'];
                 
                 $kursiArray = array (
-                    $kursiArray[i] = $kurss;
+                    $kursiArray[0] = 1;
+                    $kursiArray[1] = 2;
+                    $kursiArray[2] = 3;
                 );
             /*
             try {
