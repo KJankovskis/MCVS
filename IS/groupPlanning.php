@@ -1,6 +1,11 @@
 <?php
     include('header.php');
+
+    $selectedCourse = "";
+    $selectedTeacher = "";
+    $selectedRoom = "";
 ?>
+
 
 <div class="topic">
     <p>Jaunas mācību grupas plānošana</p>
@@ -15,7 +20,7 @@
             </td>
             <td width="40%">
                 <select id="gpCourseList" name="gbCourseListName">
-                    <option value="null"></option>
+                    <option value=""></option>
                     <?php
                         $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
                         $resultSet  =$mysqli->query("SELECT * FROM Kurss");
@@ -84,7 +89,7 @@
         
         <tr>
             <td rowspan="3" width="40%" style="vertical-align: middle">
-                <label id="gpStudentLabel">Pievienojiet studentus:</label>
+                <label id="gpStudentLabel">Meklējiet un pievienojiet studentus:</label>
             </td>
             <td width="40%">
                 <input type="text" id="gpStudentName" placeholder="Studenta vārds">
@@ -108,10 +113,18 @@
     </table>
     <br><br><br>
     <label id="gpCourseResultLabel">Izvēlētais kurss:</label>
-    <label id="gpCourseResultInfo">Projektu vadība</label>
+    <label id="gpCourseResultInfo"><b><?php echo $selectedCourse ?></b></label>
     <br>
     <label id="gpTeacherResultLabel" >Izvēlētais pasniedzējs:</label>
-    <label id="gpTeacherResultInfo">Arnis Strautiņš</label>
+    <label id="gpTeacherResultInfo"><b><?php echo $selectedTeacher ?></b></label>
+    <br>
+    <label id="gpTeacherResultLabel" >Izvēlētā auditorija:</label>
+    <label id="gpTeacherResultInfo"><b><?php echo $selectedRoom ?></b></label>
+    <br>
+    <label id="gpStudentResultLabel" >Izvēlētie studenti:</label>
+    <select id="gpStudentResultInfo" name="gpStudentResultInfo">
+        <option></option>
+    </select>
     <br><br><br>
     <center><input type="submit" id="gpCreateButton" value="IZVEIDOT MĀCĪBU GRUPU"></center>
     <br><br>
@@ -119,10 +132,8 @@
 
 <?php
     if (isset($_POST['gpCourseButton'])) {
-        $tests = $_POST['gbCourseListName'];
-
-        echo "Izvēlēts: " . $tests;
+        include('selectTeachersAndRooms.php');                
     }
-?>
 
-<?php include('footer.php'); ?> 
+    include('footer.php'); 
+?>
