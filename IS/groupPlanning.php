@@ -38,11 +38,6 @@
             </td>
         </tr>
         </form>
-        <?php
-            if (isset($_POST['gpCourseButton'])) {
-                include('selectTeachersAndRooms.php');
-            }
-        ?>
         <tr>
             <td width="40%">
                 <label id="gpTeacherLabel">Izvēlieties pasniedzēju:</label>
@@ -120,10 +115,16 @@
         <label id="gpTeacherResultInfo">Arnis Strautiņš</label>
     </div>
     <br>
-    <div class="gbCreateButtonClass">
         <center><input type="submit" id="gpCreateButton" value="IZVEIDOT MĀCĪBU GRUPU"></center>
-    </div>
     <br>
-</div> 
+</div>
+
+<?php
+    if (isset($_POST['gpCourseButton'])) {
+        $tests = $_POST['gbCourseListName'];
+
+        echo "Izvēlēts: " . $tests;
+    }
+?>
 
 <?php include('footer.php'); ?> 
