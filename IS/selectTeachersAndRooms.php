@@ -1,5 +1,7 @@
 <?php
-echo $_POST['gbCourseListName'];
+$tests = $_POST['gbCourseListName'];
+
+echo "Izvēlēts: " . $tests;
 ?>
 
 </body>
