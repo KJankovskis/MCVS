@@ -109,13 +109,13 @@
     </table>
     <br><br><br>
     <label id="gpCourseResultLabel">Izvēlētais kurss:</label>
-    <label id="gpCourseResultInfo"><b><?php echo $selectedCourse ?></b></label>
+    <label id="gpCourseResultInfo"><b><?php echo $selectedCourse; ?></b></label>
     <br>
     <label id="gpTeacherResultLabel" >Izvēlētais pasniedzējs:</label>
-    <label id="gpTeacherResultInfo"><b><?php echo $selectedTeacher ?></b></label>
+    <label id="gpTeacherResultInfo"><b><?php echo $selectedTeacher; ?></b></label>
     <br>
     <label id="gpRoomResultLabel" >Izvēlētā auditorija:</label>
-    <label id="gpTeacherResultInfo"><b><?php echo $selectedRoom ?></b></label>
+    <label id="gpTeacherResultInfo"><b><?php echo $selectedRoom; ?></b></label>
     <br>
     <label id="gpStudentResultLabel" >Izvēlētie studenti:</label>
     <select id="gpStudentResultInfo" name="gpStudentResultInfo">
@@ -131,6 +131,8 @@
         //include('selectTeachersAndRooms.php'); 
                             
         $selectedCourse = $_POST['gbCourseListName'];
+        
+        echo "Izvēlēts: " . $selectedCourse;
     }
 
     include('footer.php'); 
