@@ -7,14 +7,14 @@
 </div>
 <div class="gpContent">
     <br>
-    <table>
+    <table width="100%">
         <form action="http://84.237.231.90/MCVS/IS/groupPlanning.php" method="post">
         <tr>
             <td width="40%">
                 <label id="gpCourseLabel">Izvēlieties mācību kursu:</label>
             </td>
             <td width="40%">
-                <select id="gpCourseList">
+                <select id="gpCourseList" name="gbCourseListName">
                     <option value="null"></option>
                     <?php
                         $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
@@ -120,7 +120,9 @@
         <label id="gpTeacherResultInfo">Arnis Strautiņš</label>
     </div>
     <br>
+    <div class="gbCreateButtonClass">
         <center><input type="submit" id="gpCreateButton" value="IZVEIDOT MĀCĪBU GRUPU"></center>
+    </div>
     <br>
 </div> 
 

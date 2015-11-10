@@ -1,4 +1,6 @@
-<p>IT WORKS! :)</p>
+<?php
+echo $_POST['gbCourseListName'];
+?>
 
 </body>
 </html>
