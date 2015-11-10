@@ -50,10 +50,10 @@
 .gpContentResults {
     position: relative;
     float: left;
-    left: 200px;
+    left: 300px;
     width: 600px;
     height: auto;
-    background-color: green;
+    background-color: antiquewhite;
     padding: 10px 10px 10px 10px;
     line-height: 150%;
 }
