@@ -118,7 +118,7 @@
     <label id="gpTeacherResultLabel" >Izvēlētais pasniedzējs:</label>
     <label id="gpTeacherResultInfo"><b><?php echo $selectedTeacher ?></b></label>
     <br>
-    <label id="gpTeacherResultLabel" >Izvēlētā auditorija:</label>
+    <label id="gpRoomResultLabel" >Izvēlētā auditorija:</label>
     <label id="gpTeacherResultInfo"><b><?php echo $selectedRoom ?></b></label>
     <br>
     <label id="gpStudentResultLabel" >Izvēlētie studenti:</label>
@@ -132,7 +132,9 @@
 
 <?php
     if (isset($_POST['gpCourseButton'])) {
-        include('selectTeachersAndRooms.php');                
+        //include('selectTeachersAndRooms.php'); 
+                            
+        $selectedCourse = $_POST['gbCourseListName'];
     }
 
     include('footer.php'); 
