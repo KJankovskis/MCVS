@@ -1,9 +1,5 @@
 <?php
     include('header.php');
-
-    $selectedCourse = "";
-    $selectedTeacher = "";
-    $selectedRoom = "";
 ?>
 
 
