@@ -26,7 +26,7 @@
                 
                             while($rows = $resultSet -> fetch_assoc()) {
                                 ?>
-                                <option value="<?php $rows['kKursaNosaukums']; ?>"><?php echo $rows['kKursaNosaukums']; ?></option>
+                                <option value="<?php echo $rows['kKursaNosaukums']; ?>"><?php echo $rows['kKursaNosaukums']; ?></option>
                                 <?php
                             }
                         }
@@ -114,7 +114,7 @@
     <label id="gpTeacherResultInfo">Arnis Strautiņš</label>
     <br><br><br>
     <center><input type="submit" id="gpCreateButton" value="IZVEIDOT MĀCĪBU GRUPU"></center>
-    <br><br><br>
+    <br><br>
 </div>
 
 <?php
