@@ -26,7 +26,7 @@
                 
                             while($rows = $resultSet -> fetch_assoc()) {
                                 ?>
-                                <option value="<?php $i; ?>"><?php echo $rows['kKursaNosaukums']; ?></option>
+                                <option value="<?php $rows['kKursaNosaukums']; ?>"><?php echo $rows['kKursaNosaukums']; ?></option>
                                 <?php
                             }
                         }
@@ -107,16 +107,14 @@
         </tr>
     </table>
     <br><br><br>
-    <div class="gpContentResults">
-        <label id="gpCourseResultLabel">Izvēlētais kurss:</label>
-        <label id="gpCourseResultInfo">Projektu vadība</label>
-        <br>
-        <label id="gpTeacherResultLabel" >Izvēlētais pasniedzējs:</label>
-        <label id="gpTeacherResultInfo">Arnis Strautiņš</label>
-    </div>
+    <label id="gpCourseResultLabel">Izvēlētais kurss:</label>
+    <label id="gpCourseResultInfo">Projektu vadība</label>
     <br>
-        <center><input type="submit" id="gpCreateButton" value="IZVEIDOT MĀCĪBU GRUPU"></center>
-    <br>
+    <label id="gpTeacherResultLabel" >Izvēlētais pasniedzējs:</label>
+    <label id="gpTeacherResultInfo">Arnis Strautiņš</label>
+    <br><br><br>
+    <center><input type="submit" id="gpCreateButton" value="IZVEIDOT MĀCĪBU GRUPU"></center>
+    <br><br><br>
 </div>
 
 <?php
