@@ -49,15 +49,6 @@
         showRoom.style.display = room.checked ? "block" : "none";
     }
 </script>
-    
-<script type="text/javascript">
-    function mgAddCourse () {
-        document.getElementById("gpCourseResultInfo").value = "<?php echo $_POST['gbCourseListName']; ?>";
-        
-        document.getElementById("gpCourseList").value = 
-            "<?php echo $_POST['gbCourseListName']; ?>";
-    }
-</script>
 
 </head>
 <body>
