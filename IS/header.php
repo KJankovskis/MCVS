@@ -49,6 +49,16 @@
         showRoom.style.display = room.checked ? "block" : "none";
     }
 </script>
+    
+<script>
+    function mgAddCourse () {
+        alert("Vērtība pirms: " + document.getElementById("gpCourseList").value);
+        
+        document.getElementById("gpCourseResultInfo").value = document.getElementById("gpCourseList").value;
+        
+        alert("Vērtība pēc: " + document.getElementById("gpCourseList").value);
+    }
+</script>
 
 </head>
 <body>

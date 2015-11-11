@@ -21,10 +21,7 @@
                         $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
                         $resultSet  =$mysqli->query("SELECT * FROM Kurss");
                         
-                        if($resultSet -> num_rows != 0) {
-                            $i = 0;
-                            $kursiArray = array ();
-                
+                        if($resultSet -> num_rows != 0) {                
                             while($rows = $resultSet -> fetch_assoc()) {
                                 ?>
                                 <option value="<?php echo $rows['kKursaNosaukums']; ?>"><?php echo $rows['kKursaNosaukums']; ?></option>
@@ -35,7 +32,7 @@
                 </select>
             </td>
             <td width="20%">
-                <input type="submit" id="gpCourseButton" name="gpCourseButton" value="Apstiprināt">
+                <input type="submit" id="gpCourseButton" name="gpCourseButton" value="Apstiprināt" onclick="return mgAddCourse();">
             </td>
         </tr>
         </form>
@@ -44,10 +41,41 @@
                 <label id="gpTeacherLabel">Izvēlieties pasniedzēju:</label>
             </td>
             <td width="40%">
-                <select id="gpTeacherList">
-                    <option value="000"></option>
-                    <option value="001">Jānis Zariņš</option>
-                    <option value="002">Indulis Celms</option>
+                <select id="gpTeacherList" name="gbTeacherListName">
+                    <option value=""></option>
+                    <?php
+/*                    
+if (isset($_POST['gpCourseButton'])) {
+        //include('selectTeachersAndRooms.php'); 
+                            
+        $selectedCourse = $_POST['gbCourseListName'];
+        
+        
+        $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
+        
+        $resultSet1 = $mysqli->query("SELECT idKurss FROM Kurss WHERE kKursaNosaukums='$selectedCourse'");
+        
+        if($resultSet1->num_rows !=0){
+            while($rows = $resultSet1->fetch_assoc()){
+                $selectedCourseId = $rows['idKurss'];
+            }
+        }
+            
+        $resultSet2 = $mysqli->query("SELECT Persona.vards, Persona.uzvards FROM Persona
+LEFT JOIN Persona_has_Kurss ON Persona.idPersona = Persona_has_Kurss.Persona_idPersona
+WHERE Persona.lietotajaLoma =  'P' AND Persona_has_Kurss.Kurss_idKurss = '$selectedCourseId'");
+                        
+        if($resultSet2 -> num_rows != 0) {
+            while($rows = $resultSet2 -> fetch_assoc()) {
+                $selectedTeacherName = $rows['Persona.vards'];
+                $$selectedTeacherSurame = $rows['Persona.uzvards'];
+            }
+        }
+        
+         
+    }
+    */
+             ?>       
                 </select>
             </td>
             <td width="20%">
@@ -109,13 +137,13 @@
     </table>
     <br><br><br>
     <label id="gpCourseResultLabel">Izvēlētais kurss:</label>
-    <label id="gpCourseResultInfo"><b><?php echo $selectedCourse; ?></b></label>
+    <label id="gpCourseResultInfo"><b></b></label>
     <br>
     <label id="gpTeacherResultLabel" >Izvēlētais pasniedzējs:</label>
-    <label id="gpTeacherResultInfo"><b><?php echo $selectedTeacher; ?></b></label>
+    <label id="gpTeacherResultInfo"><b></b></label>
     <br>
     <label id="gpRoomResultLabel" >Izvēlētā auditorija:</label>
-    <label id="gpTeacherResultInfo"><b><?php echo $selectedRoom; ?></b></label>
+    <label id="gpTeacherResultInfo"><b></b></label>
     <br>
     <label id="gpStudentResultLabel" >Izvēlētie studenti:</label>
     <select id="gpStudentResultInfo" name="gpStudentResultInfo">
@@ -127,13 +155,5 @@
 </div>
 
 <?php
-    if (isset($_POST['gpCourseButton'])) {
-        //include('selectTeachersAndRooms.php'); 
-                            
-        $selectedCourse = $_POST['gbCourseListName'];
-        
-        echo "Izvēlēts: " . $selectedCourse;
-    }
-
     include('footer.php'); 
 ?>
