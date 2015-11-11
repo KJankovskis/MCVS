@@ -50,13 +50,12 @@
     }
 </script>
     
-<script>
+<script type="text/javascript">
     function mgAddCourse () {
-        alert("Vērtība pirms: " + document.getElementById("gpCourseList").value);
+        document.getElementById("gpCourseResultInfo").value = "<?php echo $_POST['gbCourseListName']; ?>";
         
-        document.getElementById("gpCourseResultInfo").value = document.getElementById("gpCourseList").value;
-        
-        alert("Vērtība pēc: " + document.getElementById("gpCourseList").value);
+        document.getElementById("gpCourseList").value = 
+            "<?php echo $_POST['gbCourseListName']; ?>";
     }
 </script>
 

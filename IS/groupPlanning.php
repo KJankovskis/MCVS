@@ -28,7 +28,7 @@
                                 <?php
                             }
                         }
-                        ?>
+                    ?>
                 </select>
             </td>
             <td width="20%">
@@ -44,23 +44,23 @@
                 <select id="gpTeacherList" name="gbTeacherListName">
                     <option value=""></option>
                     <?php
-/*                    
-if (isset($_POST['gpCourseButton'])) {
-        //include('selectTeachersAndRooms.php'); 
+                        if (isset($_POST['gpCourseButton'])) {
                             
-        $selectedCourse = $_POST['gbCourseListName'];
+                        $selectedCourse = $_POST['gbCourseListName'];
+                        
+                        $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
         
+                        $resultSet1 = $mysqli->query("SELECT idKurss FROM Kurss 
+                        WHERE kKursaNosaukums='$selectedCourse'");
         
-        $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
-        
-        $resultSet1 = $mysqli->query("SELECT idKurss FROM Kurss WHERE kKursaNosaukums='$selectedCourse'");
-        
-        if($resultSet1->num_rows !=0){
-            while($rows = $resultSet1->fetch_assoc()){
-                $selectedCourseId = $rows['idKurss'];
-            }
-        }
-            
+                        if($resultSet1->num_rows !=0){
+                            while($rows = $resultSet1->fetch_assoc()){
+                                $selectedCourseId = $rows['idKurss'];
+                            }
+                        }
+                            
+                            echo "Izvēlētā kursa ID: " . $selectedCourseId;
+        /*    
         $resultSet2 = $mysqli->query("SELECT Persona.vards, Persona.uzvards FROM Persona
 LEFT JOIN Persona_has_Kurss ON Persona.idPersona = Persona_has_Kurss.Persona_idPersona
 WHERE Persona.lietotajaLoma =  'P' AND Persona_has_Kurss.Kurss_idKurss = '$selectedCourseId'");
