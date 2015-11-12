@@ -9,7 +9,7 @@
             </div>
             <div class="content-right">
                 <div class="groups">
-                    <input class="newGroup" name="newGroup" type="button" value="MĀCĪBU GRUPAS PLĀNOŠANA" onclick="window.open('groupPlanning.php', '_self')"/>
+                    <p>MACIBU<br><br> GRUPU<br><br> PLANOSANA</p>
                 </div>
             </div>
         </div> 
@@ -20,10 +20,10 @@
             <form action="" method="post">
             <div class="search-left">
                 
-                <label for="peroson">
-                    <input type="radio" id="peroson" name="chkPassPort" value="1" onclick="ShowHideDiv()" />
-                    <b>persona</b>
-                </label>
+                <label for="person">
+                    <input type="radio" id="person" name="chkPassPort" value="1" onclick="ShowHideDiv()" />
+                    <b>Students</b>
+                </label>                
                 <label for="course">
                     <input type="radio" id="course" name="chkPassPort" value="2" onclick="ShowHideDiv()" />
                     <b>Kurss</b>
@@ -38,7 +38,7 @@
                     Vards: <input type="text" id="name" name="name"/><br>
                     Uzvards:<input type="text" id="surname" name="surname"/><br>
                     Personas kods: <input type="text" id="peronID" name="peronID"/>
-                </div>
+                </div>              
  <!--____________________________________________________________________-->               
                 <div id="showCourse" style="display: none">
                     Kursa kods: <input type="text" id="courseID" name="courseID"/><br>
@@ -46,8 +46,7 @@
                 </div>
  <!--____________________________________________________________________-->               
                 <div id="showRoom" style="display: none">
-                    Numurs: <input type="text" id="number" name="number"/><br>
-                    Nosaukums:<input type="text" id="roomName" name="roomName"/><br>
+                    Auditorijas numurs vai nosaukums:<input type="text" id="roomName" name="roomName"/><br>
                 </div>
 <!--____________________________________________________________________-->
             </div>
