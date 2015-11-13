@@ -25,8 +25,7 @@
 }
 
 
-#gpCourseAcceptButton, 
-#gpStudentSearchButton {
+#gpCourseAcceptButton, #gpStudentSearchButton {
     height: 35px;
     width: 125px;
     padding: 5px 5px 5px 5px;
