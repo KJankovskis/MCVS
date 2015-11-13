@@ -49,6 +49,24 @@
         showRoom.style.display = room.checked ? "block" : "none";
     }
 </script>
+    
+<script> 
+    function changeResults(){
+        var c = document.getElementById("gpCourseList");
+        var cValue = c.options[c.selectedIndex].value;
+        document.getElementById("gpCourseResultInfo").value = cValue;
+        
+        var t = document.getElementById("gpTeacherList");
+        var tValue = t.options[t.selectedIndex].value;
+        document.getElementById("gpTeacherResultInfo").value = tValue;
+        
+        var r = document.getElementById("gpRoomList");
+        var rValue = r.options[r.selectedIndex].value;
+        document.getElementById("gpRoomResultInfo").value = rValue;
+        
+        document.getElementById("gpDatesResultInfo").value = document.getElementById("gpDateFrom").value + " - " + document.getElementById("gpDateTo").value;
+    }
+</script>
 
 </head>
 <body>

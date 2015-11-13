@@ -127,6 +127,7 @@ else if($chkPassPort == "3"){
         ?>     
         </table>
     </div>
+<?php
 }
 mysqli_close($d);
 ?>
