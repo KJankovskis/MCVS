@@ -20,7 +20,8 @@
                 $role = $rows['lietotajaLoma'];
             }
         }
-
+		$sql = "SELECT * FROM PersonaNoslogojums WHERE Persona_idPersona='$ID'";
+        $result = $mysqli->query($sql);
     ?>
     <div class="name-surname">
         <p ><?php echo "$name $surname"; ?> </p>
@@ -46,15 +47,32 @@ echo '<dd>'
             else if($role == 'P'){        //pasniedzejs
                 echo "<b>pasniedzamie kursi</b> :";
             }
-            else if($role == 'A'){
-                echo "<b>TU ESI ADMINISTRATORS</b>";   
+            else if($role == 'A'){ 
             }
         ?></p>      
     </div>
     <div class="noslogojums"><p>Noslogojums</p></div>
     <div class="about">
-        
-
+       <table style="width:100%; border: 1px solid black; border-collapse: collapse;">
+          <tr>
+                <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Nr.</th>
+                <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Datums</th>
+                <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Laiks no</th>
+                <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Laiks līdz</th>
+          </tr>
+          <tr>
+        <?php
+        $tmp = 0;
+        if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    $tmp = $tmp +1;
+                    echo "<td>" . $tmp. "</td><td>" . $row["pDatums"]. "</td><td>" . $row["pLaiksNo"]. "</td><td>" . $row["pLaiksLidz"]. "</td></tr>". "<br>";
+                }
+            } else {
+                
+            }
+        ?>     
+        </table> 
     </div>
    
 <?php include('footer.php'); ?>

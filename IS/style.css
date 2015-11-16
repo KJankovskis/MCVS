@@ -297,6 +297,19 @@ color:#6495ed;
     margin-left: 75px;   
     text-align: center;
 }
+.newGroupGroup{
+    width:400px;
+    height: 45px;
+    background-color:#FFBC00;
+    color:#fff;
+    border:2px solid #FFCB00;
+    padding:10px;
+    font-size:20px;
+    cursor:pointer;
+    border-radius:15px;
+    margin-top: 70px;
+    text-align: center;
+}
 .searchArray{
     width:auto;
     position:relative;
