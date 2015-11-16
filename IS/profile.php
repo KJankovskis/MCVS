@@ -8,9 +8,7 @@
                 
             </div>
             <div class="content-right">
-                <div class="groups">
-                    <input class="newRoom" name="newRoom" type="button" value="Mācību GRUPU PLĀNOŠANA" onclick="window.open('groupPlanning.php', '_self')"/>
-                </div>
+                 <input class="newGroup" name="newRoom" type="button" value="Mācību GRUPU PLĀNOŠANA" onclick="window.open('groupPlanning.php', '_self')"/>
             </div>
         </div> 
         <div class="topic">
