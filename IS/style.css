@@ -110,22 +110,6 @@ margin: auto;
 margin-top:  20px;
 }
 
-#name {
-    width: 150px;
-    margin-left: 5px;
-    height: 20px;
-}
-
-#password {
-    width: 150px;
-    margin-left: 55px;
-    height: 20px;
-}
-
-#ienaktSistema {
-    margin-top: 20px;
-}
-
 
 input[type=text],input[type=password] {
 width:200px;
@@ -150,7 +134,11 @@ border-radius:5px;
     margin-top: 10px;
 margin-bottom:8px;
 }
+
+
 /*********PROFILA LAPA*********/
+
+
 .wrap {
     position:relative;
 	width:990px;
@@ -215,6 +203,40 @@ color:#6495ed;
 ******************** StyleForMain.css ***********************
 ************************************************************/
 
+#newUserVards {
+    margin-top: 20px;
+}
+
+#newUserName, #newUserSurname, #newUserEmail, #newUserPhone, #newUserPK, 
+#newUserHomeAddress, #newUserHomeCity, #newUserWorkAddress, #newUserWorkCity, #newUserUsername, #newUserPassword {
+    width: 200px;
+    height: 21px;
+}
+
+#newUserPicture {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#lietotajaLoma {
+    width: 217px;
+    height: 45px;
+    margin-top: 8px;
+}
+
+.forTextFieldsL {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 700px;
+}
+
+.forTextFieldsR {
+    position: relative;
+    float: right;
+    width: 200px;
+    height: 700px;
+}
 
 
 /*********CONETNT*********/
@@ -299,21 +321,20 @@ color:#6495ed;
     margin-left: 115px;  
     text-align: center;
 }
-
-#newGroupGroup{
+.newGroup{
     width:400px;
     height: 45px;
-    background-color:#FF5326;
+    background-color:#FFBC00;
     color:#fff;
-    border:2px solid #FF5326;
+    border:2px solid #FFCB00;
     padding:10px;
     font-size:20px;
     cursor:pointer;
     border-radius:15px;
-    margin-top: 70px;
+    margin-top: 10px;
+    margin-left: 75px;   
     text-align: center;
 }
-
 .searchArray{
     width:auto;
     position:relative;
@@ -391,9 +412,8 @@ form {
 
 
 /************************************************************
-******************** StyleForNew's.css **********************
+******************** StyleForNews.css ***********************
 ************************************************************/
-
 
 
 .middleUser{
@@ -401,7 +421,7 @@ form {
     position:relative;
     background-color: #DCE6F7;
     font-family:Verdana, Geneva, sans-serif;
-    height: 1100px;
+    height: 900px;
     border:1px solid grey;
 }
 .middleCourse{
@@ -436,14 +456,14 @@ form {
     font-weight: bold;
 }
 .forTextFields{
-    width:600px;
+    width:450px;
     position:relative;
     background-color: #DCE6F7;
     float: left;
     margin-top: -20px;
     margin-left: -170px;
     font-family:Verdana, Geneva, sans-serif;
-    height: 1000px;
+    height: 725px;
 }
 
 .saveButton{
