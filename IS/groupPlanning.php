@@ -9,7 +9,7 @@
 <div class="gpContent">
     <br>
     <?php
-    if(isset($_POST['newGroup'])) {
+    if(isset($_POST['newGroupGroup'])) {
         include("truncateGroupPlanning.php");
     }
     else {
@@ -76,7 +76,7 @@
                 <select id="gpCourseList" name="gbCourseListName">
                     <?php
                     //Ja lapa tiek atjaunota, lietotājam tiek piedāvāts pilns kursu saraksts
-                    if(isset($_POST['newGroup']) || isset($_POST['gpCourseRefreshButton'])) {
+                    if(isset($_POST['newGroupGroup']) || isset($_POST['gpCourseRefreshButton'])) {
                         ?>
                         <option value=""></option>
                         <?php
