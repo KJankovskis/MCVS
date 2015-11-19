@@ -566,7 +566,7 @@
                     $row["uzvards"]. "</center></td><td><center>" . 
                     $row["personasKods"]. "</center></td><td><center>" . 
                     $row["darbaAdrese"]. ", " . $row["darbaPilseta"]. "</center></td><td><center>" . 
-                    "<input type='checkbox' name='studentCheckbox' value='$temp'><input style='width: 10px' name='counter' type='text' value='$rowCounter'>" . "</center></td></tr>";
+                    "<input type='checkbox' name='studentCheckbox' value='$temp'><input style='width: 10px' name='counter' type='hidden' value='$rowCounter'>" . "</center></td></tr>";
             }
         } else {
             $x = 2;  

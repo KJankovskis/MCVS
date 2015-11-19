@@ -9,7 +9,7 @@
             </div>
             <div class="content-right">
                 <form method="post" action="groupPlanning.php">
-                <input class="newGroupGroup" name="newGroupGroup" type="submit" value="MĀCĪBU GRUPU PLĀNOŠANA">
+                <input class="newGroupGroup" id="newGroupGroup" name="newGroupGroup" type="submit" value="MĀCĪBU GRUPU PLĀNOŠANA">
                 </form>  
             </div>
         </div> 
