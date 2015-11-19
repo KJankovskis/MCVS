@@ -391,11 +391,31 @@ form {
 
 
 /************************************************************
-******************** StyleForNews.css ***********************
+******************** StyleForNew's.css **********************
 ************************************************************/
 
+#newUserName, #newUserSurame, #newUserEmail, #newUserPhone, #newUserPK, 
+#newUserHomeAddress, #newUserHomeCity, #newUserWorkAddress, #newUserWorkCity, 
+#newUserPicture, #newUserUsername, #newUserPassword, #lietotajaLoma {
+    width: 200px;
+    height: 20px;
+}
 
+.forTextFieldsL {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
 
+.forTextFieldsR {
+    position: relative;
+    float: right;
+    width: 200px;
+    height: 200px;
+    background-color: green;
+}
 
 .middleUser{
     width:auto;
@@ -437,7 +457,7 @@ form {
     font-weight: bold;
 }
 .forTextFields{
-    width:450px;
+    width:600px;
     position:relative;
     background-color: #DCE6F7;
     float: left;
