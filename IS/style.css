@@ -394,28 +394,7 @@ form {
 ******************** StyleForNew's.css **********************
 ************************************************************/
 
-#newUserName, #newUserSurname, #newUserEmail, #newUserPhone, #newUserPK, 
-#newUserHomeAddress, #newUserHomeCity, #newUserWorkAddress, #newUserWorkCity, 
-#newUserPicture, #newUserUsername, #newUserPassword, #lietotajaLoma {
-    width: 200px;
-    height: 20px;
-}
 
-.forTextFieldsL {
-    position: relative;
-    float: left;
-    width: 200px;
-    height: 200px;
-    background-color: red;
-}
-
-.forTextFieldsR {
-    position: relative;
-    float: right;
-    width: 200px;
-    height: 200px;
-    background-color: green;
-}
 
 .middleUser{
     width:auto;
