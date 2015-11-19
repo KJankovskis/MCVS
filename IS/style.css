@@ -111,13 +111,19 @@ margin-top:  20px;
 }
 
 #name {
+    width: 150px;
     margin-left: 5px;
-    height: 30px;
+    height: 25px;
 }
 
 #password {
-    margin-left: 30px;
-    height: 30px;
+    width: 150px;
+    margin-left: 45px;
+    height: 25px;
+}
+
+#ienaktSistema {
+    margin-top: 20px;
 }
 
 
