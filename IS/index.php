@@ -17,9 +17,9 @@ header("location: profile.php");
     <h1>MĀCĪBU CENTRA VADĪBAS SISTĒMA</h1>
         <div id="login">
             <form action="" method="post">
-            <label style="height: 25px">Lietotājvārds:</label>
+            <label style="height: 20px">Lietotājvārds:</label>
             <input id="name" name="username" type="text"><br>
-            <label style="height: 25px">Parole :</label>
+            <label style="height: 20px">Parole :</label>
             <input id="password" name="password" type="password">
             <input id="ienaktSistema" name="submit" type="submit" value="Ienākt sistēmā">
             <span><?php echo $error; ?></span>
