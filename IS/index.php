@@ -17,13 +17,13 @@ header("location: profile.php");
     <h1>MĀCĪBU CENTRA VADĪBAS SISTĒMA</h1>
         <div id="login">
             <form action="" method="post">
-            <label>UserName :</label>
-            <input id="name" name="username" placeholder="username" type="text"><br>
-            <label>Password :</label><br>
-            <input id="password" name="password" placeholder="**********" type="password">
-            <input name="submit" type="submit" value=" Login ">
+            <label style="height: 30px">Lietotājvārds:</label>
+            <input id="name" name="username" placeholder="lietotājvārds" type="text"><br>
+            <label style="height: 30px">Parole :</label>
+            <input id="password" name="password" placeholder="********" type="password">
+            <input name="submit" type="submit" value="Ienākt sistēmā">
             <span><?php echo $error; ?></span>
-        </form>
+            </form>
         </div>
     </div>
 </body>
