@@ -394,7 +394,7 @@ form {
 ******************** StyleForNew's.css **********************
 ************************************************************/
 
-#newUserName, #newUserSurame, #newUserEmail, #newUserPhone, #newUserPK, 
+#newUserName, #newUserSurname, #newUserEmail, #newUserPhone, #newUserPK, 
 #newUserHomeAddress, #newUserHomeCity, #newUserWorkAddress, #newUserWorkCity, 
 #newUserPicture, #newUserUsername, #newUserPassword, #lietotajaLoma {
     width: 200px;
