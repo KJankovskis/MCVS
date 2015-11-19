@@ -20,7 +20,7 @@
                     Uzvārds:<br>
                     E-pasts:
                 </div>
-                <div clas="forTextFieldsR">
+                <div class="forTextFieldsR">
                     <input id="newUserName" type="text" name="vards"><br>
                     <input id="newUserSurame"  type="text" name="uzvards"><br>
                     <input id="newUserEmail" type="text" name="epasts"><br>
