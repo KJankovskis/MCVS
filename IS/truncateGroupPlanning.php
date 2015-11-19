@@ -8,7 +8,7 @@ $myPass = '';  # Norādiet savu lietotājvārdu
 $d = mysqli_connect($myServer,$myUser,$myPass,$myDB) or die('Kļūda pieslēdzoties datubāzei!');
 mysqli_set_charset($d, 'utf8');
 
-$sql_query2="DELETE FROM grupasplanosanastudenti WHERE gpsID > '0';";
+$sql_query2="DELETE FROM GrupasPlanosanaStudenti WHERE gpsID > '0';";
 
 if (mysqli_query($d, $sql_query2)) {
     // echo "Ieraksts par lietotaju veiksmīgi pievienots";
@@ -16,7 +16,7 @@ if (mysqli_query($d, $sql_query2)) {
     echo "Error: " . $sql_query2 . "<br>" . mysqli_error($d);
 }
                             
-$sql_query="DELETE FROM grupasplanosana WHERE gpID > '0';";
+$sql_query="DELETE FROM GrupasPlanosana WHERE gpID > '0';";
 
 if (mysqli_query($d, $sql_query)) {
     // echo "Ieraksts par lietotaju veiksmīgi pievienots";

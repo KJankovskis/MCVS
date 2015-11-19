@@ -81,7 +81,7 @@
                         <option value=""></option>
                         <?php
                         $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
-                        $resultSet  =$mysqli->query("SELECT * FROM kurss");
+                        $resultSet  =$mysqli->query("SELECT * FROM Kurss");
                         
                         if($resultSet -> num_rows != 0) {                
                             while($rows = $resultSet -> fetch_assoc()) {
