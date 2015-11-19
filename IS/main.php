@@ -2,7 +2,7 @@
         <div class="content">
 <!--            <div class="content-top"></div>-->
             <div class="content-left">
-                <input class="newUser" name="newUser" type="button" value="PIEVIENOT JAUNU LIETOTAJU" onclick="window.open('newUser.php', '_self')"/>
+                <input class="newUser" name="newUser" type="button" value="PIEVIENOT JAUNU LIETOTĀJU" onclick="window.open('newUser.php', '_self')"/>
                 <input class="newCourse" name="newCourse" type="button" value="PIEVIENOT JAUNU KURSU" onclick="window.open('newCourse.php', '_self')"/>
                 <input class="newRoom" name="newRoom" type="button" value="PIEVIENOT JAUNU AUDITORIJU" onclick="window.open('newRoom.php', '_self')"/>
                 
@@ -22,7 +22,7 @@
                 
                 <label for="person">
                     <input type="radio" id="person" name="chkPassPort" value="1" onclick="ShowHideDiv()" />
-                    <b>Students</b>
+                    <b>Lietotājs</b>
                 </label>                
                 <label for="course">
                     <input type="radio" id="course" name="chkPassPort" value="2" onclick="ShowHideDiv()" />
@@ -35,8 +35,8 @@
                 </label>
 <!--____________________________________________________________________-->
                 <div id="showPerson" style="display: none">
-                    Vards: <input type="text" id="name" name="name"/><br>
-                    Uzvards:<input type="text" id="surname" name="surname"/><br>
+                    Vārds: <input type="text" id="name" name="name"/><br>
+                    Uzvārds:<input type="text" id="surname" name="surname"/><br>
                     Personas kods: <input type="text" id="peronID" name="peronID"/>
                 </div>              
  <!--____________________________________________________________________-->               
@@ -52,7 +52,7 @@
             </div>
             <div class="search-right">
             <?php         
-                print "<input class=\"searchButton\" type=\"Submit\" name=\"Submit\" value=\"Meklet\"> ";
+                print "<input class=\"searchButton\" type=\"Submit\" name=\"Submit\" value=\"Meklēt\"> ";
             ?>
             </div>
                 </form>
