@@ -89,10 +89,10 @@ else if($chkPassPort == "2"){
         $sql = "SELECT * FROM Kurss WHERE kKursaNosaukums='$courseName'";
         $result = $d->query($sql); 
     } else if($courseName == ""){                           //ja nav kursa nosaukums
-        $sql = "SELECT * FROM kurss WHERE kursaKods='$courseID'";
+        $sql = "SELECT * FROM Kurss WHERE kursaKods='$courseID'";
         $result = $d->query($sql);  
     } else{                                                 //ja visi lauki ir aizpilditi
-        $sql = "SELECT * FROM kurss WHERE vards='$name' AND kursaKods='$courseID' AND kKursaNosaukums='$courseName'";
+        $sql = "SELECT * FROM Kurss WHERE kursaKods='$courseID' AND kKursaNosaukums='$courseName'";
         $result = $d->query($sql);
     }
 ?>
