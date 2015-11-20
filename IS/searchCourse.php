@@ -20,7 +20,7 @@
         <div class="kursaApraksts">
             <p><?php echo "<b>Kursa apraksts</b> :<br> $kursaApraksts" ?></p>
         </div>
-        <p><?php echo "<b>Kursa kods:</b> :  $kursaKods" ?></p>
+        <p><?php echo "<b>Kursa kods</b> :  $kursaKods" ?></p>
         <p><?php echo "<b>Nepieciešamā auditorija</b> : "; 
             if($tips == 'D'){
                 echo "Datorauditorija";
@@ -29,7 +29,7 @@
                 echo "Auditorija";
             }
             ?></p>
-        <p><?php echo "<b>Maksimālais sēdvietu skaits: </b> : $skaits" ?></p>
+        <p><?php echo "<b>Maksimālais sēdvietu skaits</b> : $skaits" ?></p>
         <p><?php echo "<b>Kursa ilgums</b> : $ilgums" ?></p>  
         <p><?php echo "<b>Kursa apraksts</b> : $ilgums" ?></p>
     </div>

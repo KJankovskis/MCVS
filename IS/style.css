@@ -633,4 +633,5 @@ form {
     font-family:Verdana, Geneva, sans-serif;
     height: 200px;
     border:1px solid grey;
+	overflow-y: scroll;
 }

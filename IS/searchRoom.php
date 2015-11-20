@@ -30,7 +30,7 @@
             }
             ?></p>
         <p><?php echo "<b>Atrodas pilsētā</b> : $pilseta" ?></p> 
-        <p><?php echo "<b>Maksimālais sēdvietu skaits: </b> : $skaits" ?></p>
+        <p><?php echo "<b>Maksimālais sēdvietu skaits</b> : $skaits" ?></p>
         <p><?php echo "<b>Tafele</b> : "; 
             if($tafele == '1'){
                 echo "auditorijā ir pieejama tāfele.";
