@@ -19,7 +19,7 @@ header("location: main.php");
             <form action="" method="post">
             <label style="height: 20px">Lietotājvārds:</label>
             <input id="name" name="username" type="text"><br>
-            <label style="height: 20px">Parole :</label>
+            <label style="height: 20px">Parole:</label>
             <input id="password" name="password" type="password">
             <input id="ienaktSistema" name="submit" type="submit" value="Ienākt sistēmā">
             <span><?php echo $error; ?></span>

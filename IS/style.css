@@ -135,6 +135,22 @@ border-radius:5px;
 margin-bottom:8px;
 }
 
+#name {
+    width: 150px;
+    margin-left: 5px;
+    height: 20px;
+}
+
+#password {
+    width: 150px;
+    margin-left: 60px;
+    height: 20px;
+}
+
+#ienaktSistema {
+    margin-top: 20px;
+}
+
 
 /*********PROFILA LAPA*********/
 
@@ -321,17 +337,17 @@ color:#6495ed;
     margin-left: 115px;  
     text-align: center;
 }
-.newGroup{
+#newGroupGroup{
     width:400px;
     height: 45px;
-    background-color:#FFBC00;
+    background-color:#FF5326;
     color:#fff;
-    border:2px solid #FFCB00;
+    border:2px solid #FF5326;
     padding:10px;
     font-size:20px;
     cursor:pointer;
     border-radius:15px;
-    margin-top: 10px;
+    margin-top: 70px;
     margin-left: 75px;   
     text-align: center;
 }
