@@ -314,6 +314,18 @@ color:#6495ed;
     margin-left: 75px; 
     text-align: center;
 }
+.meklesana{
+    width:100px;
+    height: 25px;
+    background-color:#FFBC00;
+    color:#fff;
+    border:2px solid #FFCB00;
+    padding:5px;
+    font-size:15px;
+    cursor:pointer;
+    border-radius:5px;  
+    text-align: center;
+}
 .content-right{
     position: relative;
     margin-top: 10px;
@@ -542,6 +554,40 @@ form {
     padding-left: 20px;
     font-size: 30px;
     font-weight: bold;
+}
+.auditorija{
+    width:auto;
+    background-color: #DCE6F7;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 200px;
+    border:1px solid grey;
+}
+.auditorija p{
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 15px;
+    font-size: 17px;
+}
+.kurss{
+    width:auto;
+    background-color: #DCE6F7;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 200px;
+    border:1px solid grey;
+}
+.kurss p{
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 15px;
+    font-size: 17px;
+}
+.kursaApraksts{
+    width:400px;
+    height: 190px;
+    position:relative;
+    float:right;
+    margin-top: 10px;
+    margin-right: 70px; 
 }
 .person {
     width:auto;

@@ -50,15 +50,34 @@ if($chkPassPort == "1"){
           </tr>
           <tr>
         <?php
+        $x = 0;
         if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
-                    echo "<td>" . $row["vards"]. "</td><td>" . $row["uzvards"]. "</td><td>" . $row["personasKods"]. "</td><td>" .                               $row["darbaAdrese"]. ", " . $row["darbaPilseta"]. "</td> </tr>". "<br>";
-                }
+                    $tempPersonasKods = $row["personasKods"]; 
+                    
+                    echo "<td><center>" . $row["vards"] . "</center></td><td><center>" . 
+                    $row["uzvards"]. "</center></td><td><center>" . 
+                    $row["personasKods"]. "</center></td><td><center>" . 
+                    $row["darbaAdrese"]. ", " . 
+                    $row["darbaPilseta"]. "</center></td><td><center>" . 
+                     "<input type=\"hidden\" name=\"personas_kods\" value=\"$tempPersonasKods\"><input class=\"meklesana\" name=\"meklesana\" type=\"button\" value=\"Uz profilu\" onclick=\"window.open('searchProfile.php', '_self')\" />" . "</center></td></tr>"; 
+                    }
             } else {
-                echo "Datubāzē, nav neviena persona ar šadu vārdu:";
+                $x = 404;
             }
-        ?>     
+        ?> 
         </table>
+        <?php
+        if ($x == 404) {
+                ?>
+                <br><br><br><br><center>
+                <?php
+                echo "Pēc šādiem meklēšanas kritērijiem datubāzē nav atrasts neviens ieraksts!";
+                ?>
+                </center>
+                <?php
+            }
+            ?>
     </div>
 <?php
 }  
@@ -89,15 +108,32 @@ else if($chkPassPort == "2"){
           </tr>
           <tr>
         <?php
+        $x = 0;
         if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
-                    echo "<td>" . $row["kursaKods"]. "</td><td>" . $row["kKursaNosaukums"]. "</td><td>" . $row["nepieciesamaisAuditorijasTips"]. "</td><td>" . $row["kMaksimalaisStudentuSkaits"]. "</td><td>" . $row["kursaIlgums"]. "</td> </tr>". "<br>";
+                    echo "<td><center>" . $row["kursaKods"]. "</center></td><td><center>" .    
+                    $row["kKursaNosaukums"]. "</center></td><td><center>" . 
+                    $row["nepieciesamaisAuditorijasTips"]. "</center></td><td><center>" . 
+                    $row["kMaksimalaisStudentuSkaits"]. "</center></td><td><center>" . 
+                    $row["kursaIlgums"]. "</center></td> <td><center>". 
+                    "<input class=\"meklesana\" name=\"meklesana\" type=\"button\" value=\"Uz kursu\" onclick=\"window.open('searchCourse.php', '_self')\" />" . "</center></td></tr>"; 
                 }
             } else {
-                echo "Datubāzē, nav neviena persona ar šadu vārdu:";
+                $x = 404;
             }
-        ?>     
+        ?> 
         </table>
+        <?php
+        if ($x == 404) {
+                ?>
+                <br><br><br><br><center>
+                <?php
+                echo "Pēc šādiem meklēšanas kritērijiem datubāzē nav atrasts neviens ieraksts!";
+                ?>
+                </center>
+                <?php
+            }
+            ?>
     </div>
 <?php
 }
@@ -117,15 +153,31 @@ else if($chkPassPort == "3"){
           </tr>
           <tr>
         <?php
+		$x = 0;
         if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
-                    echo "<td>" . $row["aNumursNosaukums"]. "</td><td>" . $row["aAdrese"]. "</td><td>" . $row["aPilseta"]. "</td><td>" . $row["aMaksimalaisStudentuSkaits"]. "</td> </tr>". "<br>";
+                    echo "<td><center>" . $row["aNumursNosaukums"]. "</center></td><td><center>" . 
+					$row["aAdrese"]. "</center></td><td><center>" . 
+					$row["aPilseta"]. "</center></td><td><center>" . 
+					$row["aMaksimalaisStudentuSkaits"]. "</center></td><td><center>" . 
+					"<input class=\"meklesana\" name=\"meklesana\" type=\"button\" value=\"Uz auditoriju\" onclick=\"window.open('searchRoom.php', '_self')\" />" . "</center></td></tr>"; ;
                 }
             } else {
-                echo "Datubāzē, nav neviena persona ar šadu vārdu:";
+                $x = 404;
             }
-        ?>     
+        ?> 
         </table>
+        <?php
+        if ($x == 404) {
+                ?>
+                <br><br><br><br><center>
+                <?php
+                echo "Pēc šādiem meklēšanas kritērijiem datubāzē nav atrasts neviens ieraksts!";
+                ?>
+                </center>
+                <?php
+            }
+            ?>
     </div>
 <?php
 }
