@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Your Home Page</title>
+<title>MCVS</title>
 <meta charset="utf-8">
 <link href="style.css" rel="stylesheet" type="text/css">
 <link href="styleForGroupPlanning.css" rel="stylesheet" type="text/css">
@@ -58,5 +58,5 @@
 				
                 <b id="logout"><a href="logout.php"><img src="atteli/logout.png" alt="logout-icon" height="24" width="24"></a></b>     
                 <b id="user-page"><a href="user-page.php"><img src="atteli/user.png" alt="user-icon" height="24" width="24"></a></b>
-                <b id="home"><a href="profile.php"><img src="atteli/home.png" alt="home-icon" height="24" width="24"></a></b>
+                <b id="home"><a href="main.php"><img src="atteli/home.png" alt="home-icon" height="24" width="24"></a></b>
             </div>
