@@ -446,7 +446,13 @@ form {
     border:1px solid grey; 
     overflow-y: scroll;
 }
-
+.founded table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.founded th, td {
+    padding: 5px;
+}
 
 
 /*******************CONTENT_TOP******************/
