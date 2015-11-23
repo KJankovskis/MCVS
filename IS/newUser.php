@@ -15,7 +15,7 @@
     <div class="middleUser">
         <form action="newUser.php" method="post" enctype="multipart/form-data">
             <div class = "forTextFields">
-                <div class="forTextFieldsL">
+                <div class="forTextFieldsL_User">
                     <label id="newUserVards" style="height: 35px">Vārds:</label><br>
                     <label style="height: 35px">Uzvārds:</label><br>
                     <label style="height: 35px">E-pasts:</label><br>
@@ -30,24 +30,24 @@
                     <label style="height: 35px">Parole:</label><br>
                     <label style="height: 35px">Lietotāja loma:</label><br>
                 </div>
-                <div class="forTextFieldsR">
+                <div class="forTextFieldsR_User">
                     <input id="newUserName" type="text" name="vards"><br>
                     <input id="newUserSurname"  type="text" name="uzvards"><br>
                     <input id="newUserEmail" type="text" name="epasts"><br>
                     <input id="newUserPhone" type="text" name="talrunis"><br>
-                <input id="newUserPK" type="text" name="personasKods"><br>
-                <input id="newUserHomeAddress" type="text" name="dzivesAdrese"><br>
-                <input id="newUserHomeCity" type="text" name="dzivesPilseta"><br> 
-                <input id="newUserWorkAddress" type="text" name="darbaAdrese"><br>
-                <input id="newUserWorkCity" type="text" name="darbaPilseta"><br>
-                <input id="newUserPicture" type="file" name="foto" id="foto"><br>
-                <input id="newUserUsername" type="text" name="lietotajvards"><br>
-                <input id="newUserPassword" type="text" name="parole"><br>
-                <select name="lietotajaLoma" id="lietotajaLoma">
-                    <option value="L" name="L">Lietotājs</option>
-                    <option value="P" name="P">Pasniedzējs</option>
-                    <option value="A" name="A">Administrators</option>
-                </select>
+					<input id="newUserPK" type="text" name="personasKods"><br>
+					<input id="newUserHomeAddress" type="text" name="dzivesAdrese"><br>
+					<input id="newUserHomeCity" type="text" name="dzivesPilseta"><br> 
+					<input id="newUserWorkAddress" type="text" name="darbaAdrese"><br>
+					<input id="newUserWorkCity" type="text" name="darbaPilseta"><br>
+					<input id="newUserPicture" type="file" name="foto" id="foto"><br>
+					<input id="newUserUsername" type="text" name="lietotajvards"><br>
+					<input id="newUserPassword" type="text" name="parole"><br>
+					<select name="lietotajaLoma" id="lietotajaLoma">
+						<option value="L" name="L">Lietotājs</option>
+						<option value="P" name="P">Pasniedzējs</option>
+						<option value="A" name="A">Administrators</option>
+					</select>
                 </div>
             </div>
             <center><input id="newUserButton" class="newUserSaveButton" type="Submit" name="Submit" value="Izveidot lietotāju"></center>

@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <link href="style.css" rel="stylesheet" type="text/css">
 <link href="styleForGroupPlanning.css" rel="stylesheet" type="text/css">
-
+<link href="atteli/favIcon.png" rel="shortcut icon" type="image/x-icon" />
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 
 <script> 
@@ -55,6 +55,8 @@
     <div class="wrap">
         	<div class="header">
                 <b id="logo"><a href="main.php"><img src="atteli/logo.png" alt="logo" height="50" width="250"></a></b>
-                <b id="logout"><a href="logout.php"><img src="atteli/logout.png" alt="logout-icon" height="24" width="24"></a></b>
+				
+                <b id="logout"><a href="logout.php"><img src="atteli/logout.png" alt="logout-icon" height="24" width="24"></a></b>     
                 <b id="user-page"><a href="user-page.php"><img src="atteli/user.png" alt="user-icon" height="24" width="24"></a></b>
+                <b id="home"><a href="profile.php"><img src="atteli/home.png" alt="home-icon" height="24" width="24"></a></b>
             </div>
