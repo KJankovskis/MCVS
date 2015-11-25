@@ -66,7 +66,7 @@
     }
     ?>
     <br>
-    <table width="100%">
+    <table id="groupPlanningTable" width="100%">
         <form action="http://84.237.231.90/MCVS/IS/groupPlanning.php" method="post">
         <tr height="40px">
             <td width="35%">
