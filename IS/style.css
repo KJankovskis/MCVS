@@ -215,7 +215,14 @@ color:#6495ed;
 i {
 color:#6495ed;
 }
-
+.copyRight{
+    padding-top: 6px;
+    padding-left: 15px;
+    float: left;
+    font-size: 10px;
+    color: white;
+    font-weight: bold;
+}
 
 
 /************************************************************
@@ -409,7 +416,7 @@ color:#6495ed;
     padding:10px;
     font-size:20px;
     cursor:pointer;
-    border-radius:15px;
+    border-radius:5px;
     margin-top: 70px;
     margin-left: 0px;   
     text-align: center;
