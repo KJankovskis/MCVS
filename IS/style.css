@@ -297,14 +297,14 @@ color:#6495ed;
 .forTextFieldsR_Room {
     position: relative;
     float: right;
-    width: 200px;
-    height: 500px;
+    width: 175px;
+    height: 440px;
 }
 .forTextFieldsL_Room{
     position: relative;
     float: left;
-    width: 200px;
-    height: 500px;
+    width: 175px;
+    height: 440px;
 }
 /*********CONETNT*********/
 .content {
@@ -461,7 +461,21 @@ form {
     background-color:#fafafa;
     color:#207cca;
 }
-
+.founded{
+    width:auto;
+    position:relative;
+    background-color: #DCE6F7;
+    height: 250px;
+    border:1px solid grey; 
+    overflow-y: scroll;
+}
+.founded table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.founded th, td {
+    padding: 5px;
+}
 
 
 /*******************CONTENT_TOP******************/
