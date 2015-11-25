@@ -587,7 +587,7 @@ form {
 .itemsRoom label{
     display: block;
 }
-.pievienotsDbApstiprinoss, .pievienotsDbNeapstiprinoss{
+.pievienotsDbApstiprinoss, .pievienotsDbNeapstiprinoss, .pievienotsDbTuksh{
     width:auto;
     position:relative;
     background-color: #DCE6F7;
@@ -595,6 +595,14 @@ form {
     height: 50px;
     border:1px solid grey; 
 }
+.pievienotsDbTuksh p{
+    text-align: center;
+    padding-top: 15px;
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+	color: red;
+} 
 .pievienotsDbApstiprinoss p{
     text-align: center;
     padding-top: 15px;

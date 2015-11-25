@@ -6,6 +6,7 @@
         //echo "$username";
         $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
         $resultSet  =$mysqli->query("SELECT * FROM Persona WHERE lietotajvards='$username' ");
+		mysqli_set_charset($mysqli, 'utf8');
         if($resultSet->num_rows !=0){
             while($rows = $resultSet->fetch_assoc()){
                 $name = $rows['vards'];

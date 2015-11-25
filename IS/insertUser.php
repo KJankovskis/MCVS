@@ -23,19 +23,25 @@ $foto=addslashes (file_get_contents($_FILES['foto']['tmp_name']));
 $lietotajvards = $_REQUEST["lietotajvards"];
 $loma = $_REQUEST["lietotajaLoma"];
 $parole = $_REQUEST["parole"];
-$loma = $_REQUEST["lietotajaLoma"];
 
 
-    $sql_query=" INSERT INTO Persona(vards, uzvards, epasts, talrunis, personasKods, dzivesAdrese, 
-                                    dzivesPilseta, darbaAdrese, darbaPilseta, foto, lietotajaLoma, lietotajvards, parole) 
-                VALUES('$vards','$uzvards','$epasts', '$talrunis', '$persKods', '$dzivesAdrese', '$dzivesPilseta'
-                        , '$darbaAdrese', '$darbaPilseta','$foto' ,'$loma', '$lietotajvards', '$parole');";
-    if (mysqli_query($d, $sql_query)) {
-		?><div class="pievienotsDbApstiprinoss"> <p>Persona veiksmīgi pievienota datubāzei</p></div><?php
-    } else {
-        ?><div class="pievienotsDbNeapstiprinoss"> <p>Persona nav pievienota datubāzei</p></div><?php
-    }
-
+	if($vards == "" || $uzvards == "" || $epasts == "" || 
+		$talrunis == "" || $persKods == "" || $dzivesAdrese == "" || 
+		$dzivesPilseta == "" || $darbaAdrese == "" || $darbaPilseta == "" || 
+		$lietotajvards == "" || $parole == ""){
+		?><div class="pievienotsDbTuksh"> <p>Kāds no aizpildāmajiem laukiem nav aizpildīts!</p></div><?php
+	}
+	else{
+		$sql_query=" INSERT INTO Persona(vards, uzvards, epasts, talrunis, personasKods, dzivesAdrese, 
+										dzivesPilseta, darbaAdrese, darbaPilseta, foto, lietotajaLoma, lietotajvards, parole) 
+					VALUES('$vards','$uzvards','$epasts', '$talrunis', '$persKods', '$dzivesAdrese', '$dzivesPilseta'
+							, '$darbaAdrese', '$darbaPilseta','$foto' ,'$loma', '$lietotajvards', '$parole');";
+		if (mysqli_query($d, $sql_query)) {
+			?><div class="pievienotsDbApstiprinoss"> <p>Persona veiksmīgi pievienota datubāzei!</p></div><?php
+		} else {
+			?><div class="pievienotsDbNeapstiprinoss"> <p>Persona nav pievienota datubāzei!</p></div><?php
+		}
+	}
 mysqli_close($d);
 
 ?>
