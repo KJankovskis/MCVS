@@ -23,14 +23,14 @@
 				</select><br>
 				<input id="newRoomAdress" type="text" name="adrese" /><br>
 				<input id="newRoomCity" type="text" name="pilseta" /><br>
-				<input id="newRoomCapacity" type="text" name="skaits" /><br>
+				<input id="newRoomCapacity" type="text" name="skaits" /><br><br>
 				
 				<input type="radio" name="tafele" value="1">Ir
 				<input type="radio" name="tafele" value="2">Nav
-				<br><br><br>				  
+				<br><br><br><br>  
 				<input type="radio" name="projektors" value="1">Ir
 				<input type="radio" name="projektors" value="2">Nav
-				<br><br><br>
+				<br><br><br><br>
 				<input type="radio" name="video" value="1">Ir
 				<input type="radio" name="video" value="2">Nav
 				<br>
