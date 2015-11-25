@@ -8,8 +8,7 @@ $myPass = 'janisk';  # Norādiet savu lietotājvārdu
 # ja nevaram pievienoties - rakstam kļūdu paziņojumus
 $d = mysqli_connect($myServer,$myUser,$myPass,$myDB) or die('Nevaru pievienoties datubāzei');
  mysqli_set_charset($d, 'utf8');
-
-    
+ 
 $code = $_REQUEST["code"];
 $nosaukums = $_REQUEST["title"];
 $apraksts = $_REQUEST["sumary"];

@@ -33,12 +33,12 @@
 				</div>
             </div>
 			<center><input id="newCourseButton" class="newCourseSaveButton" type="Submit" name="Submit" value="Izveidot kursu"></center>
-        </form>   
-    </div>
+        </form>
+    </div> 
 <?php
     if(isset($_REQUEST['Submit']))
     {
-        include('insertCourse.php');
+        include('insertRoom.php');
     }
 ?>
 <?php include('footer.php'); ?>
