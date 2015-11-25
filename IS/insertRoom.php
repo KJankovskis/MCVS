@@ -22,9 +22,9 @@ $video = $_REQUEST["video"];
     $sql_query=" INSERT INTO Auditorija(aNumursNosaukums, auditorijasTips, aAdrese, aPilseta, aMaksimalaisStudentuSkaits, tafele, projektors, videoKonference) 
                 VALUES('$nosaukums','$tips','$adrese','$pilseta','$maxSkaits', '$tafele', '$projektors', '$video');";
     if (mysqli_query($d, $sql_query)) {
-		?><div class="pievienotsDbApstiprinoss"> Auditorija veiksmīgi pievienota datubāzei</div><?php
+		?><div class="pievienotsDbApstiprinoss"> <p>Auditorija veiksmīgi pievienota datubāzei</p></div><?php
     } else {
-        ?><div class="pievienotsDbNeapstiprinoss"> Auditorija nav pievienota datubāzei</div><?php
+        ?><div class="pievienotsDbNeapstiprinoss"> <p>Auditorija nav pievienota datubāzei</p></div><?php
     }
 
 mysqli_close($d);

@@ -24,9 +24,9 @@ $materiali=addslashes (file_get_contents($_FILES['materiali']['tmp_name']));
                                     nepieciesamaisAuditorijasTips, kMaksimalaisStudentuSkaits, kursaIlgums, kursaDiplomaDokuments) 
                 VALUES('$code','$nosaukums','$apraksts', '$tips', '$skaits', '$ilgums', '$diploms');";
     if (mysqli_query($d, $sql_query)) {
-		?><div class="pievienotsDbApstiprinoss"> Kurss veiksmīgi pievienota datubāzei</div><?php
+		?><div class="pievienotsDbApstiprinoss"> <p>Kurss veiksmīgi pievienota datubāzei</p></div><?php
     } else {
-        ?><div class="pievienotsDbNeapstiprinoss"> Kurss nav pievienota datubāzei</div><?php
+        ?><div class="pievienotsDbNeapstiprinoss"> <p>Kurss nav pievienota datubāzei</p></div><?php
     }
 
 mysqli_close($d);
