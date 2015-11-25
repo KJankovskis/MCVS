@@ -587,8 +587,30 @@ form {
 .itemsRoom label{
     display: block;
 }
-
-
+.pievienotsDbApstiprinoss, .pievienotsDbNeapstiprinoss{
+    width:auto;
+    position:relative;
+    background-color: #DCE6F7;
+    font-family:Verdana, Geneva, sans-serif;
+    height: 50px;
+    border:1px solid grey; 
+}
+.pievienotsDbApstiprinoss p{
+    text-align: center;
+    padding-top: 15px;
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+	color: red;
+}
+.pievienotsDbNeapstiprinoss p{
+    text-align: center;
+    padding-top: 15px;
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+	color: red;
+}
 
 /************************************************************
 ******************* StyleForProfile.css *********************

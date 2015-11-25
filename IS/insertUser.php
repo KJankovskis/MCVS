@@ -31,9 +31,9 @@ $loma = $_REQUEST["lietotajaLoma"];
                 VALUES('$vards','$uzvards','$epasts', '$talrunis', '$persKods', '$dzivesAdrese', '$dzivesPilseta'
                         , '$darbaAdrese', '$darbaPilseta','$foto' ,'$loma', '$lietotajvards', '$parole');";
     if (mysqli_query($d, $sql_query)) {
-//        echo "Ieraksts par lietotaju veiksmīgi pievienots";
+		?><div class="pievienotsDbApstiprinoss"> Persona veiksmīgi pievienota datubāzei</div><?php
     } else {
-        echo "Error: " . $sql_query . "<br>" . mysqli_error($d);
+        ?><div class="pievienotsDbNeapstiprinoss"> Persona nav pievienota datubāzei</div><?php
     }
 
 mysqli_close($d);
