@@ -256,7 +256,7 @@ color:#6495ed;
     width: 200px;
     height: 700px;
 }
-#newCourseCode, #newCourseTitle ,#newCourseSumary ,#newCourseCapacity ,#newCourseDuration,{
+#newCourseCode, #newCourseTitle ,#newCourseSumary ,#newCourseCapacity ,#newCourseDuration{
 	width: 200px;
     height: 21px;
 }
@@ -282,7 +282,30 @@ color:#6495ed;
     width: 200px;
     height: 575px;
 }
-
+#newRoomVards {
+    margin-top: 20px;
+}
+#newRoomName, #newRoomAdress ,#newRoomCity ,#newRoomCapacity {
+	width: 200px;
+    height: 21px;
+}
+#newRoomAuditorijasTips{
+	width: 217px;
+    height: 45px;
+    margin-top: 8px;
+}
+.forTextFieldsR_Room {
+    position: relative;
+    float: right;
+    width: 200px;
+    height: 500px;
+}
+.forTextFieldsL_Room{
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 500px;
+}
 /*********CONETNT*********/
 .content {
     width:auto;
