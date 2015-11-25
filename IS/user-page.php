@@ -4,15 +4,15 @@
         include('login.php');
         $username = $_SESSION['login_user']; 
 
-# Veidojam savienojumu ar savu serveri un datu bāzi
-$myServer = 'localhost';
-$myDB = 'mcvs_db'; # Norādiet savu datu bāzi
-$myUser = 'root';  # Norādiet savu datu bāzes lietotājvārdu
-$myPass = 'janisk';  # Norādiet savu lietotājvārdu
-# ja nevaram pievienoties - rakstam kļūdu paziņojumus
-$mysqli = mysqli_connect($myServer,$myUser,$myPass,$myDB) or die('Nevaru pievienoties datubāzei');
-mysqli_set_charset($mysqli, 'utf8');
-		
+		# Veidojam savienojumu ar savu serveri un datu bāzi
+		$myServer = 'localhost';
+		$myDB = 'mcvs_db'; # Norādiet savu datu bāzi
+		$myUser = 'root';  # Norādiet savu datu bāzes lietotājvārdu
+		$myPass = 'janisk';  # Norādiet savu lietotājvārdu
+		# ja nevaram pievienoties - rakstam kļūdu paziņojumus
+		$mysqli = mysqli_connect($myServer,$myUser,$myPass,$myDB) or die('Nevaru pievienoties datubāzei');
+		mysqli_set_charset($mysqli, 'utf8');
+				
         $resultSet  =$mysqli->query("SELECT * FROM Persona WHERE lietotajvards='$username' ");
 
         if($resultSet->num_rows !=0){
