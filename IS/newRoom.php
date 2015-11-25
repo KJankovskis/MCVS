@@ -41,7 +41,7 @@
         </form>   
     </div>
 <?php
-    if(isset($_REQUEST['SubmitRoom']))
+    if(isset($_REQUEST['Submit']))
     {
         include('insertRoom.php');
     }
