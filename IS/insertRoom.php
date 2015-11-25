@@ -9,16 +9,18 @@ $myPass = 'janisk';  # Norādiet savu lietotājvārdu
 $d = mysqli_connect($myServer,$myUser,$myPass,$myDB) or die('Nevaru pievienoties datubāzei');
  mysqli_set_charset($d, 'utf8');
 
-$vieta = $_REQUEST["vieta"];
+$nosaukums = $_REQUEST["nosaukums"];
 $tips = $_REQUEST["auditorijasTips"];
+$adrese = $_REQUEST["adrese"];
+$pilseta = $_REQUEST["pilseta"];
 $maxSkaits = $_REQUEST["skaits"];
 $tafele = $_REQUEST["tafele"];
 $projektors = $_REQUEST["projektors"];
 $video = $_REQUEST["video"];
 
 
-    $sql_query=" INSERT INTO Auditorija(atrasanasVieta, auditorijasTips, aMaksimalaisStudentuSkaits, tafele, projektors, videoKonference) 
-                VALUES('$vieta','$tips','$maxSkaits', '$tafele', '$projektors', '$video');";
+    $sql_query=" INSERT INTO Auditorija(aNumursNosaukums, auditorijasTips, aAdrese, aPilseta, aMaksimalaisStudentuSkaits, tafele, projektors, videoKonference) 
+                VALUES('$nosaukums','$tips','$adrese','$pilseta','$maxSkaits', '$tafele', '$projektors', '$video');";
     if (mysqli_query($d, $sql_query)) {
 //        echo "Ieraksts par lietotaju veiksmīgi pievienots";
     } else {
