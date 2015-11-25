@@ -30,7 +30,7 @@
 				<br><br><br><br>  
 				<input type="radio" name="projektors" value="1">Ir
 				<input type="radio" name="projektors" value="2">Nav
-				<br><br><br><br>
+				<br><br><br>
 				<input type="radio" name="video" value="1">Ir
 				<input type="radio" name="video" value="2">Nav
 				<br>
