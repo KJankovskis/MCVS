@@ -26,6 +26,7 @@
                 $cityWork = $rows['darbaPilseta']; 
                 $workplaceAdress = $rows['darbaAdrese'];
                 $foto = $rows['foto'];
+				if (empty($foto)) $foto = "defaultPerson.png";
                 $role = $rows['lietotajaLoma'];
             }
         }

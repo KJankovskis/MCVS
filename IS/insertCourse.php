@@ -20,8 +20,7 @@ $programma=addslashes (file_get_contents($_FILES['programma']['tmp_name']));
 $materiali=addslashes (file_get_contents($_FILES['materiali']['tmp_name']));
 
 
-	if($code == "" || $nosaukums == "" || $apraksts == "" || 
-		$skaits == "" || $ilgums == ""){
+	if($code == "" || $nosaukums == "" || $apraksts == "" || $skaits == "" || $ilgums == ""){
 		?><div class="pievienotsDbTuksh"> <p>Kāds no aizpildāmajiem laukiem nav aizpildīts!</p></div><?php
 	}
 	else{
