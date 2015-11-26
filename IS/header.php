@@ -60,7 +60,7 @@
 		# ja nevaram pievienoties - rakstam kļūdu paziņojumus
 		$mysqli = mysqli_connect($myServer,$myUser,$myPass,$myDB) or die('Nevaru pievienoties datubāzei');
 		mysqli_set_charset($mysqli, 'utf8');
-        $resultSet  =$mysqli->query("SELECT * FROM Persona WHERE lietotajvards='$username' ");
+        $resultSet  =$mysqli->query("SELECT vards, uzvards FROM Persona WHERE lietotajvards='$username' ");
         if($resultSet->num_rows !=0){
             while($rows = $resultSet->fetch_assoc()){ 
                 $name = $rows['vards'];
@@ -75,5 +75,5 @@
                 <b id="logout"><a href="logout.php"><img src="atteli/logout.png" alt="logout-icon" height="24" width="24"></a></b>     
                 <b id="user-page"><a href="user-page.php"><img src="atteli/user.png" alt="user-icon" height="24" width="24"></a></b>
                 <b id="home"><a href="main.php"><img src="atteli/home.png" alt="home-icon" height="24" width="24"></a></b>
-				<p id="welcome"><?php echo "<b>Sveiki, $name $surname</b>" ?></p>
+				<p id="welcome"><?php echo "Sveiki, ". $name. $surname ?></p>
             </div>
