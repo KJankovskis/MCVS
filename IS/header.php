@@ -57,6 +57,7 @@
         $username = $_SESSION['login_user']; 
         //echo "$username";
         $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
+		mysqli_set_charset($mysqli, 'utf8');
         $resultSet  =$mysqli->query("SELECT * FROM Persona WHERE lietotajvards='$username' ");
         if($resultSet->num_rows !=0){
             while($rows = $resultSet->fetch_assoc()){ 
