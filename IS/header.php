@@ -57,7 +57,7 @@
         $username = $_SESSION['login_user']; 
         //echo "$username";
         $mysqli = NEW MySQLi('localhost', 'root','', 'mcvs_db');
-        $resultSet  =$mysqli->query("SELECT * FROM persona WHERE lietotajvards='$username' ");
+        $resultSet  =$mysqli->query("SELECT * FROM Persona WHERE lietotajvards='$username' ");
         if($resultSet->num_rows !=0){
             while($rows = $resultSet->fetch_assoc()){ 
                 $name = $rows['vards'];
