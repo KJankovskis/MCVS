@@ -81,6 +81,7 @@
                         <option value=""></option>
                         <?php
                         $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
+						mysqli_set_charset($mysqli, 'utf8');
                         $resultSet  =$mysqli->query("SELECT * FROM Kurss");
                         
                         if($resultSet -> num_rows != 0) {                
@@ -104,6 +105,7 @@
                         isset($_POST['gpAddSelectedStudentsButton'])) {
                         
                         $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
+						mysqli_set_charset($mysqli, 'utf8');
                         $resultSet = $mysqli->query(
                             "SELECT gpKurss FROM GrupasPlanosana ORDER BY gpID DESC LIMIT 1;");
             
@@ -143,6 +145,7 @@
                             $selectedCourse = $_POST['gbCourseListName'];
                         
                             $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
+							mysqli_set_charset($mysqli, 'utf8');
                             $resultSet1 = $mysqli->query("SELECT idKurss 
                             FROM Kurss 
                             WHERE kKursaNosaukums='$selectedCourse'");
@@ -220,6 +223,7 @@
                             isset($_POST['gpAddSelectedStudentsButton'])) {
             
                             $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
+							mysqli_set_charset($mysqli, 'utf8');
                             $resultSet = $mysqli->query("SELECT gpPasniedzejsVards, gpPasniedzejsUzvards, gpPasniedzejsPK FROM GrupasPlanosana ORDER BY gpID DESC LIMIT 1;");
             
             if($resultSet->num_rows !=0){
@@ -261,6 +265,7 @@
                             $selectedCourse = $_POST['gbCourseListName'];
                         
                             $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
+							mysqli_set_charset($mysqli, 'utf8');
                             $resultSet1 = $mysqli->query("SELECT nepieciesamaisAuditorijasTips 
                             FROM Kurss 
                             WHERE kKursaNosaukums='$selectedCourse'");
@@ -294,6 +299,7 @@
                             <option value=""></option>
                             <?php
                             $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
+							mysqli_set_charset($mysqli, 'utf8');
                             $resultSet = $mysqli->query("SELECT gpKurss FROM GrupasPlanosana ORDER BY gpID desc LIMIT 1;");
                             
                             if($resultSet->num_rows !=0){
@@ -304,6 +310,7 @@
                             
                         
                             $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
+							mysqli_set_charset($mysqli, 'utf8');
                             $resultSet1 = $mysqli->query("SELECT nepieciesamaisAuditorijasTips 
                             FROM Kurss 
                             WHERE kKursaNosaukums='$selectedKurss'");
@@ -380,6 +387,7 @@
                             isset($_POST['gpStudentSearchButton']) ||
                             isset($_POST['gpAddSelectedStudentsButton'])) {
                             $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
+							mysqli_set_charset($mysqli, 'utf8');
                             $resultSet = $mysqli->query("SELECT gpAuditorijaAdrese, gpAuditorijaPilseta, gpAuditorijaNumursNosaukums FROM GrupasPlanosana ORDER BY gpID DESC LIMIT 1;");
             
                             if($resultSet->num_rows !=0){
@@ -603,7 +611,8 @@ mysqli_close($d);
     //Ja tiek nospiesta studentu pievienošanas poga,
     //studentu informācija tiek ievadīta DB
     if(isset($_POST['gpAddSelectedStudentsButton'])) {            
-            $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');                
+            $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db'); 
+			mysqli_set_charset($mysqli, 'utf8');			
             $resultSet = $mysqli->query("SELECT MAX(gpID) FROM GrupasPlanosana;");
                             
             if($resultSet->num_rows !=0){
@@ -643,7 +652,8 @@ mysqli_close($d);
         if(isset($_POST['gpStudentSearchButton']) || 
            isset($_POST['gpAddSelectedStudentsButton'])) {
             //for ($i = 1; $i < $_POST['counter']; $i++) {
-            $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');                
+            $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db'); 
+			mysqli_set_charset($mysqli, 'utf8');			
             $resultSet = $mysqli->query("SELECT MAX(grupasplanosana_gpID) FROM GrupasPlanosanaStudenti;");
                             
             if($resultSet->num_rows !=0){
