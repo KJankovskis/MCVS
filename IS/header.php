@@ -52,6 +52,22 @@
 
 </head>
 <body>
+	<?php
+        $myServer = 'localhost';
+		$myDB = 'mcvs_db'; # Norādiet savu datu bāzi
+		$myUser = 'root';  # Norādiet savu datu bāzes lietotājvārdu
+		$myPass = 'janisk';  # Norādiet savu lietotājvārdu
+		# ja nevaram pievienoties - rakstam kļūdu paziņojumus
+		$mysqli = mysqli_connect($myServer,$myUser,$myPass,$myDB) or die('Nevaru pievienoties datubāzei');
+		mysqli_set_charset($mysqli, 'utf8');
+        $resultSet  =$mysqli->query("SELECT * FROM Persona WHERE lietotajvards='$username' ");
+        if($resultSet->num_rows !=0){
+            while($rows = $resultSet->fetch_assoc()){ 
+                $name = $rows['vards'];
+                $surname = $rows['uzvards'];
+            }
+        }
+    ?>
     <div class="wrap">
         	<div class="header">
                 <b id="logo"><a href="main.php"><img src="atteli/logo.png" alt="logo" height="50" width="250"></a></b>
@@ -59,4 +75,5 @@
                 <b id="logout"><a href="logout.php"><img src="atteli/logout.png" alt="logout-icon" height="24" width="24"></a></b>     
                 <b id="user-page"><a href="user-page.php"><img src="atteli/user.png" alt="user-icon" height="24" width="24"></a></b>
                 <b id="home"><a href="main.php"><img src="atteli/home.png" alt="home-icon" height="24" width="24"></a></b>
+				<p id="welcome"><?php echo "<b>Sveiki, $name $surname</b>" ?></p>
             </div>

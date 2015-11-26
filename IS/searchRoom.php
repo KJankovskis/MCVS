@@ -41,26 +41,26 @@
         <p><?php echo "<b>Maksimālais sēdvietu skaits</b> : $skaits" ?></p>
         <p><?php echo "<b>Tafele</b> : "; 
             if($tafele == '1'){
-                echo "auditorijā ir pieejama tāfele.";
+                echo "Ir";
             }
             else{
-                echo "auditorijā nav pieejama tāfele.";
+                echo "Nav";
             }
             ?></p>
         <p><?php echo "<b>Projektors</b> : "; 
             if($projektors == '1'){
-                echo "auditorijā ir pieejams projektors.";
+                echo "Ir";
             }
             else{
-                echo "auditorijā nav pieejams projektors.";
+                echo "Nav";
             }
             ?></p>
-        <p><?php echo "<b>Video konforence</b> : "; 
+        <p><?php echo "<b>Video konference</b> : "; 
             if($video == '1'){
-                echo "auditorijā ir pieejama video konforence.";
+                echo "Ir";
             }
             else{
-                echo "auditorijā nav pieejama video konforence.";
+                echo "Nav";
             }
             ?></p>
     </div>
