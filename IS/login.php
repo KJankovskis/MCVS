@@ -23,9 +23,19 @@ if (isset($_POST['submit'])) {
         // SQL query to fetch information of registerd users and finds user match.
         $query = mysql_query("SELECT * FROM Persona WHERE parole='$password' AND lietotajvards='$username'", $connection);
         $rows = mysql_num_rows($query);
+		if($query->num_rows !=0){
+			while($rows = $query->fetch_assoc()){ 
+				$role = $rows['lietotajaLoma'];
+			}
+		}
         if ($rows == 1) {
             $_SESSION['login_user']=$username; 
-            header("location: profile.php"); // Pārslēdzas uz citu lapu
+			if($role == 'L'){
+				header("location: user-page.php"); // Pārslēdzas uz citu lapu
+			}
+			else{
+				header("location: profile.php"); // Pārslēdzas uz citu lapu
+			}
         } 
         else {
             $error = "Nepareizi ievadīts lietotājvārds un / vai parole!";
