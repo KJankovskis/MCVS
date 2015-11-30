@@ -10,9 +10,9 @@
 		$mysqli = mysqli_connect($myServer,$myUser,$myPass,$myDB) or die('Nevaru pievienoties datubāzei');
 		mysqli_set_charset($mysqli, 'utf8');
 		
-		$PK=$_REQUEST['PK'];
+		$kKods=$_REQUEST['kKods']
 		
-        $resultSet  =$mysqli->query("SELECT * FROM Persona WHERE personasKods='$PK' ");
+        $resultSet  =$mysqli->query("SELECT * FROM Persona WHERE personasKods='$kKods' ");
         if($resultSet->num_rows !=0){
             while($rows = $resultSet->fetch_assoc()){ 
                 $ID = $rows['idPersona'];
@@ -38,9 +38,7 @@
         <div class="profilePicture">
             <?php
 echo '<dd>'
-     . '<object data="atteli/defaultPerson.png" type="image/png">'
-     .      '<img src="data:image/jpeg;base64,' . base64_encode($foto) . '" width="200" height="230">'
-     . '</object>'
+     . '<img src="data:image/jpeg;base64,' . base64_encode($foto) . '" width="200" height="230">'
      . '</dd>';
 ?>
         </div>
@@ -52,25 +50,14 @@ echo '<dd>'
             if($role == 'L'){             //lietotajs
                 echo "<b>apgūtie kursi</b> : <br><br>";
                 echo "<b>iegūtie diplomi</b> : <br><br>";
-                echo "<b>iegūtie sertifikāti</b> : <br>";
+                echo "<b>iegūtie sertifikāti</b> : <br><br>";
             }
             else if($role == 'P'){        //pasniedzejs
                 echo "<b>pasniedzamie kursi</b> :";
             }
             else if($role == 'A'){ 
             }
-        ?></p> 
-		<p><?php echo "<b>lietotāja loma: </b> :" 
-			if($role == 'L'){             //lietotajs
-                echo "<b>Lietotājs</b>";
-            }
-            else if($role == 'P'){        //pasniedzejs
-                echo "<b>Pasniedzējs</b>";
-            }
-            else if($role == 'A'){ 
-				echo "<b>Administrators</b>";
-			}
-        ?></p>		
+        ?></p>      
     </div>
     
     <div class="about">

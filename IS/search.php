@@ -114,7 +114,7 @@ else if($chkPassPort == "2"){
                     $row["nepieciesamaisAuditorijasTips"]. "</center></td><td><center>" . 
                     $row["kMaksimalaisStudentuSkaits"]. "</center></td><td><center>" . 
                     $row["kursaIlgums"]. "</center></td> <td><center>". 
-                    "<a href=\"searchProfile.php?kKods=".$row["kursaKods"]."\">Dati</a>" . "</center></td></tr>"; 
+                    "<a href=\"searchCourse.php?kKods=".$row["kursaKods"]."\">Dati</a>" . "</center></td></tr>"; 
                 }
             } else {
                 $x = 404;

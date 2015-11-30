@@ -39,12 +39,9 @@
     <div class="person">
         <div class="profilePicture">
             <?php
-echo '<dd>'
-     . '<object data="atteli/defaultPerson.png" type="image/png">'
+
      .      '<img src="data:image/jpeg;base64,' . base64_encode($foto) . '" width="200" height="230">'
-     . '</object>'
-     . '</dd>';
-?>
+
         </div>
         <p><?php echo "<b>e-pasts</b> :  $mail" ?></p>
         <p><?php echo "<b>tālrunis</b> : $phone" ?></p>
