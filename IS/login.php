@@ -22,12 +22,12 @@ if (isset($_POST['submit'])) {
         $db = mysql_select_db("mcvs_db", $connection);
         // SQL query to fetch information of registerd users and finds user match.
         $query = mysql_query("SELECT * FROM Persona WHERE parole='$password' AND lietotajvards='$username'", $connection);
-        $rows = mysql_num_rows($query);
-		if($query->num_rows !=0){
+        if($query->num_rows !=0){
 			while($rows = $query->fetch_assoc()){ 
 				$role = $rows['lietotajaLoma'];
 			}
 		}
+		$rows = mysql_num_rows($query);
         if ($rows == 1) {
              
 			if($role == 'L'){
