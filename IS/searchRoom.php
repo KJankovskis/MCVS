@@ -9,7 +9,7 @@
 		$mysqli = mysqli_connect($myServer,$myUser,$myPass,$myDB) or die('Nevaru pievienoties datubāzei');
 		mysqli_set_charset($mysqli, 'utf8');
 		
-		$aNosaukums=$_REQUEST['aNosaukums']
+		$aNosaukums=$_REQUEST['aNosaukums'];
 		
         $resultSet  =$mysqli->query("SELECT * FROM Auditorija WHERE aNumursNosaukums='$aNosaukums' ");
         if($resultSet->num_rows !=0){
