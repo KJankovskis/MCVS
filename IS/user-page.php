@@ -26,7 +26,7 @@
                 $cityWork = $rows['darbaPilseta']; 
                 $workplaceAdress = $rows['darbaAdrese'];
                 $foto = $rows['foto'];
-				if (empty($foto)) $foto = "defaultPerson.png";
+				if (empty($foto)) $foto = "atteli/defaultPerson.png";
                 $role = $rows['lietotajaLoma'];
             }
         }
@@ -40,7 +40,9 @@
         <div class="profilePicture">
             <?php
 echo '<dd>'
-     . '<img src="data:image/jpeg;base64,' . base64_encode($foto) . '" width="200" height="230">'
+     . '<object data="atteli/defaultPerson.png" type="image/png">'
+     .      '<img src="data:image/jpeg;base64,' . base64_encode($foto) . '" width="200" height="230">'
+     . '</object>'
      . '</dd>';
 ?>
         </div>
@@ -52,14 +54,25 @@ echo '<dd>'
             if($role == 'L'){             //lietotajs
                 echo "<b>apgūtie kursi</b> : <br><br>";
                 echo "<b>iegūtie diplomi</b> : <br><br>";
-                echo "<b>iegūtie sertifikāti</b> : <br><br>";
+                echo "<b>iegūtie sertifikāti</b> : <br>";
             }
             else if($role == 'P'){        //pasniedzejs
                 echo "<b>pasniedzamie kursi</b> :";
             }
             else if($role == 'A'){ 
             }
-        ?></p>      
+        ?></p> 
+		<p><?php echo "<b>lietotāja loma: </b> :" 
+			if($role == 'L'){             //lietotajs
+                echo "<b>Lietotājs</b>";
+            }
+            else if($role == 'P'){        //pasniedzejs
+                echo "<b>Pasniedzējs</b>";
+            }
+            else if($role == 'A'){ 
+				echo "<b>Administrators</b>";
+			}
+        ?></p> 
     </div>
     <div class="noslogojums"><p>Noslogojums</p></div>
     <div class="about">

@@ -9,7 +9,9 @@
 		$mysqli = mysqli_connect($myServer,$myUser,$myPass,$myDB) or die('Nevaru pievienoties datubāzei');
 		mysqli_set_charset($mysqli, 'utf8');
 		
-        $resultSet  =$mysqli->query("SELECT * FROM Kurss WHERE kursaKods='SM' ");
+		$kKods=$_REQUEST['kKods']
+		
+        $resultSet  =$mysqli->query("SELECT * FROM Kurss WHERE kursaKods='$kKods' ");
         if($resultSet->num_rows !=0){
             while($rows = $resultSet->fetch_assoc()){ 
                 $kursaKods = $rows['kursaKods'];

@@ -53,14 +53,12 @@ if($chkPassPort == "1"){
         $x = 0;
         if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
-                    $tempPersonasKods = $row["personasKods"]; 
-                    
                     echo "<td><center>" . $row["vards"] . "</center></td><td><center>" . 
                     $row["uzvards"]. "</center></td><td><center>" . 
                     $row["personasKods"]. "</center></td><td><center>" . 
                     $row["darbaAdrese"]. ", " . 
                     $row["darbaPilseta"]. "</center></td><td><center>" . 
-                     "<input type=\"hidden\" name=\"personas_kods\" value=\"$tempPersonasKods\"><input class=\"meklesana\" name=\"meklesana\" type=\"button\" value=\"Uz profilu\" onclick=\"window.open('searchProfile.php', '_self')\" />" . "</center></td></tr>"; 
+                     "<a href=\"searchProfile.php?PK=".$row["personasKods"]."\">Dati</a>" . "</center></td></tr>"; 
                     }
             } else {
                 $x = 404;
@@ -116,7 +114,7 @@ else if($chkPassPort == "2"){
                     $row["nepieciesamaisAuditorijasTips"]. "</center></td><td><center>" . 
                     $row["kMaksimalaisStudentuSkaits"]. "</center></td><td><center>" . 
                     $row["kursaIlgums"]. "</center></td> <td><center>". 
-                    "<input class=\"meklesana\" name=\"meklesana\" type=\"button\" value=\"Uz kursu\" onclick=\"window.open('searchCourse.php', '_self')\" />" . "</center></td></tr>"; 
+                    "<a href=\"searchProfile.php?kKods=".$row["kursaKods"]."\">Dati</a>" . "</center></td></tr>"; 
                 }
             } else {
                 $x = 404;
@@ -160,7 +158,7 @@ else if($chkPassPort == "3"){
 					$row["aAdrese"]. "</center></td><td><center>" . 
 					$row["aPilseta"]. "</center></td><td><center>" . 
 					$row["aMaksimalaisStudentuSkaits"]. "</center></td><td><center>" . 
-					"<input class=\"meklesana\" name=\"meklesana\" type=\"button\" value=\"Uz auditoriju\" onclick=\"window.open('searchRoom.php', '_self')\" />" . "</center></td></tr>"; ;
+					"<a href=\"searchRoom.php?aNosaukums=".$row["aNumursNosaukums"]."\">Dati</a>" . "</center></td></tr>"; ;
                 }
             } else {
                 $x = 404;
