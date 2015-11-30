@@ -39,9 +39,10 @@
     <div class="person">
         <div class="profilePicture">
             <?php
-
-     .      '<img src="data:image/jpeg;base64,' . base64_encode($foto) . '" width="200" height="230">'
-
+echo '<dd>'
+     . '<img src="data:image/jpeg;base64,' . base64_encode($foto) . '" width="200" height="230">'
+     . '</dd>';
+?>
         </div>
         <p><?php echo "<b>e-pasts</b> :  $mail" ?></p>
         <p><?php echo "<b>tālrunis</b> : $phone" ?></p>
