@@ -15,7 +15,7 @@
         if($resultSet->num_rows !=0){
             while($rows = $resultSet->fetch_assoc()){ 
                 $ID = $rows['idAuditorija'];
-                $nosaukums = $rows['NumursNosaukums'];
+                $nosaukums = $rows['aNumursNosaukums'];
                 $tips = $rows['aTips'];
                 $pilseta = $rows['aPilseta'];
                 $skaits = $rows['aMaksimalaisStudentuSkaits'];
