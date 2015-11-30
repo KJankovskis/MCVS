@@ -29,11 +29,13 @@ if (isset($_POST['submit'])) {
 			}
 		}
         if ($rows == 1) {
-            $_SESSION['login_user']=$username; 
+             
 			if($role == 'L'){
+				$_SESSION['login_user']=$username;
 				header("location: user-page.php"); // Pārslēdzas uz citu lapu
 			}
 			else{
+				$_SESSION['login_user']=$username;
 				header("location: profile.php"); // Pārslēdzas uz citu lapu
 			}
         } 
