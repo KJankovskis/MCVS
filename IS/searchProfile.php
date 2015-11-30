@@ -10,9 +10,9 @@
 		$mysqli = mysqli_connect($myServer,$myUser,$myPass,$myDB) or die('Nevaru pievienoties datubāzei');
 		mysqli_set_charset($mysqli, 'utf8');
 		
-		$kKods=$_REQUEST['kKods']
-		
-        $resultSet  =$mysqli->query("SELECT * FROM Persona WHERE personasKods='$kKods' ");
+        $PK=$_REQUEST['PK'];
+
+        $resultSet  =$mysqli->query("SELECT * FROM Persona WHERE personasKods='$PK' ");
         if($resultSet->num_rows !=0){
             while($rows = $resultSet->fetch_assoc()){ 
                 $ID = $rows['idPersona'];

@@ -11,7 +11,7 @@
 		
 		$kKods=$_REQUEST['kKods']
 		
-        $resultSet  =$mysqli->query("SELECT * FROM Kurss WHERE kursaKods='$kKods' ");
+        $resultSet  =$mysqli->query("SELECT * FROM Kurss WHERE kursaKods='$kKods'");
         if($resultSet->num_rows !=0){
             while($rows = $resultSet->fetch_assoc()){ 
                 $kursaKods = $rows['kursaKods'];
