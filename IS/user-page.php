@@ -3,20 +3,12 @@
     <?php
         include('login.php');
         $username = $_SESSION['login_user']; 
-
-		# Veidojam savienojumu ar savu serveri un datu bāzi
-		$myServer = 'localhost';
-		$myDB = 'mcvs_db'; # Norādiet savu datu bāzi
-		$myUser = 'root';  # Norādiet savu datu bāzes lietotājvārdu
-		$myPass = 'janisk';  # Norādiet savu lietotājvārdu
-		# ja nevaram pievienoties - rakstam kļūdu paziņojumus
-		$mysqli = mysqli_connect($myServer,$myUser,$myPass,$myDB) or die('Nevaru pievienoties datubāzei');
-		mysqli_set_charset($mysqli, 'utf8');
-				
+        //echo "$username";
+        $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
         $resultSet  =$mysqli->query("SELECT * FROM Persona WHERE lietotajvards='$username' ");
-
         if($resultSet->num_rows !=0){
-            while($rows = $resultSet->fetch_assoc()){
+            while($rows = $resultSet->fetch_assoc()){ 
+                $ID = $rows['idPersona'];
                 $name = $rows['vards'];
                 $surname = $rows['uzvards'];
                 $mail = $rows['epasts'];
@@ -26,11 +18,11 @@
                 $cityWork = $rows['darbaPilseta']; 
                 $workplaceAdress = $rows['darbaAdrese'];
                 $foto = $rows['foto'];
-				if (empty($foto)) $foto = "atteli/defaultPerson.png";
+                if (empty($foto)) $foto = "atteli/defaultPerson.png";
                 $role = $rows['lietotajaLoma'];
             }
         }
-		$sql = "SELECT * FROM PersonaNoslogojums WHERE Persona_idPersona='$ID'";
+        $sql = "SELECT * FROM PersonaNoslogojums WHERE Persona_idPersona='$ID'";
         $result = $mysqli->query($sql);
     ?>
     <div class="name-surname">
@@ -40,9 +32,12 @@
         <div class="profilePicture">
             <?php
 echo '<dd>'
-     . '<img src="data:image/jpeg;base64,' . base64_encode($foto) . '" width="200" height="230">'
+     . '<object data="atteli/defaultPerson.png" type="image/png">'
+     .      '<img src="data:image/jpeg;base64,' . base64_encode($foto) . '" width="200" height="230">'
+     . '</object>'
      . '</dd>';
 ?>
+            
         </div>
         <p><?php echo "<b>e-pasts</b> :  $mail" ?></p>
         <p><?php echo "<b>tālrunis</b> : $phone" ?></p>
@@ -59,22 +54,23 @@ echo '<dd>'
             }
             else if($role == 'A'){ 
             }
-        ?></p> 
-		<p><?php echo "<b>lietotāja loma: </b> :" 
+        ?></p>
+        <p><?php echo "<b>lietotāja loma: </b>"; 
 			if($role == 'L'){             //lietotajs
-                echo "<b>Lietotājs</b>";
+                echo "Lietotājs";
             }
             else if($role == 'P'){        //pasniedzejs
-                echo "<b>Pasniedzējs</b>";
+                echo "Pasniedzējs";
             }
             else if($role == 'A'){ 
-				echo "<b>Administrators</b>";
+				echo "Administrators";
 			}
         ?></p> 
     </div>
-    <div class="noslogojums"><p>Noslogojums</p></div>
+    
     <div class="about">
-       <table style="width:100%; border: 1px solid black; border-collapse: collapse;">
+        <div class="noslogojums"><p>Noslogojums</p></div>
+        <table style="width:100%; border: 1px solid black; border-collapse: collapse;">
           <tr>
                 <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Nr.</th>
                 <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Datums</th>
@@ -84,16 +80,24 @@ echo '<dd>'
           <tr>
         <?php
         $tmp = 0;
+        $x = 0;
         if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
                     $tmp = $tmp +1;
                     echo "<td>" . $tmp. "</td><td>" . $row["pDatums"]. "</td><td>" . $row["pLaiksNo"]. "</td><td>" . $row["pLaiksLidz"]. "</td></tr>". "<br>";
                 }
             } else {
-                
+                $x = 404;
             }
         ?>     
-        </table> 
+        </table>
+        <br><br><br><br><center>
+        <?php
+        if($x == 404){
+            echo "Personai tuvākajā laikā nekas nav ieplānots!";
+        }
+        ?>
+        </center>
     </div>
    
 <?php include('footer.php'); ?>
