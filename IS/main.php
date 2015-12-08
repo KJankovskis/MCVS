@@ -6,7 +6,7 @@ if($username == ""){
     session_destroy();
 }
 else{
-		<?php include('header.php'); ?>
+	 include('header.php'); ?>
         <div class="content">
 <!--            <div class="content-top"></div>-->
             <div class="content-left">
