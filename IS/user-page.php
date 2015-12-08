@@ -6,8 +6,7 @@ if($username == ""){
     session_destroy();
 }
 else{
-        include('login.php');
-        $username = $_SESSION['login_user']; 
+		include('header.php');
         //echo "$username";
         $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
 		mysqli_set_charset($mysqli, 'utf8');
