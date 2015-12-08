@@ -1,4 +1,12 @@
-<?php include('header.php');?>
+<?php
+include('login.php');      
+$username = $_SESSION['login_user']; 
+if($username == ""){
+    header("Location: index.php");
+    session_destroy();
+}
+else{
+	include('header.php');?>
     <div class="topic">
         <p>Jauna kursa pievienošana</p>
     </div>
@@ -41,4 +49,6 @@
         include('insertRoom.php');
     }
 ?>
-<?php include('footer.php'); ?>
+<?php include('footer.php'); 
+}
+?>

@@ -1,4 +1,13 @@
-<?php include('header.php');?>
+<?php
+include('login.php');      
+$username = $_SESSION['login_user']; 
+if($username == ""){
+    header("Location: index.php");
+    session_destroy();
+}
+else{
+	include('header.php');
+?>
 <?php
         # Veidojam savienojumu ar savu serveri un datu bāzi
 		$myServer = 'localhost';
@@ -43,4 +52,6 @@
         <p><?php echo "<b>Kursa ilgums</b> : $ilgums" ?></p>  
         <p><?php echo "<b>Kursa apraksts</b> : $ilgums" ?></p>
     </div>
-<?php include('footer.php'); ?>
+<?php include('footer.php'); 
+}
+?>

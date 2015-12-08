@@ -1,4 +1,13 @@
-        <?php include('header.php'); ?>
+<?php
+include('login.php');      
+$username = $_SESSION['login_user']; 
+if($username == ""){
+    header("Location: index.php");
+    session_destroy();
+}
+else{
+	include('header.php');
+	?>
         <div class="content">
 <!--            <div class="content-top"></div>-->
             <div class="content-left">
@@ -66,4 +75,6 @@
     
         </div>
 -->
-        <?php include('footer.php'); ?>
+<?php include('footer.php'); 
+}		
+?>

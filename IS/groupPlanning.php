@@ -1,5 +1,12 @@
 <?php
-    include('header.php');
+include('login.php');      
+$username = $_SESSION['login_user']; 
+if($username == ""){
+    header("Location: index.php");
+    session_destroy();
+}
+else{
+	include('header.php');
 ?>
 
 
@@ -687,7 +694,7 @@ mysqli_close($d);
     <center><input type="submit" id="gpCreateButton" value="IZVEIDOT MĀCĪBU GRUPU"></center>
     <br><br>
 </div>
-
 <?php
     include('footer.php'); 
+}
 ?>

@@ -1,6 +1,11 @@
-<?php include('header.php');?>
-
-    <?php
+<?php
+        include('login.php');      
+        $username = $_SESSION['login_user']; 
+if($username == ""){
+    header("Location: index.php");
+    session_destroy();
+}
+else{
         include('login.php');
         $username = $_SESSION['login_user']; 
         //echo "$username";
@@ -101,4 +106,6 @@ echo '<dd>'
         </center>
     </div>
    
-<?php include('footer.php'); ?>
+<?php include('footer.php'); 
+}
+?>

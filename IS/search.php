@@ -1,4 +1,11 @@
 <?php
+include('login.php');      
+$username = $_SESSION['login_user']; 
+if($username == ""){
+    header("Location: index.php");
+    session_destroy();
+}
+else{
 
 # Veidojam savienojumu ar savu serveri un datu bāzi
 $myServer = 'localhost';
@@ -180,4 +187,5 @@ else if($chkPassPort == "3"){
 <?php
 }
 mysqli_close($d);
+}
 ?>
