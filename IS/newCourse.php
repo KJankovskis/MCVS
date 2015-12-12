@@ -46,7 +46,7 @@ else{
 <?php
     if(isset($_REQUEST['Submit']))
     {
-        include('insertRoom.php');
+        include('insertCourse.php');
     }
 ?>
 <?php include('footer.php'); 
