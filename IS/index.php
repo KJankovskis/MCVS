@@ -6,7 +6,7 @@ if(isset($_SESSION['login_user'])){
     if($role == "L"){
         header("location: user-pageForUser.php");
     }else if($role == "A"){
-        header("location: profile.php");
+        header("location: main.php");
     }
 }
 ?>
