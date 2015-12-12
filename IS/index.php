@@ -1,8 +1,13 @@
 <?php
-include('login.php'); // Includes Login Script
+include('indexNew.php'); // Includes Login Script
 
 if(isset($_SESSION['login_user'])){
-header("location: main.php");
+    $role = $_SESSION['user_role'];
+    if($role == "L"){
+        header("location: user-pageForUser.php");
+    }else if($role == "A"){
+        header("location: profile.php");
+    }
 }
 ?>
 <!DOCTYPE html>

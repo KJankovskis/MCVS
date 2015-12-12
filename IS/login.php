@@ -27,6 +27,7 @@ if (isset($_POST['submit'])) {
 				$role = $rows['lietotajaLoma'];
 			}
 		}
+		
 		$rows = mysql_num_rows($query);
         if ($rows == 1) {
              
