@@ -28,7 +28,7 @@ $video = $_REQUEST["video"];
 		?><div class="pievienotsDbTuksh"> <p>Kāds no aizpildāmajiem laukiem nav aizpildīts!</p></div><?php
 	}
 	else{
-		$sql_query=" INSERT INTO Auditorija(aNumursNosaukums, auditorijasTips, aAdrese, aPilseta, aMaksimalaisStudentuSkaits, tafele, projektors, videoKonference) 
+		$sql_query="INSERT INTO Auditorija(aNumursNosaukums, aTips, aAdrese, aPilseta, aMaksimalaisStudentuSkaits, tafele, projektors, videoKonference) 
 					VALUES('$nosaukums','$tips','$adrese','$pilseta','$maxSkaits', '$tafele', '$projektors', '$video');";
 		if (mysqli_query($d, $sql_query)) {
 			?><div class="pievienotsDbApstiprinoss"> <p>Auditorija veiksmīgi pievienota datubāzei</p></div><?php
