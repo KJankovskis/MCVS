@@ -7,7 +7,9 @@ if(isset($_SESSION['login_user'])){
         header("location: user-pageForUser.php");
     }else if($role == "A"){
         header("location: main.php");
-    }
+    }else if($role == "A"){
+		header("location: main.php"); //Pasniedzejam vel jaizveido ipasa lapa vina lomai
+	}
 }
 ?>
 <!DOCTYPE html>
