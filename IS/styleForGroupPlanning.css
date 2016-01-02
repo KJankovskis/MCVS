@@ -11,10 +11,14 @@
     border: none;
 }
 
-#gpCourseLabel, #gpTeacherLabel, #gpRoomLabel, #gpDateLabel, #gpStudentLabel {
+#gpCourseLabel, #gpTeacherLabel, #gpRoomLabel, #gpDateLabel, #gpStudentLabel, #groupNameLabel {
     margin-left: 20px;
 }
 
+#groupNameInput{
+	padding: 5px;
+	width: 285px;
+}
 
 #gpRoomLabel {
     margin-top: 10px;
