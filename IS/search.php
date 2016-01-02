@@ -27,22 +27,22 @@ if($chkPassPort == "1"){
     $sql = "SELECT * FROM Persona WHERE vards='$name'";
     $result = $d->query($sql);    
     } else if($name == "" && $peronID ==""){                    //ja nav ievadits vards un personas kods
-        $sql = "SELECT * FROM persona WHERE uzvards='$surname'";
+        $sql = "SELECT * FROM Persona WHERE uzvards='$surname'";
         $result = $d->query($sql); 
     } else if($name == "" && $surname ==""){                    //ja nav ievadits vards un uzvards
-        $sql = "SELECT * FROM persona WHERE personaskods='$peronID'";
+        $sql = "SELECT * FROM Persona WHERE personaskods='$peronID'";
         $result = $d->query($sql); 
     } else if($peronID == ""){                                  //ja nav ievadits personas kods
-        $sql = "SELECT * FROM persona WHERE vards='$name' AND uzvards='$surname'";
+        $sql = "SELECT * FROM Persona WHERE vards='$name' AND uzvards='$surname'";
         $result = $d->query($sql); 
     } else if($name == ""){                                     //ja nav ievadits vards
-        $sql = "SELECT * FROM persona WHERE uzvards='$surname' AND personaskods='$peronID'";
+        $sql = "SELECT * FROM Persona WHERE uzvards='$surname' AND personaskods='$peronID'";
         $result = $d->query($sql); 
     } else if($surname == ""){                                  //ja nav ievadits uzvards
-        $sql = "SELECT * FROM persona WHERE vards='$name' AND personaskods='$peronID'";
+        $sql = "SELECT * FROM Persona WHERE vards='$name' AND personaskods='$peronID'";
         $result = $d->query($sql); 
     } else{                                                     //ja visi lauki ir aizpilditi
-        $sql = "SELECT * FROM persona WHERE vards='$name' AND uzvards='$surname' AND personaskods='$peronID'";
+        $sql = "SELECT * FROM Persona WHERE vards='$name' AND uzvards='$surname' AND personaskods='$peronID'";
         $result = $d->query($sql);
     }
 ?>
@@ -166,6 +166,50 @@ else if($chkPassPort == "3"){
 					$row["aPilseta"]. "</center></td><td><center>" . 
 					$row["aMaksimalaisStudentuSkaits"]. "</center></td><td><center>" . 
 					"<a href=\"searchRoom.php?aNosaukums=".$row["aNumursNosaukums"]."\">Dati</a>" . "</center></td></tr>"; ;
+                }
+            } else {
+                $x = 404;
+            }
+        ?> 
+        </table>
+        <?php
+        if ($x == 404) {
+                ?>
+                <br><br><br><br><center>
+                <?php
+                echo "Pēc šādiem meklēšanas kritērijiem datubāzē nav atrasts neviens ieraksts!";
+                ?>
+                </center>
+                <?php
+            }
+            ?>
+    </div>
+<?php
+}
+else if($chkPassPort == "4"){
+    $groupName = $_REQUEST["groupName"];
+    $sql = "SELECT * FROM MacibuGrupa WHERE mGrupasNosaukums='$groupName'";
+    $result = $d->query($sql); 
+?>
+  <div class="founded">
+        <table style="width:100%; border: 1px solid black; border-collapse: collapse;">
+          <tr>
+                <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Nosaukums/Numurs</th>
+                <!--<th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Pilsēta</th>
+                <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Adrese</th>
+                <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Ietilpība</th>-->
+                <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Uz grupas lapu</th>
+          </tr>
+          <tr>
+        <?php
+		$x = 0;
+        if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    echo "<td><center>" . $row["mGrupasNosaukums"]. "</center></td><td><center>" . 
+					//$row["aAdrese"]. "</center></td><td><center>" . 
+					//$row["aPilseta"]. "</center></td><td><center>" . 
+					//$row["aMaksimalaisStudentuSkaits"]. "</center></td><td><center>" . 
+					"<a href=\"searchRoom.php?aNosaukums=".$row["mGrupasNosaukums"]."\">Dati</a>" . "</center></td></tr>";
                 }
             } else {
                 $x = 404;
