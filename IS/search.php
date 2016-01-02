@@ -194,9 +194,9 @@ else if($chkPassPort == "4"){
   <div class="founded">
         <table style="width:100%; border: 1px solid black; border-collapse: collapse;">
           <tr>
-                <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Nosaukums/Numurs</th>
-                <!--<th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Pilsēta</th>
-                <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Adrese</th>
+                <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Nosaukums</th>
+                <!--<th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Studentu skaits</th>
+                <!--<th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Adrese</th>
                 <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Ietilpība</th>-->
                 <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Uz grupas lapu</th>
           </tr>
