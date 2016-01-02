@@ -16,9 +16,8 @@ else{
                 
             </div>
             <div class="content-right">
-                <form method="post" action="groupPlanning.php">
-                <input class="newGroupGroup" id="newGroupGroup" name="newGroupGroup" type="submit" value="MĀCĪBU GRUPU PLĀNOŠANA">
-                </form>  
+                <input class="addStudent" name="newGroupGroup" type="button" value="MĀCĪBU GRUPU PLĀNOŠANA" onclick="window.open('groupPlanning.php', '_self')"/>
+				<input class="newGroupGroup" name="addStudent" type="button" value="PIEVIENOT STUDENTUS GRUPAI" onclick="window.open('addStudent.php', '_self')"/>  
             </div>
         </div> 
         <div class="topic">
@@ -41,6 +40,10 @@ else{
                     <input type="radio" id="room" name="chkPassPort" value="3" onclick="ShowHideDiv()" />
                     <b>Auditorija</b>
                 </label>
+                <label for="group">
+                    <input type="radio" id="group" name="chkPassPort" value="4" onclick="ShowHideDiv()" />
+                    <b>Mācību grupa</b>
+                </label>
 <!--____________________________________________________________________-->
                 <div id="showPerson" style="display: none">
                     Vārds: <input type="text" id="name" name="name"/><br>
@@ -55,6 +58,10 @@ else{
  <!--____________________________________________________________________-->               
                 <div id="showRoom" style="display: none">
                     Auditorijas numurs vai nosaukums:<input type="text" id="roomName" name="roomName"/><br>
+                </div>
+<!--____________________________________________________________________-->
+                <div id="showGroup" style="display: none">
+                    Mācību grupas nosaukums:<input type="text" id="groupName" name="groupName"/><br>
                 </div>
 <!--____________________________________________________________________-->
             </div>

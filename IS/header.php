@@ -47,6 +47,9 @@
         var room = document.getElementById("room");
         var showRoom = document.getElementById("showRoom");
         showRoom.style.display = room.checked ? "block" : "none";
+        var group = document.getElementById("group");
+        var showGroup = document.getElementById("showGroup");
+        showGroup.style.display = group.checked ? "block" : "none";
     }
 </script>
 
