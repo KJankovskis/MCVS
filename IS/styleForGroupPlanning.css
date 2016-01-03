@@ -10,7 +10,36 @@
 #groupPlanningTable {
     border: none;
 }
-
+#searchInfo{
+	margin-left:100px;
+}
+#searchInformation{
+	font-size:12px;
+	font-weight: bold;
+    height: 30px;
+    width: 55px;
+    padding: 5px 15px 5px 5px;
+}
+.searchPerson{
+	height: 10%;
+}
+.allBorder{
+border: 3px solid #DCE6F7;
+}
+.LRborder{
+border-left: 3px solid #DCE6F7; 
+border-right: 3px solid #DCE6F7;
+}
+.LRTborder{
+border-left: 3px solid #DCE6F7; 
+border-right: 3px solid #DCE6F7; 
+border-top: 3px solid #DCE6F7;
+}
+.LRBborder{
+border-left: 3px solid #DCE6F7; 
+border-right: 3px solid #DCE6F7; 
+border-bottom: 3px solid #DCE6F7;
+}
 #gpCourseLabel, #gpTeacherLabel, #gpRoomLabel, #gpDateLabel, #gpStudentLabel, #groupNameLabel {
     margin-left: 20px;
 }
