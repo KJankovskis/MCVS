@@ -48,7 +48,10 @@ border-bottom: 3px solid #DCE6F7;
 	padding: 5px;
 	width: 285px;
 }
-
+#name, #surname, #peronID, #courseID, #courseName, #roomName, #groupName{
+	padding: 5px;
+	width: 150px;
+}
 #gpRoomLabel {
     margin-top: 10px;
     margin-bottom: 10px;
