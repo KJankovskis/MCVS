@@ -331,10 +331,10 @@ color:#6495ed;
 .content-left{
     position: relative;
     margin-top: 10px;
-	margin-left: 10px;
+	margin-left: 0px;
     height: 180px;
     float: left;
-    width: 550px;
+    width: 500px;
 }
 .newUser{
     width:400px;
@@ -347,7 +347,7 @@ color:#6495ed;
     cursor:pointer;
     border-radius:5px;
     margin-top: 10px;
-    margin-left: 75px;   
+    margin-left: 45px;   
     text-align: center;
 }
 .newCourse{
@@ -361,7 +361,7 @@ color:#6495ed;
     cursor:pointer;
     border-radius:5px;
     margin-top: 10px;
-    margin-left: 75px; 
+    margin-left: 45px; 
     text-align: center;
 }
 .newRoom{
@@ -375,7 +375,7 @@ color:#6495ed;
     cursor:pointer;
     border-radius:5px;
     margin-top: 10px;
-    margin-left: 75px; 
+    margin-left: 45px; 
     text-align: center;
 }
 .meklesana{
@@ -397,7 +397,7 @@ color:#6495ed;
     font-family:Verdana, Geneva, sans-serif;
     height: 180px;
     float: right;
-    width: 410px;
+    width: 450px;
 }
 .groups{
     width:170px;
@@ -414,7 +414,7 @@ color:#6495ed;
     text-align: center;
 }
 .addStudent{
-    width:400px;
+    width:430px;
     height: 45px;
     background-color:#FF5326;
     color:#fff;
@@ -428,7 +428,7 @@ color:#6495ed;
     text-align: center;
 }
 .newGroupGroup{
-    width:400px;
+    width:430px;
     height: 45px;
     background-color:#FF5326;
     color:#fff;
