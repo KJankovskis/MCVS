@@ -16,61 +16,131 @@ else{
                 
             </div>
             <div class="content-right">
-                <input class="addStudent" name="newGroupGroup" type="button" value="MĀCĪBU GRUPU PLĀNOŠANA" onclick="window.open('groupPlanning.php', '_self')"/>
-				<input class="newGroupGroup" name="addStudent" type="button" value="PIEVIENOT STUDENTUS GRUPAI" onclick="window.open('addStudent.php', '_self')"/>  
+				<input class="addStudent" name="newGroupGroup" type="button" value="IZVEIDOT JAUNU MĀCĪBU GRUPU" onclick="window.open('groupPlanning.php', '_self')"/>
+				<input class="newGroupGroup" name="addStudent" type="button" value="PIEVIENOT STUDENTUS MĀCĪBU GRUPAI" onclick="window.open('addStudent.php', '_self')"/>
+				
+				<!--<form method="post" action="addStudent.php">
+					<input class="addStudent" id="addStudent" name="addStudent" type="submit" value="PIEVIENOT STUDENTUS GRUPAI">
+                </form>
+                <form method="post" action="groupPlanning.php">
+					<input class="newGroupGroup" id="newGroupGroup" name="newGroupGroup" type="submit" value="MĀCĪBU GRUPU PLĀNOŠANA">
+                </form>  -->
             </div>
         </div> 
         <div class="topic">
             <p style="font-size:25px;">Informācijas meklēšana</p>
         </div>
         <div class="searchArray">
-            <form action="" method="post">
-            <div class="search-left">
-                
-                <label for="person">
-                    <input type="radio" id="person" name="chkPassPort" value="1" onclick="ShowHideDiv()" />
-                    <b>Lietotājs</b>
-                </label>                
-                <label for="course">
-                    <input type="radio" id="course" name="chkPassPort" value="2" onclick="ShowHideDiv()" />
-                    <b>Kurss</b>
-                </label>
-                
-                <label for="room">
-                    <input type="radio" id="room" name="chkPassPort" value="3" onclick="ShowHideDiv()" />
-                    <b>Auditorija</b>
-                </label>
-                <label for="group">
-                    <input type="radio" id="group" name="chkPassPort" value="4" onclick="ShowHideDiv()" />
-                    <b>Mācību grupa</b>
-                </label>
-<!--____________________________________________________________________-->
-                <div id="showPerson" style="display: none">
-                    Vārds: <input type="text" id="name" name="name"/><br>
-                    Uzvārds:<input type="text" id="surname" name="surname"/><br>
-                    Personas kods: <input type="text" id="peronID" name="peronID"/>
-                </div>              
- <!--____________________________________________________________________-->               
-                <div id="showCourse" style="display: none">
-                    Kursa kods: <input type="text" id="courseID" name="courseID"/><br>
-                    Kursa nosaukums:<input type="text" id="courseName" name="courseName"/><br>
-                </div>
- <!--____________________________________________________________________-->               
-                <div id="showRoom" style="display: none">
-                    Auditorijas numurs vai nosaukums:<input type="text" id="roomName" name="roomName"/><br>
-                </div>
-<!--____________________________________________________________________-->
-                <div id="showGroup" style="display: none">
-                    Mācību grupas nosaukums:<input type="text" id="groupName" name="groupName"/><br>
-                </div>
-<!--____________________________________________________________________-->
-            </div>
-            <div class="search-right">
-            <?php         
-                print "<input class=\"searchButton\" type=\"Submit\" name=\"Submit\" value=\"Meklēt\"> ";
-            ?>
-            </div>
-                </form>
+			<table id="searchInfo" width="80%">
+			<form action="" method="post">
+				<tr height="20px" style="font-size:10px; text-align: center; line-height: 0.3;">
+					<td width="20%" class="allBorder">
+						<label style="font-size:20px;">Lietotājs: </label>
+					</td>
+					<td width="20%" class="allBorder">
+						<input id="name" type="text" name="name"/>
+					</td>
+					<td width="20%" class="allBorder">
+						<input id="surname" type="text" name="surname" />
+					</td>
+					<td width="20%" class="allBorder">
+						<input id="peronID" type="text" name="peronID" />
+					</td>
+					<td width="5%" class="allBorder">				
+						<input type="hidden" name="chkPassPort" value="1">
+						<input type="Submit" id="searchInformation" name="Submit" value="Meklēt">
+					</td>
+				</tr>
+				</form>
+				<tr height="20px" style=" font-size:10px; text-align: center; line-height: 0.3;">
+					<td width="20%" class="LRborder"></td>
+					<td width="20%" class="LRborder">
+						<label class="searchPerson">Vārds</label>
+					</td>
+					<td width="20%" class="LRborder">
+						<label class="searchPerson">Uzvārds</label>
+					</td>
+					<td width="20%" class="LRborder">
+						<label class="searchPerson">Personas kods</label>
+					</td>
+				</tr>
+				<form action="" method="post">
+				<tr height="20px" style=" font-size:10px; text-align: center; line-height: 0.3;">
+					<td width="20%" class="LRBborder">
+						<label style="font-size:20px;">Kurss: </label>
+					</td>
+					<td width="20%" class="LRborder">
+						<input id="courseID" type="text" name="courseID"/>
+					</td>
+					<td width="20%" class="LRborder">
+						<input id="courseName" type="text" name="courseName" />
+					</td>
+					<td width="20%" class="LRborder"></td>
+					<td width="5%" class="LRborder">
+						<input type="hidden" name="chkPassPort" value="2">
+						<input type="Submit" id="searchInformation" name="Submit" value="Meklēt">
+					</td>
+				</tr>
+				</form>
+				<tr height="20px" style=" font-size:10px; text-align: center; line-height: 0.3;">
+					<td width="20%" class="LRborder"></td>
+					<td width="20%" class="LRTborder">
+						<label id="searchCourse">Kods</label>
+					</td>
+					<td width="20%"class="LRTborder">
+						<label id="searchCourse">Nosaukums</label>
+					</td>
+					<td class="LRTborder"></td>
+					<td class="LRTborder"></td>
+				</tr>
+				<form action="" method="post">
+				<tr height="20px" style=" font-size:10px; text-align: center; line-height: 0.3;">
+					<td width="20%" class="LRBborder">
+						<label style="font-size:20px;">Auditorija: </label>
+					</td>
+					<td width="20%" class="LRborder">
+						<input id="roomName" type="text" name="roomName"/>
+					</td>
+					<td width="20%" class="LRborder"></td>
+					<td width="20%" class="LRborder"></td>
+					<td width="5%" class="LRborder">
+						<input type="hidden" name="chkPassPort" value="3">
+						<input type="Submit" id="searchInformation" name="Submit" value="Meklēt">
+					</td>
+				</tr>
+				</form>
+				<tr height="20px" style=" font-size:10px; text-align: center; line-height: 0.3;">
+					<td width="20%" class="LRborder"></td>
+					<td width="20%" class="LRTborder">
+						<label id="searchRoom">Numurs/Nosaukums</label>
+					</td>
+					<td width="20%" class="LRTborder"></td>
+					<td width="20%" class="LRTborder"></td>
+					<td width="5%" class="LRTborder"></td>
+				</tr>
+				<form action="" method="post">
+				<tr height="20px" style=" font-size:10px; text-align: center; line-height: 0.3;">
+					<td width="20%" class="LRBborder">
+						<label style="font-size:20px;">Mācību grupa: </label>
+					</td>
+					<td width="20%" class="LRBborder">
+						<input id="groupName" type="text" name="groupName"/>
+					</td>
+					<td width="20%" class="LRBborder"></td>
+					<td width="20%" class="LRBborder"></td>
+					<td width="5%" class="LRBborder">
+						<input type="hidden" name="chkPassPort" value="4">
+						<input type="Submit" id="searchInformation" name="Submit" value="Meklēt">
+					</td>
+				</tr>
+				</form>
+				<tr height="20px" style=" font-size:10px; text-align: center; line-height: 0.3;">
+					<td width="20%" class="allBorder"></td>
+					<td width="20%" class="allBorder">
+						<label id="searchGroup">Nosaukums</label>
+					</td>
+				</tr>
+			</table>
         </div>
 <?php
     if(isset($_REQUEST['Submit']))
