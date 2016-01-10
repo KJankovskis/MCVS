@@ -95,9 +95,9 @@ else{
                                     $resultSet2 = $mysqli->query("SELECT Persona.vards, Persona.uzvards, Persona.personasKods
                                     FROM Persona
                                     LEFT JOIN Persona_has_Kurss 
-                                    ON Persona.idPersona = Persona_has_kurss.Persona_idPersona
+                                    ON Persona.idPersona = Persona_has_Kurss.Persona_idPersona
                                     WHERE Persona.lietotajaLoma =  'P' 
-                                    AND Persona_has_kurss.Kurss_idKurss = '$selectedCourseId'");
+                                    AND Persona_has_Kurss.Kurss_idKurss = '$selectedCourseId'");
                         
                                     if($resultSet2 -> num_rows != 0) {
                                         while($rows = $resultSet2 -> fetch_assoc()) {           
