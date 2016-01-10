@@ -267,10 +267,10 @@ else{
         $sql_query2="INSERT INTO Persona_has_MacibuGrupa(Persona_idPersona, MacibuGrupa_idMacibuGrupa, vaiIrPasniedzejs) VALUES('$selectedTeacherId','$selectedGroupId','J');";
         
         if (mysqli_query($d, $sql_query2)) {
-            // echo "Ieraksts par lietotaju veiksmīgi pievienots";
-        } else {
-            echo "Error: " . $sql_query2 . "<br>" . mysqli_error($d);
-        }
+			?><div class="pievienotsDbApstiprinoss"> <p>Mācību grupa veiksmīgi izveidota!</p></div><?php
+		} else {
+			?><div class="pievienotsDbNeapstiprinoss"> <p>Mācību grupu izveidot neizdevās!</p></div><?php
+		}
         
         mysqli_close($d);   
     }
