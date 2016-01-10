@@ -264,7 +264,7 @@ else{
             }
         }
         
-        $sql_query2="INSERT INTO Persona_has_Macibugrupa(Persona_idPersona, MacibuGrupa_idMacibuGrupa, vaiIrPasniedzejs) VALUES('$selectedTeacherId','$selectedGroupId','J');";
+        $sql_query2="INSERT INTO Persona_has_MacibuGrupa(Persona_idPersona, MacibuGrupa_idMacibuGrupa, vaiIrPasniedzejs) VALUES('$selectedTeacherId','$selectedGroupId','J');";
         
         if (mysqli_query($d, $sql_query2)) {
             // echo "Ieraksts par lietotaju veiksmīgi pievienots";
