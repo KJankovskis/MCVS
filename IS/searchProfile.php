@@ -9,9 +9,18 @@ else{
 	include('header.php');?>
 <?php
 
-        $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
+        # Veidojam savienojumu ar savu serveri un datu bāzi
+		$myServer = 'localhost';
+		$myDB = 'mcvs_db'; # Norādiet savu datu bāzi
+		$myUser = 'root';  # Norādiet savu datu bāzes lietotājvārdu
+		$myPass = 'janisk';  # Norādiet savu lietotājvārdu
+		# ja nevaram pievienoties - rakstam kļūdu paziņojumus
+		$mysqli = mysqli_connect($myServer,$myUser,$myPass,$myDB) or die('Nevaru pievienoties datubāzei');
 		mysqli_set_charset($mysqli, 'utf8');
-        $resultSet  =$mysqli->query("SELECT * FROM Persona WHERE lietotajvards='$username' ");
+		
+        $PK=$_REQUEST['PK'];
+
+        $resultSet  =$mysqli->query("SELECT * FROM Persona WHERE personasKods='$PK' ");
         if($resultSet->num_rows !=0){
             while($rows = $resultSet->fetch_assoc()){ 
                 $ID = $rows['idPersona'];
@@ -26,9 +35,6 @@ else{
                 $foto = $rows['foto'];
                 if (empty($foto)) $foto = "atteli/defaultPerson.png";
                 $role = $rows['lietotajaLoma'];
-				//startDate = $rows['pDatums'];
-				//startTime = $rows['pLaiksNo'];
-				//endTime = $rows['pLaiksLidz'];
             }
         }
         $resultNoslogojums=$mysqli->query("SELECT * FROM Persona_has_MacibuGrupa WHERE Persona_idPersona='$ID' ");
