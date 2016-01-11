@@ -195,9 +195,6 @@ else if($chkPassPort == "4"){
         <table style="width:100%; border: 1px solid black; border-collapse: collapse;">
           <tr>
                 <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Nosaukums</th>
-                <!--<th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Studentu skaits</th>
-                <!--<th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Adrese</th>
-                <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Ietilpība</th>-->
                 <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Uz grupas lapu</th>
           </tr>
           <tr>
@@ -206,10 +203,7 @@ else if($chkPassPort == "4"){
         if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
                     echo "<td><center>" . $row["mGrupasNosaukums"]. "</center></td><td><center>" . 
-					//$row["aAdrese"]. "</center></td><td><center>" . 
-					//$row["aPilseta"]. "</center></td><td><center>" . 
-					//$row["aMaksimalaisStudentuSkaits"]. "</center></td><td><center>" . 
-					"<a href=\"searchRoom.php?aNosaukums=".$row["mGrupasNosaukums"]."\">Dati</a>" . "</center></td></tr>";
+					"<a href=\"searchGroup.php?gNosaukums=".$row["mGrupasNosaukums"]."\">Dati</a>" . "</center></td></tr>";
                 }
             } else {
                 $x = 404;
