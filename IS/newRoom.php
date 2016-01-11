@@ -18,7 +18,7 @@ else{
 				<label style="height: 35px">Auditorijas tips: </label><br>
 				<label style="height: 35px">Auditorijas adrese: </label><br>
 				<label style="height: 35px">Auditorijas pilseta: </label><br>
-				<label style="height: 35px">Studentu skaits: </label><br>
+				<label style="height: 35px">Maksimālais studentu skaits: </label><br>
 				<label style="height: 35px">Tāfele: </label><br>
 				<label style="height: 35px">Projektors: </label><br>
 				<label style="height: 35px">Video konference: </label><br>

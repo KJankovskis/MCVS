@@ -48,9 +48,8 @@ else{
                 echo "Auditorija";
             }
             ?></p>
-        <p><?php echo "<b>Maksimālais sēdvietu skaits</b> : $skaits" ?></p>
-        <p><?php echo "<b>Kursa ilgums</b> : $ilgums" ?></p>  
-        <p><?php echo "<b>Kursa apraksts</b> : $ilgums" ?></p>
+        <p><?php echo "<b>Maksimālais studentu skaits</b> : $skaits" ?></p>
+        <p><?php echo "<b>Kursa ilgums</b> : $ilgums dienas" ?></p>  
     </div>
 <?php include('footer.php'); 
 }

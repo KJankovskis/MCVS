@@ -49,7 +49,7 @@ else{
             ?></p>
         <p><?php echo "<b>Atrodas pilsētā</b> : $pilseta" ?></p> 
         <p><?php echo "<b>Maksimālais sēdvietu skaits</b> : $skaits" ?></p>
-        <p><?php echo "<b>Tafele</b> : "; 
+        <p><?php echo "<b>Tāfele</b> : "; 
             if($tafele == '1'){
                 echo "Ir";
             }
