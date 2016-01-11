@@ -10,7 +10,7 @@ else{
         //echo "$username";
         $mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
 		mysqli_set_charset($mysqli, 'utf8');
-        $resultSet  =$mysqli->query("SELECT * FROM Persona JOIN PersonaNoslogojums ON idPersona = Persona_idPersona WHERE lietotajvards='$username' ");
+        $resultSet  =$mysqli->query("SELECT * FROM Persona WHERE lietotajvards='$username' ");
         if($resultSet->num_rows !=0){
             while($rows = $resultSet->fetch_assoc()){ 
                 $ID = $rows['idPersona'];
@@ -30,6 +30,13 @@ else{
 				//endTime = $rows['pLaiksLidz'];
             }
         }
+        $resultNoslogojums=$mysqli->query("SELECT * FROM Persona_has_MacibuGrupa WHERE Persona_idPersona='$ID' ");
+		if($resultNoslogojums->num_rows !=0){
+            while($rows = $resultNoslogojums->fetch_assoc()){ 
+                $IDmGrupa = $rows['MacibuGrupa_idMacibuGrupa'];
+            }
+        }
+		$resultMacibuGrupa=$mysqli->query("SELECT * FROM MacibuGrupa WHERE 	idMacibuGrupa='$IDmGrupa'");
     ?>
     <div class="name-surname">
         <p ><?php echo "$name $surname"; ?> </p>
