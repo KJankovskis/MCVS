@@ -82,11 +82,11 @@ echo '<dd>'
         <div class="noslogojums"><p>Noslogojums</p></div>
         <table style="width:100%; border: 1px solid black; border-collapse: collapse;">
           <tr>
-                <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Nr.</th>	
+                 <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Nr.</th>	
 				<th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Aktivitāte</th>
 				<th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Datums no</th>
 				<th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Datums līdz</th>
-          </tr>
+		  </tr>
           <tr>
         <?php
         $tmp = 0;
