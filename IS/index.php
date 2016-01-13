@@ -29,7 +29,7 @@ if(isset($_SESSION['login_user'])){
             <label style="height: 20px">Parole:</label>
             <input id="password" name="password" type="password">
             <input id="ienaktSistema" name="submit" type="submit" value="Ienākt sistēmā">
-            <span><br><?php echo $error; ?></span>
+            <span><br><br><?php echo $error; ?></span>
             </form>
         </div>
     </div>
