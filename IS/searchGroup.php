@@ -87,14 +87,14 @@ else{
 		<br>
 		<br>
 		<br>
-        <p><?php echo "<b>Pasniedzejs</b> :  $pasniedzejaVards $pasniedzejaUzvards , $pasniedzejaPersonasKods" ?></p>
-        <p><?php echo "<b>Apgūstamais kurss</b> : $kursaNosaukums" ?></p>
-        <p><?php echo "<b>Auditorija</b> : $auditorijasNosaukums <b>atrodas :</b> $aAdrese, $aPilseta" ?></p>
-        <p><?php echo "<b>Mācības ilgst no</b> $mgDatumsNo <b>līdz</b> $mgDatumsLidz" ?></p>     
+        <p><?php echo "<b>Pasniedzejs</b>:  $pasniedzejaVards $pasniedzejaUzvards , $pasniedzejaPersonasKods" ?></p>
+        <p><?php echo "<b>Apgūstamais kurss</b>: $kursaNosaukums" ?></p>
+        <p><?php echo "<b>Auditorija</b : $auditorijasNosaukums ($aAdrese, $aPilseta)" ?></p>
+        <p><?php echo "<b>Apmācību ilgums</b>: no $mgDatumsNo līdz $mgDatumsLidz" ?></p>     
     </div>
     
     <div class="about">
-        <div class="noslogojums"><p>Noslogojums</p></div>
+        <div class="noslogojums"><p>Studentu saraksts</p></div>
         <table style="width:100%; border: 1px solid black; border-collapse: collapse; position: absolute; top:30px;"">
           <tr>
                 <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Nr.</th>
