@@ -51,18 +51,18 @@ echo '<dd>'
 ?>
             
         </div>
-        <p><?php echo "<b>e-pasts</b> :  $mail" ?></p>
-        <p><?php echo "<b>tālrunis</b> : $phone" ?></p>
-        <p><?php echo "<b>dzīvesvietas adrese</b> : $adress , $city" ?></p>
-        <p><?php echo "<b>darbavieta</b> : $workplaceAdress, $cityWork" ?></p>
+        <p><?php echo "<b>e-pasts</b>: $mail" ?></p>
+        <p><?php echo "<b>tālrunis</b>: $phone" ?></p>
+        <p><?php echo "<b>dzīvesvietas adrese</b>: $adress, $city" ?></p>
+        <p><?php echo "<b>darbavieta</b>: $workplaceAdress, $cityWork" ?></p>
         <p><?php
             if($role == 'L'){             //lietotajs
-                echo "<b>apgūtie kursi</b> : <br><br>";
-                echo "<b>iegūtie diplomi</b> : <br><br>";
-                echo "<b>iegūtie sertifikāti</b> : <br>";
+                echo "<b>apgūtie kursi</b>: <br><br>";
+                echo "<b>iegūtie diplomi</b>: <br><br>";
+                echo "<b>iegūtie sertifikāti</b>: <br>";
             }
             else if($role == 'P'){        //pasniedzejs
-                echo "<b>pasniedzamie kursi</b> :";
+                echo "<b>pasniedzamie kursi</b>:";
             }
             else if($role == 'A'){ 
             }
