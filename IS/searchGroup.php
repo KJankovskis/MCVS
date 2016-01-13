@@ -71,13 +71,13 @@ else{
 				$aPilseta = $rows['aPilseta'];
             }
         }
-		$resultSetStudentiID  =$mysqli->query("SELECT * FROM Persona_has_MacibuGrupa WHERE MacibuGrupa_idMacibuGrupa='$IDgrupa' AND vaiIrPasniedzejs = 'N'");
+		/*$resultSetStudentiID  =$mysqli->query("SELECT * FROM Persona_has_MacibuGrupa WHERE MacibuGrupa_idMacibuGrupa='$IDgrupa' AND vaiIrPasniedzejs = 'N'");
         if($resultSetStudentiID->num_rows !=0){
             while($rows = $resultSetStudentiID->fetch_assoc()){ 
 				$IDstudenta = $rows['Persona_idPersona'];;
             }
         }
-		$resultSetStudent = $mysqli->query("SELECT * FROM Persona WHERE idPersona='$IDstudenta'");
+		$resultSetStudent = $mysqli->query("SELECT * FROM Persona WHERE idPersona='$IDstudenta'");*/
 
     ?>
     <div class="name-surname">
@@ -95,7 +95,7 @@ else{
     
     <div class="about">
         <div class="noslogojums"><p>Noslogojums</p></div>
-        <table style="width:100%; border: 1px solid black; border-collapse: collapse;">
+        <table style="width:100%; border: 1px solid black; border-collapse: collapse; position: absolute; top:30px;"">
           <tr>
                 <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Nr.</th>
                 <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Vārds</th>
@@ -106,14 +106,24 @@ else{
         <?php
         $tmp = 0;
         $x = 0;
-        if ($resultSetStudent->num_rows > 0) {
-                while($row = $resultSetStudent->fetch_assoc()) {
-                    $tmp = $tmp +1;
-                    echo "<td><center>" . $tmp. "</center></td><td><center>" . 
-                        $row["vards"]. "</center></td><td><center>" . 
-                        $row["uzvards"]. "</center></td><td><center>" .
-                        $row["personasKods"]. "</center></td></tr>". "<br>";
-                }
+		
+		$resultSetStudentiID  =$mysqli->query("SELECT * FROM Persona_has_MacibuGrupa WHERE MacibuGrupa_idMacibuGrupa='$IDgrupa' AND vaiIrPasniedzejs = 'N'");
+        if($resultSetStudentiID->num_rows !=0){
+            while($rows = $resultSetStudentiID->fetch_assoc()){ 
+				$IDstudenta = $rows['Persona_idPersona'];
+				
+				$resultSetStudent = $mysqli->query("SELECT * FROM Persona WHERE idPersona='$IDstudenta'");
+				if ($resultSetStudent->num_rows > 0) {
+					while($row = $resultSetStudent->fetch_assoc()) {
+						$tmp = $tmp +1;
+						echo "<td><center>" . $tmp. "</center></td><td><center>" . 
+							$row["vards"]. "</center></td><td><center>" . 
+							$row["uzvards"]. "</center></td><td><center>" .
+							$row["personasKods"]. "</center></td></tr>". "<br>";
+					}
+            }
+        }
+		
             } else {
                 $x = 404;
             }
