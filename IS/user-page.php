@@ -45,9 +45,9 @@ echo //'<dd>'
 ?>
             
         </div>
-        <p><?php echo "<b>e-pasts</b> :  $mail" ?></p>
+        <p><?php echo "<b>e-pasts:</b> $mail" ?></p>
         <p><?php echo "<b>tālrunis</b> : $phone" ?></p>
-        <p><?php echo "<b>dzīvesvietas adrese</b> : $adress , $city" ?></p>
+        <p><?php echo "<b>dzīvesvietas adrese</b> : $adress, $city" ?></p>
         <p><?php echo "<b>darbavieta</b> : $workplaceAdress, $cityWork" ?></p>
         <?php
             if($role == 'L'){
@@ -59,7 +59,7 @@ echo //'<dd>'
             }
             else if($role == 'P'){
                 ?><p><?php//pasniedzejs
-                echo "<b>pasniedzamie kursi</b> :";
+                echo "<b>pasniedzamie kursi: </b>";
                 ?></p><?php
             }
             else if($role == 'A'){ 
