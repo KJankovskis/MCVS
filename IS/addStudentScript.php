@@ -44,7 +44,7 @@ if($resultSetForGroup->num_rows !=0){
         $d = mysqli_connect($myServer,$myUser,$myPass,$myDB) or die('Kļūda pieslēdzoties datubāzei!');
 
         mysqli_set_charset($d, 'utf8');
-		$sql_query="INSERT INTO Persona_has_MacibuGrupa(Persona_idPersona, MacibuGrupa_idMacibuGrupa, vaiIrPasniedzejs) VALUES ('$IDpersona','$IDgrupai','$vaiIr');";		
+		$sql_query="INSERT INTO Persona_has_Macibugrupa(Persona_idPersona, MacibuGrupa_idMacibuGrupa, vaiIrPasniedzejs) VALUES ('$IDpersona','$IDgrupai','$vaiIr');";		
 		if (mysqli_query($d, $sql_query)) {
 			header("Location: addStudentPOSITIVE.php");
 		} else {
