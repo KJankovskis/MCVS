@@ -37,13 +37,18 @@ if($resultSetForGroup->num_rows !=0){
 		$IDgrupai = $rows['idMacibuGrupa'];
    }
 }
+        $myServer = 'localhost';
+        $myDB = 'mcvs_db'; # Norādiet savu datu bāzi
+        $myUser = 'root';  # Norādiet savu datu bāzes lietotājvārdu
+        $myPass = 'janisk';  # Norādiet savu lietotājvārdu                     
+        $d = mysqli_connect($myServer,$myUser,$myPass,$myDB) or die('Kļūda pieslēdzoties datubāzei!');
+
+        mysqli_set_charset($d, 'utf8');
 		$sql_query="INSERT INTO Persona_has_Macibugrupa(Persona_idPersona, MacibuGrupa_idMacibuGrupa, vaiIrPasniedzejs) VALUES ('$IDpersona','$IDgrupai','$vaiIr');";		
-		if (mysqli_query($mysqli, $sql_query)) {
+		if (mysqli_query($d, $sql_query)) {
 			header("Location: addStudentPOSITIVE.php");
-			echo "ir";
 		} else {
 			header("Location: addStudentNEGATIVE.php");
-			echo "nav";
 		}
 mysqli_close($mysqli);
 ?>
