@@ -39,10 +39,10 @@ if($resultSetForGroup->num_rows !=0){
 }
 		$sql_query="INSERT INTO Persona_has_Macibugrupa(Persona_idPersona, MacibuGrupa_idMacibuGrupa, vaiIrPasniedzejs) VALUES ('$IDpersona','$IDgrupai','$vaiIr');";		
 		if (mysqli_query($mysqli, $sql_query)) {
-			header("Location: addStudent.php");
+			header("Location: addStudentPOSITIVE.php");
 			echo "ir";
 		} else {
-			header("Location: addStudent.php");
+			header("Location: addStudentNEGATIVE.php");
 			echo "nav";
 		}
 mysqli_close($mysqli);

@@ -36,7 +36,8 @@ else{
                 $IDmGrupa = $rows['MacibuGrupa_idMacibuGrupa'];
             }
         }
-		$resultMacibuGrupa=$mysqli->query("SELECT * FROM MacibuGrupa WHERE 	idMacibuGrupa='$IDmGrupa'");
+		//$resultMacibuGrupa=$mysqli->query("SELECT * FROM MacibuGrupa WHERE 	idMacibuGrupa='$IDmGrupa'");
+		$noslogojumsJoinMacibuGrupa = $mysqli->query("SELECT * FROM MacibuGrupa JOIN Persona_has_MacibuGrupa ON idMacibuGrupa = MacibuGrupa_idMacibuGrupa WHERE Persona_idPersona = '$ID' AND idMacibuGrupa = '$IDmGrupa'");
     ?>
     <div class="name-surname">
         <p ><?php echo "$name $surname"; ?> </p>
@@ -96,8 +97,8 @@ echo '<dd>'
         $tmp = 0;
         $x = 0;
     
-        if ($resultMacibuGrupa->num_rows > 0) {
-                while($row = $resultMacibuGrupa->fetch_assoc()) {
+        if ($noslogojumsJoinMacibuGrupa->num_rows > 0) {
+                while($row = $noslogojumsJoinMacibuGrupa->fetch_assoc()) {
                     $tmp = $tmp +1;
                     echo "<td><center>" . $tmp. "</center></td><td><center>" . $row["mGrupasNosaukums"]. "</center></td><td><center>" . $row["mgDatumsNo"]. "</center></td><td><center>" . $row["mgDatumsLidz"]."</center></td></tr>". "<br>";
                 }
