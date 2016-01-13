@@ -23,9 +23,7 @@ else{
                 $cityWork = $rows['darbaPilseta']; 
                 $workplaceAdress = $rows['darbaAdrese'];
                 $foto = $rows['foto'];
-                if (empty($foto)) {
-                    $foto = "atteli/defaultPerson.png";
-                }
+                if (empty($foto)) $foto = "atteli/defaultPerson.png";
                 $role = $rows['lietotajaLoma'];
 				//startDate = $rows['pDatums'];
 				//startTime = $rows['pLaiksNo'];
@@ -39,17 +37,17 @@ else{
     <div class="person">
         <div class="profilePicture">
             <?php
-echo //'<dd>'
-     //. '<object data="atteli/defaultPerson.png" type="image/png">'
-           '<img src="data:image/jpeg;base64,' . base64_encode($foto) . '" width="200" height="230">';
-     //. '</object>'
-     //. '</dd>';
+echo '<dd>'
+     . '<object data="atteli/defaultPerson.png" type="image/png">'
+     .      '<img src="data:image/jpeg;base64,' . base64_encode($foto) . '" width="200" height="230">'
+     . '</object>'
+     . '</dd>';
 ?>
             
         </div>
         <p><?php echo "<b>e-pasts:</b> $mail" ?></p>
         <p><?php echo "<b>tālrunis:</b> $phone" ?></p>
-        <p><?php echo "<b>dzīvesvietas adrese:</b> $adress , $city" ?></p>
+        <p><?php echo "<b>dzīvesvietas adrese:</b> $adress, $city" ?></p>
         <p><?php echo "<b>darbavieta:</b> $workplaceAdress, $cityWork" ?></p>
         <p><?php
             if($role == 'L'){             //lietotajs
