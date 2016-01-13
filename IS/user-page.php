@@ -52,9 +52,9 @@ echo '<dd>'
         <?php
             if($role == 'L'){
                 ?><p><?php //lietotajs
-                echo "<b>apgūtie kursi:</b> <br><br>";
-                echo "<b>iegūtie diplomi:</b> <br><br>";
-                echo "<b>iegūtie sertifikāti:</b> <br>";
+                echo "<b>apgūtie kursi:</b><br><br>";
+                echo "<b>iegūtie diplomi:</b><br><br>";
+                echo "<b>iegūtie sertifikāti:</b><br>";
                 ?></p><?php
             }
             else if($role == 'P'){
