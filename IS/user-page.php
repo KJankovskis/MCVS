@@ -49,18 +49,22 @@ echo //'<dd>'
         <p><?php echo "<b>tālrunis</b> : $phone" ?></p>
         <p><?php echo "<b>dzīvesvietas adrese</b> : $adress , $city" ?></p>
         <p><?php echo "<b>darbavieta</b> : $workplaceAdress, $cityWork" ?></p>
-        <p><?php
-            if($role == 'L'){             //lietotajs
+        <?php
+            if($role == 'L'){
+                ?><p><?php //lietotajs
                 echo "<b>apgūtie kursi</b> : <br><br>";
                 echo "<b>iegūtie diplomi</b> : <br><br>";
                 echo "<b>iegūtie sertifikāti</b> : <br>";
+                ?></p><?php
             }
-            else if($role == 'P'){        //pasniedzejs
+            else if($role == 'P'){
+                ?><p><?php//pasniedzejs
                 echo "<b>pasniedzamie kursi</b> :";
+                ?></p><?php
             }
             else if($role == 'A'){ 
             }
-        ?></p>
+        ?>
         <p><?php echo "<b>lietotāja loma: </b>"; 
 			if($role == 'L'){             //lietotajs
                 echo "Lietotājs";
