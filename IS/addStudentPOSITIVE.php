@@ -15,7 +15,7 @@ else{
 <div class="gpContent">
     <br>
     <table id="groupPlanningTable" width="100%" style="border: 3px solid #DCE6F7;">
-        <form action="http://localhost/sistema/addStudent.php" method="post">
+        <form action="http://84.237.231.90/MCVS/IS/addStudent.php" method="post">
 			<tr height="40px" style="border: 3px solid #DCE6F7;">
 				<td width="35%" style="border: 3px solid #DCE6F7;">
 					<label id="gpCourseLabel">Izvēlieties mācību grupu:</label>
@@ -38,9 +38,9 @@ else{
 							?>
 							<option selected="selected" value="0"></option>
 							<?php
-							$mysqli = NEW MySQLi('localhost', 'root','', 'mcvs_db');
+							$mysqli = NEW MySQLi('localhost', 'root','janisk', 'mcvs_db');
 							mysqli_set_charset($mysqli, 'utf8');
-							$resultSet  =$mysqli->query("SELECT * FROM macibugrupa");
+							$resultSet  =$mysqli->query("SELECT * FROM MacibuGrupa");
 							
 							if($resultSet -> num_rows != 0) {                
 								while($rows = $resultSet -> fetch_assoc()) {
@@ -94,7 +94,7 @@ else{
 			$myServer = 'localhost';
 			$myDB = 'mcvs_db'; # Norādiet savu datu bāzi
 			$myUser = 'root';  # Norādiet savu datu bāzes lietotājvārdu
-			$myPass = '';  # Norādiet savu lietotājvārdu
+			$myPass = 'janisk';  # Norādiet savu lietotājvārdu
 			
 			$d = mysqli_connect($myServer,$myUser,$myPass,$myDB) or die('Nevaru pievienoties datubāzei');
 	 mysqli_set_charset($d, 'utf8');
@@ -104,25 +104,25 @@ else{
 			$peronID = $_REQUEST["peronID"];
 		
 			if($surname == "" && $peronID ==""){            //ja nav ievadits uzvards un personas kods
-				$sql = "SELECT * FROM persona WHERE vards='$name'";
+				$sql = "SELECT * FROM Persona WHERE vards='$name'";
 				$result = $d->query($sql);    
 			} else if($name == "" && $peronID ==""){    //ja nav ievadits vards un personas kods
-				$sql = "SELECT * FROM persona WHERE uzvards='$surname'";
+				$sql = "SELECT * FROM Persona WHERE uzvards='$surname'";
 				$result = $d->query($sql); 
 			} else if($name == "" && $surname ==""){                    //ja nav ievadits vards un uzvards
-				$sql = "SELECT * FROM persona WHERE personaskods='$peronID'";
+				$sql = "SELECT * FROM Persona WHERE personaskods='$peronID'";
 				$result = $d->query($sql); 
 			} else if($peronID == ""){                                  //ja nav ievadits personas kods
-				$sql = "SELECT * FROM persona WHERE vards='$name' AND uzvards='$surname'";
+				$sql = "SELECT * FROM Persona WHERE vards='$name' AND uzvards='$surname'";
 				$result = $d->query($sql); 
 			} else if($name == ""){                                     //ja nav ievadits vards
-				$sql = "SELECT * FROM persona WHERE uzvards='$surname' AND personaskods='$peronID'";
+				$sql = "SELECT * FROM Persona WHERE uzvards='$surname' AND personaskods='$peronID'";
 				$result = $d->query($sql); 
 			} else if($surname == ""){                                  //ja nav ievadits uzvards
-				$sql = "SELECT * FROM persona WHERE vards='$name' AND personaskods='$peronID'";
+				$sql = "SELECT * FROM Persona WHERE vards='$name' AND personaskods='$peronID'";
 				$result = $d->query($sql); 
 			} else{                                                     //ja visi lauki ir aizpilditi
-				$sql = "SELECT * FROM persona WHERE vards='$name' AND uzvards='$surname' AND personaskods='$peronID'";
+				$sql = "SELECT * FROM Persona WHERE vards='$name' AND uzvards='$surname' AND personaskods='$peronID'";
 				$result = $d->query($sql);
 			}
 			?>
@@ -168,16 +168,14 @@ else{
 			?>
 			</center>
         </form>
-		
     </div>
-	
     <br><br>
 <?php
          
 mysqli_close($d);           
     }
     ?>
-	<br>
+<br>
 	<p style="text-align: center;
 		padding-top: 15px;
 		padding-left: 20px;
@@ -185,6 +183,7 @@ mysqli_close($d);
 		font-weight: bold;
 		color: red;">STUDENTS VEIKSMĪGI PIEVIENOTS MĀCĪBU GRUPAI</p>
 	<br>
+
 </div>
 <?php
     include('footer.php'); 
