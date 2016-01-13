@@ -76,25 +76,33 @@ echo '<dd>'
     
     <div class="about">
         <div class="noslogojums"><p>Noslogojums</p></div>
-        <table style="width:100%; border: 1px solid black; border-collapse: collapse;">
+        <table style="width:100%; border: 1px solid black; border-collapse: collapse;position: absolute; top:30px;">
           <tr>
-                <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Nr.</th>
-                <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Datums</th>
-                <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Laiks no</th>
-                <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Laiks līdz</th>
-          </tr>
+                <th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Nr.</th>	
+				<th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Aktivitāte</th>
+				<th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Datums no</th>
+				<th style="padding: 5px; border: 1px solid black; border-collapse: collapse;">Datums līdz</th>
+		  </tr>
           <tr>
         <?php
         $tmp = 0;
         $x = 0;
-        if ($result->num_rows > 0) {
-                while($row = $result->fetch_assoc()) {
-                    $tmp = $tmp +1;
-                    echo "<td>" . $tmp. "</td><td>" . $row["pDatums"]. "</td><td>" . $row["pLaiksNo"]. "</td><td>" . $row["pLaiksLidz"]. "</td></tr>". "<br>";
-                }
-            } else {
-                $x = 404;
+		
+		$resultNoslogojums=$mysqli->query("SELECT * FROM Persona_has_MacibuGrupa WHERE Persona_idPersona='$ID' ");
+		if($resultNoslogojums->num_rows !=0){
+            while($rows = $resultNoslogojums->fetch_assoc()){ 
+                $IDmGrupa = $rows['MacibuGrupa_idMacibuGrupa'];
+				$resultMacibuGrupa=$mysqli->query("SELECT * FROM MacibuGrupa WHERE 	idMacibuGrupa='$IDmGrupa'");
+					if ($resultMacibuGrupa->num_rows > 0) {
+						while($row = $resultMacibuGrupa->fetch_assoc()) {
+							$tmp = $tmp +1;
+							echo "<td><center>" . $tmp. "</center></td><td><center>" . $row["mGrupasNosaukums"]. "</center></td><td><center>" . $row["mgDatumsNo"]. "</center></td><td><center>" . $row["mgDatumsLidz"]."</center></td></tr>". "<br>";
+						}
+					} else {
+						$x = 404;
+					}
             }
+        }
         ?>     
         </table>
         <br><br><br><br><center>
