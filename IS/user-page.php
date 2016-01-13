@@ -23,7 +23,9 @@ else{
                 $cityWork = $rows['darbaPilseta']; 
                 $workplaceAdress = $rows['darbaAdrese'];
                 $foto = $rows['foto'];
-                if (empty($foto)) $foto = "atteli/defaultPerson.png";
+                if (empty($foto)) {
+                    $foto = "atteli/defaultPerson.png";
+                }
                 $role = $rows['lietotajaLoma'];
 				//startDate = $rows['pDatums'];
 				//startTime = $rows['pLaiksNo'];
@@ -38,25 +40,25 @@ else{
         <div class="profilePicture">
             <?php
 echo '<dd>'
-     . '<object data="atteli/defaultPerson.png" type="image/png">'
+     //. '<object data="atteli/defaultPerson.png" type="image/png">'
      .      '<img src="data:image/jpeg;base64,' . base64_encode($foto) . '" width="200" height="230">'
-     . '</object>'
+     //. '</object>'
      . '</dd>';
 ?>
             
         </div>
-        <p><?php echo "<b>e-pasts</b> :  $mail" ?></p>
-        <p><?php echo "<b>tālrunis</b> : $phone" ?></p>
-        <p><?php echo "<b>dzīvesvietas adrese</b> : $adress , $city" ?></p>
-        <p><?php echo "<b>darbavieta</b> : $workplaceAdress, $cityWork" ?></p>
+        <p><?php echo "<b>e-pasts:</b> $mail" ?></p>
+        <p><?php echo "<b>tālrunis:</b> $phone" ?></p>
+        <p><?php echo "<b>dzīvesvietas adrese:</b> $adress , $city" ?></p>
+        <p><?php echo "<b>darbavieta:</b> $workplaceAdress, $cityWork" ?></p>
         <p><?php
             if($role == 'L'){             //lietotajs
-                echo "<b>apgūtie kursi</b> : <br><br>";
-                echo "<b>iegūtie diplomi</b> : <br><br>";
-                echo "<b>iegūtie sertifikāti</b> : <br>";
+                echo "<b>apgūtie kursi:</b> <br><br>";
+                echo "<b>iegūtie diplomi:</b> <br><br>";
+                echo "<b>iegūtie sertifikāti:</b><br>";
             }
             else if($role == 'P'){        //pasniedzejs
-                echo "<b>pasniedzamie kursi</b> :";
+                echo "<b>pasniedzamie kursi:</b> ";
             }
             else if($role == 'A'){ 
             }
@@ -68,10 +70,11 @@ echo '<dd>'
             else if($role == 'P'){        //pasniedzejs
                 echo "Pasniedzējs";
             }
+        ?></p><?php
             else if($role == 'A'){ 
 				echo "Administrators";
 			}
-        ?></p> 
+        ?> 
     </div>
     
     <div class="about">
