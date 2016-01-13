@@ -37,10 +37,10 @@ else{
     </div>
     <div class="kurss">
         <div class="kursaApraksts">
-            <p><?php echo "<b>Kursa apraksts</b> :<br> $kursaApraksts" ?></p>
+            <p><?php echo "<b>Kursa apraksts</b>:<br> $kursaApraksts" ?></p>
         </div>
-        <p><?php echo "<b>Kursa kods</b> :  $kursaKods" ?></p>
-        <p><?php echo "<b>Nepieciešamā auditorija</b> : "; 
+        <p><?php echo "<b>Kursa kods</b>:  $kursaKods" ?></p>
+        <p><?php echo "<b>Nepieciešamā auditorija</b>: "; 
             if($tips == 'D'){
                 echo "Datorauditorija";
             }
@@ -48,8 +48,8 @@ else{
                 echo "Auditorija";
             }
             ?></p>
-        <p><?php echo "<b>Maksimālais studentu skaits</b> : $skaits" ?></p>
-        <p><?php echo "<b>Kursa ilgums</b> : $ilgums dienas" ?></p>  
+        <p><?php echo "<b>Maksimālais studentu skaits</b>: $skaits" ?></p>
+        <p><?php echo "<b>Kursa ilgums</b>: $ilgums dienas" ?></p>  
     </div>
 <?php include('footer.php'); 
 }

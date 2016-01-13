@@ -19,7 +19,7 @@ else{
 					<label style="height: 35px">Kursa apraksts: </label><br>
 					<label style="height: 35px">Nepieciešamās auditorijas tips: </label><br>
 					<label style="height: 35px">Maksimālo studentu skaits: </label><br>
-					<label style="height: 35px">Kursa ilgums(dienas): </label><br>
+					<label style="height: 35px">Kursa ilgums (dienas): </label><br>
 					<label style="height: 35px">Kursa diploma dokuments:</label><br>
 					<label style="height: 35px">Kursa programma:</label><br>
 					<label style="height: 35px">Kursa macibu materialis:</label><br>
