@@ -89,7 +89,7 @@ else{
 		<br>
         <p><?php echo "<b>Pasniedzejs</b>:  $pasniedzejaVards $pasniedzejaUzvards , $pasniedzejaPersonasKods" ?></p>
         <p><?php echo "<b>Apgūstamais kurss</b>: $kursaNosaukums" ?></p>
-        <p><?php echo "<b>Auditorija</b : $auditorijasNosaukums ($aAdrese, $aPilseta)" ?></p>
+        <p><?php echo "<b>Auditorija</b>: $auditorijasNosaukums ($aAdrese, $aPilseta)" ?></p>
         <p><?php echo "<b>Apmācību ilgums</b>: no $mgDatumsNo līdz $mgDatumsLidz" ?></p>     
     </div>
     
